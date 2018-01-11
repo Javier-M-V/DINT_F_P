@@ -1,0 +1,9 @@
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.exe.config
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.exe
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.pdb
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csprojResolveAssemblyReference.cache
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.Properties.Resources.resources
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csproj.GenerateResource.Cache
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.exe
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.pdb
