@@ -31,5 +31,11 @@ namespace DINT_F_P
 
             //if(select usuario not in database){Dialog"No estás registrado, amigo"}
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //button for twitt
+
+        }
     }
 }

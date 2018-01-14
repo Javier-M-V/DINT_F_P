@@ -1,4 +1,6 @@
-﻿namespace DINT_F_P
+﻿using DINT_F_P.Properties;
+
+namespace DINT_F_P
 {
     partial class TwitClientMain
     {
@@ -32,7 +34,7 @@
             this.Main = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxContrasenya = new System.Windows.Forms.TextBox();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.UserMainTimeline = new System.Windows.Forms.TabPage();
@@ -41,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Profiles = new System.Windows.Forms.TabPage();
             this.LastNotifications = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.ControlPaginas.SuspendLayout();
             this.Main.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,10 +56,10 @@
             this.ControlPaginas.Controls.Add(this.UserMainTimeline);
             this.ControlPaginas.Controls.Add(this.Profiles);
             this.ControlPaginas.Controls.Add(this.LastNotifications);
-            this.ControlPaginas.Location = new System.Drawing.Point(2, 5);
+            this.ControlPaginas.Location = new System.Drawing.Point(-2, 2);
             this.ControlPaginas.Name = "ControlPaginas";
             this.ControlPaginas.SelectedIndex = 0;
-            this.ControlPaginas.Size = new System.Drawing.Size(1005, 549);
+            this.ControlPaginas.Size = new System.Drawing.Size(1009, 552);
             this.ControlPaginas.TabIndex = 1;
             // 
             // Main
@@ -66,7 +69,7 @@
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(997, 523);
+            this.Main.Size = new System.Drawing.Size(1001, 526);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
@@ -76,7 +79,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(338, 158);
+            this.label1.Location = new System.Drawing.Point(354, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(338, 38);
             this.label1.TabIndex = 2;
@@ -85,24 +88,26 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.textBoxContrasenya);
             this.panel1.Controls.Add(this.textBoxUsuario);
-            this.panel1.Location = new System.Drawing.Point(322, 199);
+            this.panel1.Location = new System.Drawing.Point(338, 181);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 112);
+            this.panel1.Size = new System.Drawing.Size(371, 103);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // buttonLogin
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button1.Location = new System.Drawing.Point(146, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonLogin.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonLogin.Location = new System.Drawing.Point(146, 66);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.TabIndex = 5;
+            this.buttonLogin.Text = "Login";
+            this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBoxContrasenya
             // 
@@ -124,13 +129,14 @@
             // 
             // UserMainTimeline
             // 
+            this.UserMainTimeline.Controls.Add(this.button2);
             this.UserMainTimeline.Controls.Add(this.panel2);
             this.UserMainTimeline.Controls.Add(this.richTextBoxCajaTwit);
             this.UserMainTimeline.Controls.Add(this.label2);
             this.UserMainTimeline.Location = new System.Drawing.Point(4, 22);
             this.UserMainTimeline.Name = "UserMainTimeline";
             this.UserMainTimeline.Padding = new System.Windows.Forms.Padding(3);
-            this.UserMainTimeline.Size = new System.Drawing.Size(997, 523);
+            this.UserMainTimeline.Size = new System.Drawing.Size(1001, 526);
             this.UserMainTimeline.TabIndex = 1;
             this.UserMainTimeline.Text = "Timeline";
             this.UserMainTimeline.UseVisualStyleBackColor = true;
@@ -138,17 +144,17 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(284, 61);
+            this.panel2.Location = new System.Drawing.Point(235, 140);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(563, 324);
+            this.panel2.Size = new System.Drawing.Size(582, 370);
             this.panel2.TabIndex = 3;
             // 
             // richTextBoxCajaTwit
             // 
             this.richTextBoxCajaTwit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBoxCajaTwit.Location = new System.Drawing.Point(19, 61);
+            this.richTextBoxCajaTwit.Location = new System.Drawing.Point(235, 71);
             this.richTextBoxCajaTwit.Name = "richTextBoxCajaTwit";
-            this.richTextBoxCajaTwit.Size = new System.Drawing.Size(242, 63);
+            this.richTextBoxCajaTwit.Size = new System.Drawing.Size(312, 63);
             this.richTextBoxCajaTwit.TabIndex = 2;
             this.richTextBoxCajaTwit.Text = "";
             // 
@@ -167,7 +173,7 @@
             // 
             this.Profiles.Location = new System.Drawing.Point(4, 22);
             this.Profiles.Name = "Profiles";
-            this.Profiles.Size = new System.Drawing.Size(997, 523);
+            this.Profiles.Size = new System.Drawing.Size(1001, 526);
             this.Profiles.TabIndex = 2;
             this.Profiles.Text = "Profiles";
             this.Profiles.UseVisualStyleBackColor = true;
@@ -180,6 +186,15 @@
             this.LastNotifications.TabIndex = 4;
             this.LastNotifications.Text = "LastNotifications";
             this.LastNotifications.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(553, 111);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // TwitClientMain
             // 
@@ -207,7 +222,7 @@
         private System.Windows.Forms.TabPage UserMainTimeline;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox textBoxContrasenya;
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.Panel panel2;
@@ -215,6 +230,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage Profiles;
         private System.Windows.Forms.TabPage LastNotifications;
+        private System.Windows.Forms.Button button2;
     }
 }
 
