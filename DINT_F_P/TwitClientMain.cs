@@ -19,6 +19,7 @@ namespace DINT_F_P
         public TwitClientMain()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)

@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DINT_F_P", "DINT_F_P\DINT_F_P.csproj", "{C2A79568-BE7E-492C-8BFC-AE763E0FBBFF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ADB5A0E9-BB9B-4CCD-A0F5-CDE644E5410A}"
+	ProjectSection(SolutionItems) = preProject
+		DINT_F_P\bin\Debug\PICOBLA_.TTF = DINT_F_P\bin\Debug\PICOBLA_.TTF
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
