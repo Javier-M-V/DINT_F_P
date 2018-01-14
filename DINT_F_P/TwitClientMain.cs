@@ -38,5 +38,10 @@ namespace DINT_F_P
             //button for twitt
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
