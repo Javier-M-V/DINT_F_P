@@ -21,10 +21,15 @@ namespace DINT_F_P
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             usuario = textBoxUsuario.Text;
             contrasenya = textBoxContrasenya.Text;
+            ControlPaginas.SelectedTab = UserMainTimeline;
+            richTextBoxCajaTwit.Text = "Twit as "+usuario;
+            //TODO: colocar el control para que no se puedan loguear sin cuenta.
+
+            //if(select usuario not in database){Dialog"No estás registrado, amigo"}
         }
     }
 }
