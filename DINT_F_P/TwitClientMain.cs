@@ -43,5 +43,10 @@ namespace DINT_F_P
         {
 
         }
+
+        private void pictureBoxNotifications_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastNotifications;
+        }
     }
 }
