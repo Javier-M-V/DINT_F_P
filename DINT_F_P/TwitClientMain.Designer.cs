@@ -220,6 +220,7 @@ namespace DINT_F_P
             this.pictureBoxConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxConfig.TabIndex = 7;
             this.pictureBoxConfig.TabStop = false;
+            this.pictureBoxConfig.Click += new System.EventHandler(this.pictureBoxConfig_Click);
             // 
             // pictureBoxNotifications
             // 
@@ -243,6 +244,7 @@ namespace DINT_F_P
             this.pictureBoxLastTwits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLastTwits.TabIndex = 4;
             this.pictureBoxLastTwits.TabStop = false;
+            this.pictureBoxLastTwits.Click += new System.EventHandler(this.pictureBoxLastTwits_Click);
             // 
             // pictureBoxHome
             // 
@@ -254,6 +256,7 @@ namespace DINT_F_P
             this.pictureBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxHome.TabIndex = 3;
             this.pictureBoxHome.TabStop = false;
+            this.pictureBoxHome.Click += new System.EventHandler(this.pictureBoxHome_Click);
             // 
             // panel2
             // 

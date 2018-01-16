@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace DINT_F_P
 {
@@ -15,6 +16,9 @@ namespace DINT_F_P
 
         private string usuario { get; set; }
         private string contrasenya { get; set; }
+        private MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder();
+        //build.Server = "localhost";
+
 
         public TwitClientMain()
         {
@@ -22,6 +26,7 @@ namespace DINT_F_P
             
         }
 
+        //CÓDIGO RELATIVO A LA PÁGINA PRINCIPAL
         private void button1_Click_1(object sender, EventArgs e)
         {
             usuario = textBoxUsuario.Text;
@@ -35,7 +40,7 @@ namespace DINT_F_P
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //button for twitt
+            //button for create a twitt
 
         }
 
@@ -44,9 +49,31 @@ namespace DINT_F_P
 
         }
 
+        //Va a la página de notificaciones
         private void pictureBoxNotifications_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = LastNotifications;
         }
+
+        //Va a la página principal
+        private void pictureBoxHome_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = Main;
+        }
+
+        //Va a la página Last twitts
+        private void pictureBoxLastTwits_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastTwits;
+        }
+
+        private void pictureBoxConfig_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastTwits;
+        }
+
+        //FIN DE CÓDIGO RELATIVO A LA PÁGINA PRINCIPAL
     }
+
+
 }
