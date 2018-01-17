@@ -21,3 +21,5 @@ C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\WindowsFormsControlLibrary1.pdb
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\WindowsFormsControlLibrary1.pdb
+C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\MySql.Data.dll
+C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\MySql.Data.xml

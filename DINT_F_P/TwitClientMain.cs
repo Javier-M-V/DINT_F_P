@@ -14,25 +14,41 @@ namespace DINT_F_P
     public partial class TwitClientMain : Form
     {
 
-        private string usuario { get; set; }
-        private string contrasenya { get; set; }
-        private MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder();
-        //build.Server = "localhost";
-
+        private string Usuario { get; set; }
+        private string Contrasenya { get; set; }
+        private MySqlConnectionStringBuilder build = null;
+        private MySqlConnection conexion = null;
+        private MySqlCommand comand = null;
+      
 
         public TwitClientMain()
         {
             InitializeComponent();
-            
+            //Bloque de conexión a la base de datos
+            try {
+                build = new MySqlConnectionStringBuilder();
+                build.Server = "localhost";
+                build.UserID = "root";
+                build.Password = "12345";
+                build.Database = "twittclient";
+                conexion = new MySqlConnection(build.ToString());
+                conexion.Open();
+            }
+            catch (MySqlException e) { e.ToString(); }  
         }
 
         //CÓDIGO RELATIVO A LA PÁGINA PRINCIPAL
         private void button1_Click_1(object sender, EventArgs e)
         {
-            usuario = textBoxUsuario.Text;
-            contrasenya = textBoxContrasenya.Text;
+            Usuario = textBoxUsuario.Text;
+            Contrasenya = textBoxContrasenya.Text;
             ControlPaginas.SelectedTab = UserMainTimeline;
-            richTextBoxCajaTwit.Text = "Twit as "+usuario;
+            comand = conexion.CreateCommand();
+
+
+
+            richTextBoxCajaTwit.Text = "Twit as "+Usuario;
+
             //TODO: colocar el control para que no se puedan loguear sin cuenta.
 
             //if(select usuario not in database){Dialog"No estás registrado, amigo"}
