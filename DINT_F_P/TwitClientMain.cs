@@ -18,14 +18,19 @@ namespace DINT_F_P
         private string Contrasenya { get; set; }
         private MySqlConnectionStringBuilder build = null;
         private MySqlConnection conexion = null;
-        private MySqlCommand comand = null;
-      
 
         public TwitClientMain()
         {
             InitializeComponent();
             //Bloque de conexión a la base de datos
-            try {
+            conectarBBDD(ref build, ref conexion);
+            //desconectarBBDD(ref conexion);
+            
+        }
+        public void conectarBBDD(ref MySqlConnectionStringBuilder build, ref MySqlConnection conexion) {
+
+            try
+            {
                 build = new MySqlConnectionStringBuilder();
                 build.Server = "localhost";
                 build.UserID = "root";
@@ -33,25 +38,47 @@ namespace DINT_F_P
                 build.Database = "twittclient";
                 conexion = new MySqlConnection(build.ToString());
                 conexion.Open();
+                MessageBox.Show("Conectadito");  
             }
-            catch (MySqlException e) { e.ToString(); }  
+            catch (MySqlException e) { e.ToString();  }
         }
+        public void desconectarBBDD(ref MySqlConnection conexion) {
 
-        //CÓDIGO RELATIVO A LA PÁGINA PRINCIPAL
+            conexion.Close();
+            //MessageBox.Show("Desconectadito");
+        }
+   
+
+        //CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
         private void button1_Click_1(object sender, EventArgs e)
         {
             Usuario = textBoxUsuario.Text;
             Contrasenya = textBoxContrasenya.Text;
-            ControlPaginas.SelectedTab = UserMainTimeline;
-            comand = conexion.CreateCommand();
+            
+            string user = Usuario;
+            string sql = "SELECT * from usuarios WHERE usuario_twitter=@USER";
+            MySqlCommand comand = new MySqlCommand(sql,conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            MySqlDataReader reader = comand.ExecuteReader();
 
-
-
-            richTextBoxCajaTwit.Text = "Twit as "+Usuario;
-
-            //TODO: colocar el control para que no se puedan loguear sin cuenta.
-
-            //if(select usuario not in database){Dialog"No estás registrado, amigo"}
+            //Si el user existe y las comprobaciones son correctas, vamos al TIMELINE
+            if (reader.Read()){
+                if (reader["contrasena"].ToString() == Contrasenya)
+                {
+                    ControlPaginas.SelectedTab = UserMainTimeline;
+                    richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
+                    reader.Close();
+                }
+                else {
+                    MessageBox.Show("Usuario/contraeña incorrectos");
+                    reader.Close();
+                }
+                
+            }
+            else {
+                MessageBox.Show("Usuario/contraeña incorrectos");
+                reader.Close();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
