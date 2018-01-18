@@ -33,9 +33,9 @@ namespace DINT_F_P
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwitClientMain));
             this.ControlPaginas = new System.Windows.Forms.TabControl();
             this.Main = new System.Windows.Forms.TabPage();
+            this.customButton1Login = new BotonCustom.CustomButton1();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxContrasenya = new System.Windows.Forms.TextBox();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.UserMainTimeline = new System.Windows.Forms.TabPage();
@@ -47,7 +47,6 @@ namespace DINT_F_P
             this.pictureBoxHome = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.richTextBoxCajaTwit = new System.Windows.Forms.RichTextBox();
             this.LastTwits = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -57,7 +56,7 @@ namespace DINT_F_P
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelLastTwits = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.LastNotifications = new System.Windows.Forms.TabPage();
@@ -68,10 +67,11 @@ namespace DINT_F_P
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelLastNotifications = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPageConfig = new System.Windows.Forms.TabPage();
+            this.ButtonTwittIt = new BotonCustom.CustomButton1();
             this.ControlPaginas.SuspendLayout();
             this.Main.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -123,6 +123,19 @@ namespace DINT_F_P
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
             // 
+            // customButton1Login
+            // 
+            this.customButton1Login.BackColor = System.Drawing.Color.DimGray;
+            this.customButton1Login.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.customButton1Login.ForeColor = System.Drawing.Color.White;
+            this.customButton1Login.Location = new System.Drawing.Point(126, 66);
+            this.customButton1Login.Name = "customButton1Login";
+            this.customButton1Login.Size = new System.Drawing.Size(113, 24);
+            this.customButton1Login.TabIndex = 3;
+            this.customButton1Login.Text = "Login";
+            this.customButton1Login.UseVisualStyleBackColor = false;
+            this.customButton1Login.Click += new System.EventHandler(this.customButton1Login_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -137,26 +150,13 @@ namespace DINT_F_P
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.buttonLogin);
+            this.panel1.Controls.Add(this.customButton1Login);
             this.panel1.Controls.Add(this.textBoxContrasenya);
             this.panel1.Controls.Add(this.textBoxUsuario);
             this.panel1.Location = new System.Drawing.Point(338, 181);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 103);
             this.panel1.TabIndex = 1;
-            // 
-            // buttonLogin
-            // 
-            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonLogin.Location = new System.Drawing.Point(146, 66);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogin.TabIndex = 5;
-            this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBoxContrasenya
             // 
@@ -166,6 +166,7 @@ namespace DINT_F_P
             this.textBoxContrasenya.TabIndex = 2;
             this.textBoxContrasenya.Text = "*****";
             this.textBoxContrasenya.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxContrasenya.Click += new System.EventHandler(this.textBoxContrasenya_Click);
             // 
             // textBoxUsuario
             // 
@@ -175,6 +176,7 @@ namespace DINT_F_P
             this.textBoxUsuario.TabIndex = 1;
             this.textBoxUsuario.Text = "@twitterUser";
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxUsuario.Click += new System.EventHandler(this.textBoxUsuario_Click);
             // 
             // UserMainTimeline
             // 
@@ -189,10 +191,10 @@ namespace DINT_F_P
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.ButtonTwittIt);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.richTextBoxCajaTwit);
             this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
@@ -277,16 +279,6 @@ namespace DINT_F_P
             this.label2.TabIndex = 1;
             this.label2.Text = "Timeline";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(527, 138);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // richTextBoxCajaTwit
             // 
             this.richTextBoxCajaTwit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -295,6 +287,7 @@ namespace DINT_F_P
             this.richTextBoxCajaTwit.Size = new System.Drawing.Size(291, 63);
             this.richTextBoxCajaTwit.TabIndex = 2;
             this.richTextBoxCajaTwit.Text = "";
+            this.richTextBoxCajaTwit.Click += new System.EventHandler(this.richTextBoxCajaTwit_Click);
             // 
             // LastTwits
             // 
@@ -310,7 +303,7 @@ namespace DINT_F_P
             // 
             this.panel4.Controls.Add(this.panel9);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.labelLastTwits);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.richTextBox1);
             this.panel4.Location = new System.Drawing.Point(6, 6);
@@ -381,19 +374,20 @@ namespace DINT_F_P
             this.panel5.Size = new System.Drawing.Size(541, 240);
             this.panel5.TabIndex = 3;
             // 
-            // label3
+            // labelLastTwits
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label3.Location = new System.Drawing.Point(20, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Your last twits";
+            this.labelLastTwits.AutoSize = true;
+            this.labelLastTwits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastTwits.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelLastTwits.Location = new System.Drawing.Point(20, 44);
+            this.labelLastTwits.Name = "labelLastTwits";
+            this.labelLastTwits.Size = new System.Drawing.Size(147, 25);
+            this.labelLastTwits.TabIndex = 1;
+            this.labelLastTwits.Text = "Your last twits";
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Location = new System.Drawing.Point(527, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 23);
@@ -424,7 +418,7 @@ namespace DINT_F_P
             // 
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.labelLastNotifications);
             this.panel6.Controls.Add(this.button3);
             this.panel6.Controls.Add(this.richTextBox2);
             this.panel6.Location = new System.Drawing.Point(6, 6);
@@ -495,16 +489,16 @@ namespace DINT_F_P
             this.panel7.Size = new System.Drawing.Size(541, 240);
             this.panel7.TabIndex = 3;
             // 
-            // label4
+            // labelLastNotifications
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label4.Location = new System.Drawing.Point(20, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(219, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Your last notifications";
+            this.labelLastNotifications.AutoSize = true;
+            this.labelLastNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastNotifications.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelLastNotifications.Location = new System.Drawing.Point(20, 44);
+            this.labelLastNotifications.Name = "labelLastNotifications";
+            this.labelLastNotifications.Size = new System.Drawing.Size(219, 25);
+            this.labelLastNotifications.TabIndex = 1;
+            this.labelLastNotifications.Text = "Your last notifications";
             // 
             // button3
             // 
@@ -533,6 +527,18 @@ namespace DINT_F_P
             this.tabPageConfig.Text = "Config";
             this.tabPageConfig.UseVisualStyleBackColor = true;
             // 
+            // ButtonTwittIt
+            // 
+            this.ButtonTwittIt.BackColor = System.Drawing.Color.DimGray;
+            this.ButtonTwittIt.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.ButtonTwittIt.ForeColor = System.Drawing.Color.White;
+            this.ButtonTwittIt.Location = new System.Drawing.Point(527, 138);
+            this.ButtonTwittIt.Name = "ButtonTwittIt";
+            this.ButtonTwittIt.Size = new System.Drawing.Size(66, 23);
+            this.ButtonTwittIt.TabIndex = 6;
+            this.ButtonTwittIt.Text = "Twitt It!";
+            this.ButtonTwittIt.UseVisualStyleBackColor = false;
+            // 
             // TwitClientMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,6 +548,7 @@ namespace DINT_F_P
             this.ForeColor = System.Drawing.SystemColors.Window;
             this.Name = "TwitClientMain";
             this.Text = "TwitClient";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwitClientMain_FormClosed);
             this.ControlPaginas.ResumeLayout(false);
             this.Main.ResumeLayout(false);
             this.Main.PerformLayout();
@@ -581,24 +588,22 @@ namespace DINT_F_P
         private System.Windows.Forms.TabPage UserMainTimeline;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox textBoxContrasenya;
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox richTextBoxCajaTwit;
         private System.Windows.Forms.TabPage LastTwits;
         private System.Windows.Forms.TabPage LastNotifications;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelLastTwits;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelLastNotifications;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Panel panel8;
@@ -617,6 +622,9 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private BotonCustom.CustomButton1 customButton11;
+        private BotonCustom.CustomButton1 customButton1Login;
+        private BotonCustom.CustomButton1 ButtonTwittIt;
     }
 }
 

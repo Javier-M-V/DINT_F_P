@@ -25,3 +25,7 @@ C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\MySql.Data.dll
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\MySql.Data.xml
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\MySql.Data.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\MySql.Data.xml
+C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\BotonCustom.dll
+C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.dll
+C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\BotonCustom.pdb
+C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.pdb
