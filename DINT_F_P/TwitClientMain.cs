@@ -62,11 +62,20 @@ namespace DINT_F_P{
                 //si en la BBDD la contraseña coincide se ejecuta el bloque
                 if (reader["contrasena"].ToString() == Contrasenya){ 
 
-                    ControlPaginas.SelectedTab = UserMainTimeline;
+                    ControlPaginas.SelectedTab = Timeline;
                     //Fijamos el texto de labels  y textos dinamicamente
                     richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
                     labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
-                    labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications";
+                    labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications"; reader.Close();
+                    //cargamos todos los mensajes
+                    reader.Close();
+                    reader = consultaMensajes(user);
+                    while (reader.Read())
+                    {
+                        //TODO: instancio caja y le meto toa la info
+                        MessageBox.Show(reader["mensaje"].ToString());
+                    }
+                    
                     reader.Close();
                 }
                 else{
@@ -80,6 +89,15 @@ namespace DINT_F_P{
                 MessageBox.Show("Usuario/contraeña incorrectos");
                 reader.Close();
             }
+        }
+        private MySqlDataReader consultaMensajes(string user) {
+
+            string sql = "SELECT * from mensajes WHERE mail_receptor=@USER";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", "bea@mail.com");
+            MySqlDataReader reader = comand.ExecuteReader();
+
+            return reader;
         }
 
         //Borra el contenido al hacer clic en la caja

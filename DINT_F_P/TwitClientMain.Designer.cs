@@ -33,19 +33,21 @@ namespace DINT_F_P
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwitClientMain));
             this.ControlPaginas = new System.Windows.Forms.TabControl();
             this.Main = new System.Windows.Forms.TabPage();
-            this.customButton1Login = new BotonCustom.CustomButton1();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customButton1Login = new BotonCustom.CustomButton1();
             this.textBoxContrasenya = new System.Windows.Forms.TextBox();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
-            this.UserMainTimeline = new System.Windows.Forms.TabPage();
+            this.Timeline = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ButtonTwittIt = new BotonCustom.CustomButton1();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBoxConfig = new System.Windows.Forms.PictureBox();
             this.pictureBoxNotifications = new System.Windows.Forms.PictureBox();
             this.pictureBoxLastTwits = new System.Windows.Forms.PictureBox();
             this.pictureBoxHome = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelTwits = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBoxCajaTwit = new System.Windows.Forms.RichTextBox();
             this.LastTwits = new System.Windows.Forms.TabPage();
@@ -71,17 +73,17 @@ namespace DINT_F_P
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPageConfig = new System.Windows.Forms.TabPage();
-            this.ButtonTwittIt = new BotonCustom.CustomButton1();
             this.ControlPaginas.SuspendLayout();
             this.Main.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.UserMainTimeline.SuspendLayout();
+            this.Timeline.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastTwits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
+            this.panel2.SuspendLayout();
             this.LastTwits.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -101,11 +103,11 @@ namespace DINT_F_P
             // ControlPaginas
             // 
             this.ControlPaginas.Controls.Add(this.Main);
-            this.ControlPaginas.Controls.Add(this.UserMainTimeline);
+            this.ControlPaginas.Controls.Add(this.Timeline);
             this.ControlPaginas.Controls.Add(this.LastTwits);
             this.ControlPaginas.Controls.Add(this.LastNotifications);
             this.ControlPaginas.Controls.Add(this.tabPageConfig);
-            this.ControlPaginas.Location = new System.Drawing.Point(-2, 12);
+            this.ControlPaginas.Location = new System.Drawing.Point(12, 12);
             this.ControlPaginas.Name = "ControlPaginas";
             this.ControlPaginas.SelectedIndex = 0;
             this.ControlPaginas.Size = new System.Drawing.Size(1009, 542);
@@ -122,19 +124,6 @@ namespace DINT_F_P
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
-            // 
-            // customButton1Login
-            // 
-            this.customButton1Login.BackColor = System.Drawing.Color.DimGray;
-            this.customButton1Login.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.customButton1Login.ForeColor = System.Drawing.Color.White;
-            this.customButton1Login.Location = new System.Drawing.Point(126, 66);
-            this.customButton1Login.Name = "customButton1Login";
-            this.customButton1Login.Size = new System.Drawing.Size(113, 24);
-            this.customButton1Login.TabIndex = 3;
-            this.customButton1Login.Text = "Login";
-            this.customButton1Login.UseVisualStyleBackColor = false;
-            this.customButton1Login.Click += new System.EventHandler(this.customButton1Login_Click);
             // 
             // label1
             // 
@@ -158,6 +147,19 @@ namespace DINT_F_P
             this.panel1.Size = new System.Drawing.Size(371, 103);
             this.panel1.TabIndex = 1;
             // 
+            // customButton1Login
+            // 
+            this.customButton1Login.BackColor = System.Drawing.Color.DimGray;
+            this.customButton1Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.customButton1Login.ForeColor = System.Drawing.Color.White;
+            this.customButton1Login.Location = new System.Drawing.Point(126, 66);
+            this.customButton1Login.Name = "customButton1Login";
+            this.customButton1Login.Size = new System.Drawing.Size(113, 24);
+            this.customButton1Login.TabIndex = 3;
+            this.customButton1Login.Text = "Login";
+            this.customButton1Login.UseVisualStyleBackColor = false;
+            this.customButton1Login.Click += new System.EventHandler(this.customButton1Login_Click);
+            // 
             // textBoxContrasenya
             // 
             this.textBoxContrasenya.Location = new System.Drawing.Point(86, 40);
@@ -178,16 +180,16 @@ namespace DINT_F_P
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxUsuario.Click += new System.EventHandler(this.textBoxUsuario_Click);
             // 
-            // UserMainTimeline
+            // Timeline
             // 
-            this.UserMainTimeline.Controls.Add(this.panel3);
-            this.UserMainTimeline.Location = new System.Drawing.Point(4, 22);
-            this.UserMainTimeline.Name = "UserMainTimeline";
-            this.UserMainTimeline.Padding = new System.Windows.Forms.Padding(3);
-            this.UserMainTimeline.Size = new System.Drawing.Size(1001, 516);
-            this.UserMainTimeline.TabIndex = 1;
-            this.UserMainTimeline.Text = "Timeline";
-            this.UserMainTimeline.UseVisualStyleBackColor = true;
+            this.Timeline.Controls.Add(this.panel3);
+            this.Timeline.Location = new System.Drawing.Point(4, 22);
+            this.Timeline.Name = "Timeline";
+            this.Timeline.Padding = new System.Windows.Forms.Padding(3);
+            this.Timeline.Size = new System.Drawing.Size(1001, 516);
+            this.Timeline.TabIndex = 1;
+            this.Timeline.Text = "Timeline";
+            this.Timeline.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -200,6 +202,18 @@ namespace DINT_F_P
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(989, 514);
             this.panel3.TabIndex = 0;
+            // 
+            // ButtonTwittIt
+            // 
+            this.ButtonTwittIt.BackColor = System.Drawing.Color.DimGray;
+            this.ButtonTwittIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ButtonTwittIt.ForeColor = System.Drawing.Color.White;
+            this.ButtonTwittIt.Location = new System.Drawing.Point(527, 138);
+            this.ButtonTwittIt.Name = "ButtonTwittIt";
+            this.ButtonTwittIt.Size = new System.Drawing.Size(66, 23);
+            this.ButtonTwittIt.TabIndex = 6;
+            this.ButtonTwittIt.Text = "Twitt It!";
+            this.ButtonTwittIt.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -263,10 +277,18 @@ namespace DINT_F_P
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.flowLayoutPanelTwits);
             this.panel2.Location = new System.Drawing.Point(230, 167);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(541, 240);
+            this.panel2.Size = new System.Drawing.Size(541, 337);
             this.panel2.TabIndex = 3;
+            // 
+            // flowLayoutPanelTwits
+            // 
+            this.flowLayoutPanelTwits.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelTwits.Name = "flowLayoutPanelTwits";
+            this.flowLayoutPanelTwits.Size = new System.Drawing.Size(540, 332);
+            this.flowLayoutPanelTwits.TabIndex = 0;
             // 
             // label2
             // 
@@ -371,7 +393,7 @@ namespace DINT_F_P
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Location = new System.Drawing.Point(230, 167);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(541, 240);
+            this.panel5.Size = new System.Drawing.Size(541, 338);
             this.panel5.TabIndex = 3;
             // 
             // labelLastTwits
@@ -486,7 +508,7 @@ namespace DINT_F_P
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Location = new System.Drawing.Point(230, 167);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(541, 240);
+            this.panel7.Size = new System.Drawing.Size(541, 338);
             this.panel7.TabIndex = 3;
             // 
             // labelLastNotifications
@@ -527,18 +549,6 @@ namespace DINT_F_P
             this.tabPageConfig.Text = "Config";
             this.tabPageConfig.UseVisualStyleBackColor = true;
             // 
-            // ButtonTwittIt
-            // 
-            this.ButtonTwittIt.BackColor = System.Drawing.Color.DimGray;
-            this.ButtonTwittIt.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.ButtonTwittIt.ForeColor = System.Drawing.Color.White;
-            this.ButtonTwittIt.Location = new System.Drawing.Point(527, 138);
-            this.ButtonTwittIt.Name = "ButtonTwittIt";
-            this.ButtonTwittIt.Size = new System.Drawing.Size(66, 23);
-            this.ButtonTwittIt.TabIndex = 6;
-            this.ButtonTwittIt.Text = "Twitt It!";
-            this.ButtonTwittIt.UseVisualStyleBackColor = false;
-            // 
             // TwitClientMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,7 +564,7 @@ namespace DINT_F_P
             this.Main.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.UserMainTimeline.ResumeLayout(false);
+            this.Timeline.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -562,6 +572,7 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastTwits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.LastTwits.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -585,12 +596,11 @@ namespace DINT_F_P
         #endregion
         private System.Windows.Forms.TabControl ControlPaginas;
         private System.Windows.Forms.TabPage Main;
-        private System.Windows.Forms.TabPage UserMainTimeline;
+        private System.Windows.Forms.TabPage Timeline;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxContrasenya;
         private System.Windows.Forms.TextBox textBoxUsuario;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox richTextBoxCajaTwit;
         private System.Windows.Forms.TabPage LastTwits;
         private System.Windows.Forms.TabPage LastNotifications;
@@ -625,6 +635,8 @@ namespace DINT_F_P
         private BotonCustom.CustomButton1 customButton11;
         private BotonCustom.CustomButton1 customButton1Login;
         private BotonCustom.CustomButton1 ButtonTwittIt;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTwits;
     }
 }
 
