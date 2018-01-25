@@ -71,9 +71,15 @@ namespace DINT_F_P{
                     reader.Close();
                     reader = consultaMensajes(user);
                     while (reader.Read())
-                    {
-                        //TODO: instancio caja y le meto toa la info
-                        MessageBox.Show(reader["mensaje"].ToString());
+                    { 
+                        
+                        CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+                        cajita.Favs = Int32.Parse(reader["num_rets"].ToString());
+                        cajita.Rets = Int32.Parse(reader["num_favs"].ToString());
+                        cajita.Mensaje = reader["mensaje"].ToString();
+                        cajita.User = reader["user_emisor"].ToString();
+                        flowLayoutPanelTwits.Controls.Add(cajita); //PA METER LA CAJITA
+                        MessageBox.Show(cajita.Favs.ToString());
                     }
                     
                     reader.Close();
@@ -92,9 +98,9 @@ namespace DINT_F_P{
         }
         private MySqlDataReader consultaMensajes(string user) {
 
-            string sql = "SELECT * from mensajes WHERE mail_receptor=@USER";
+            string sql = "SELECT * from mensajes WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) ORDER BY fecha";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
-            comand.Parameters.AddWithValue("@USER", "bea@mail.com");
+            comand.Parameters.AddWithValue("@USER", user);
             MySqlDataReader reader = comand.ExecuteReader();
 
             return reader;

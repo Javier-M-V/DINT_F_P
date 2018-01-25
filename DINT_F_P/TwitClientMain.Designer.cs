@@ -208,7 +208,7 @@ namespace DINT_F_P
             this.ButtonTwittIt.BackColor = System.Drawing.Color.DimGray;
             this.ButtonTwittIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ButtonTwittIt.ForeColor = System.Drawing.Color.White;
-            this.ButtonTwittIt.Location = new System.Drawing.Point(527, 138);
+            this.ButtonTwittIt.Location = new System.Drawing.Point(510, 113);
             this.ButtonTwittIt.Name = "ButtonTwittIt";
             this.ButtonTwittIt.Size = new System.Drawing.Size(66, 23);
             this.ButtonTwittIt.TabIndex = 6;
@@ -278,16 +278,17 @@ namespace DINT_F_P
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.flowLayoutPanelTwits);
-            this.panel2.Location = new System.Drawing.Point(230, 167);
+            this.panel2.Location = new System.Drawing.Point(213, 142);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(541, 337);
+            this.panel2.Size = new System.Drawing.Size(581, 337);
             this.panel2.TabIndex = 3;
             // 
             // flowLayoutPanelTwits
             // 
+            this.flowLayoutPanelTwits.AutoScroll = true;
             this.flowLayoutPanelTwits.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelTwits.Name = "flowLayoutPanelTwits";
-            this.flowLayoutPanelTwits.Size = new System.Drawing.Size(540, 332);
+            this.flowLayoutPanelTwits.Size = new System.Drawing.Size(576, 332);
             this.flowLayoutPanelTwits.TabIndex = 0;
             // 
             // label2
@@ -304,7 +305,7 @@ namespace DINT_F_P
             // richTextBoxCajaTwit
             // 
             this.richTextBoxCajaTwit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBoxCajaTwit.Location = new System.Drawing.Point(230, 98);
+            this.richTextBoxCajaTwit.Location = new System.Drawing.Point(213, 73);
             this.richTextBoxCajaTwit.Name = "richTextBoxCajaTwit";
             this.richTextBoxCajaTwit.Size = new System.Drawing.Size(291, 63);
             this.richTextBoxCajaTwit.TabIndex = 2;
