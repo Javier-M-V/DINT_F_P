@@ -18,7 +18,6 @@ C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csproj.Generate
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csproj.CoreCompileInputs.cache
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.exe
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.pdb
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\WindowsFormsControlLibrary1.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\WindowsFormsControlLibrary1.pdb
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\WindowsFormsControlLibrary1.pdb
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\MySql.Data.dll
@@ -31,5 +30,4 @@ C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\BotonCustom.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\PanelTwitt.pdb
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.pdb

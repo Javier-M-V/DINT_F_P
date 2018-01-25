@@ -14,9 +14,9 @@ namespace DINT_F_P{
         public TwitClientMain(){
 
             InitializeComponent();
-            conectarBBDD(ref build, ref conexion);   
+            ConectarBBDD(ref build, ref conexion);   
         }
-        public void conectarBBDD(ref MySqlConnectionStringBuilder build, ref MySqlConnection conexion) {
+        public void ConectarBBDD(ref MySqlConnectionStringBuilder build, ref MySqlConnection conexion) {
 
             try{
 
@@ -26,12 +26,11 @@ namespace DINT_F_P{
                 build.Password = "12345";
                 build.Database = "twittclient";
                 conexion = new MySqlConnection(build.ToString());
-                conexion.Open();
-                MessageBox.Show("Conectadito");  
+                conexion.Open(); 
             }
-            catch (MySqlException e) { e.ToString(); MessageBox.Show("Error de conexión a BBDD"); }
+            catch (MySqlException) { MessageBox.Show("Error de conexión a BBDD"); }
         }
-        public void desconectarBBDD(ref MySqlConnection conexion) {
+        public void DesconectarBBDD(ref MySqlConnection conexion) {
 
             try{
 
@@ -42,11 +41,11 @@ namespace DINT_F_P{
         //EVENTO AL CIERRE DE LA APLICACIÓN: cerrar la conexión a BBDD
         private void TwitClientMain_FormClosed(object sender, FormClosedEventArgs e){
 
-            desconectarBBDD(ref conexion);
+            DesconectarBBDD(ref conexion);
         }
 
         //CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
-        private void customButton1Login_Click(object sender, EventArgs e){
+        private void CustomButton1Login_Click(object sender, EventArgs e){
 
             Usuario = textBoxUsuario.Text;
             Contrasenya = textBoxContrasenya.Text;
@@ -67,9 +66,9 @@ namespace DINT_F_P{
                     richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
                     labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
                     labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications"; reader.Close();
-                    //cargamos todos los mensajes
+                    //cargamos todos los tuits necesarios en las páginas correspondientes
                     reader.Close();
-                    reader = consultaMensajes(user);
+                    reader = RescateTimeline(user);
                     while (reader.Read())
                     { 
                         
@@ -81,7 +80,6 @@ namespace DINT_F_P{
                         flowLayoutPanelTwits.Controls.Add(cajita); //PA METER LA CAJITA
                         MessageBox.Show(cajita.Favs.ToString());
                     }
-                    
                     reader.Close();
                 }
                 else{
@@ -96,23 +94,33 @@ namespace DINT_F_P{
                 reader.Close();
             }
         }
-        private MySqlDataReader consultaMensajes(string user) {
+        private MySqlDataReader RescateTimeline(string user) {
 
             string sql = "SELECT * from mensajes WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) ORDER BY fecha";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", user);
-            MySqlDataReader reader = comand.ExecuteReader();
+            MySqlDataReader readertimeline = comand.ExecuteReader();
+       
+            return readertimeline;
+        }
 
-            return reader;
+        private MySqlDataReader RescateTwittsSelfUsuario (string user) {
+
+            string sql = "SELECT * from mensajes WHERE user_emisor = @USER ORDER BY fecha";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", user);
+            MySqlDataReader readermensajesuser = comand.ExecuteReader();
+
+            return readermensajesuser;
         }
 
         //Borra el contenido al hacer clic en la caja
-        private void textBoxContrasenya_Click(object sender, EventArgs e){
+        private void TextBoxContrasenya_Click(object sender, EventArgs e){
 
             textBoxContrasenya.Text = "";
         }
         //Borra el contenido al hacer clic en la caja
-        private void textBoxUsuario_Click(object sender, EventArgs e){
+        private void TextBoxUsuario_Click(object sender, EventArgs e){
 
             textBoxUsuario.Text =  "";
         }
@@ -121,37 +129,37 @@ namespace DINT_F_P{
 
 
         //CÓDIGO RELATIVO AL TIMELINE
-        private void pictureBox1_Click(object sender, EventArgs e){
+        private void PictureBox1_Click(object sender, EventArgs e){
 
             //button for create a twitt
 
         }
 
         //Va a la página de notificaciones
-        private void pictureBoxNotifications_Click(object sender, EventArgs e){
+        private void PictureBoxNotifications_Click(object sender, EventArgs e){
 
             ControlPaginas.SelectedTab = LastNotifications;
         }
 
         //Va a la página principal
-        private void pictureBoxHome_Click(object sender, EventArgs e){
+        private void PictureBoxHome_Click(object sender, EventArgs e){
 
             ControlPaginas.SelectedTab = LastTwits;
         }
 
         //Va a la página Last twitts
-        private void pictureBoxLastTwits_Click(object sender, EventArgs e){
+        private void PictureBoxLastTwits_Click(object sender, EventArgs e){
 
             ControlPaginas.SelectedTab = LastTwits;
         }
 
-        private void pictureBoxConfig_Click(object sender, EventArgs e){
+        private void PictureBoxConfig_Click(object sender, EventArgs e){
 
             ControlPaginas.SelectedTab = LastTwits;
         }
 
         //Si hacemos focus en la caja, borramos el contenido
-        private void richTextBoxCajaTwit_Click(object sender, EventArgs e){
+        private void RichTextBoxCajaTwit_Click(object sender, EventArgs e){
 
             richTextBox1.Text = "";
         }

@@ -158,7 +158,7 @@ namespace DINT_F_P
             this.customButton1Login.TabIndex = 3;
             this.customButton1Login.Text = "Login";
             this.customButton1Login.UseVisualStyleBackColor = false;
-            this.customButton1Login.Click += new System.EventHandler(this.customButton1Login_Click);
+            this.customButton1Login.Click += new System.EventHandler(this.CustomButton1Login_Click);
             // 
             // textBoxContrasenya
             // 
@@ -168,7 +168,7 @@ namespace DINT_F_P
             this.textBoxContrasenya.TabIndex = 2;
             this.textBoxContrasenya.Text = "*****";
             this.textBoxContrasenya.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxContrasenya.Click += new System.EventHandler(this.textBoxContrasenya_Click);
+            this.textBoxContrasenya.Click += new System.EventHandler(this.TextBoxContrasenya_Click);
             // 
             // textBoxUsuario
             // 
@@ -178,7 +178,7 @@ namespace DINT_F_P
             this.textBoxUsuario.TabIndex = 1;
             this.textBoxUsuario.Text = "@twitterUser";
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxUsuario.Click += new System.EventHandler(this.textBoxUsuario_Click);
+            this.textBoxUsuario.Click += new System.EventHandler(this.TextBoxUsuario_Click);
             // 
             // Timeline
             // 
@@ -236,7 +236,7 @@ namespace DINT_F_P
             this.pictureBoxConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxConfig.TabIndex = 7;
             this.pictureBoxConfig.TabStop = false;
-            this.pictureBoxConfig.Click += new System.EventHandler(this.pictureBoxConfig_Click);
+            this.pictureBoxConfig.Click += new System.EventHandler(this.PictureBoxConfig_Click);
             // 
             // pictureBoxNotifications
             // 
@@ -248,7 +248,7 @@ namespace DINT_F_P
             this.pictureBoxNotifications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNotifications.TabIndex = 6;
             this.pictureBoxNotifications.TabStop = false;
-            this.pictureBoxNotifications.Click += new System.EventHandler(this.pictureBoxNotifications_Click);
+            this.pictureBoxNotifications.Click += new System.EventHandler(this.PictureBoxNotifications_Click);
             // 
             // pictureBoxLastTwits
             // 
@@ -260,7 +260,7 @@ namespace DINT_F_P
             this.pictureBoxLastTwits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLastTwits.TabIndex = 4;
             this.pictureBoxLastTwits.TabStop = false;
-            this.pictureBoxLastTwits.Click += new System.EventHandler(this.pictureBoxLastTwits_Click);
+            this.pictureBoxLastTwits.Click += new System.EventHandler(this.PictureBoxLastTwits_Click);
             // 
             // pictureBoxHome
             // 
@@ -272,7 +272,7 @@ namespace DINT_F_P
             this.pictureBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxHome.TabIndex = 3;
             this.pictureBoxHome.TabStop = false;
-            this.pictureBoxHome.Click += new System.EventHandler(this.pictureBoxHome_Click);
+            this.pictureBoxHome.Click += new System.EventHandler(this.PictureBoxHome_Click);
             // 
             // panel2
             // 
@@ -310,7 +310,7 @@ namespace DINT_F_P
             this.richTextBoxCajaTwit.Size = new System.Drawing.Size(291, 63);
             this.richTextBoxCajaTwit.TabIndex = 2;
             this.richTextBoxCajaTwit.Text = "";
-            this.richTextBoxCajaTwit.Click += new System.EventHandler(this.richTextBoxCajaTwit_Click);
+            this.richTextBoxCajaTwit.Click += new System.EventHandler(this.RichTextBoxCajaTwit_Click);
             // 
             // LastTwits
             // 
