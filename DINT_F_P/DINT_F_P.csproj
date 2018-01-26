@@ -39,9 +39,6 @@
       <HintPath>..\..\CajaTwitt\CajaTwitt\bin\Debug\CajaTwitt.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="PanelTwitt">
-      <HintPath>..\..\PanelTwitt\PanelTwitt\bin\Debug\PanelTwitt.dll</HintPath>
-    </Reference>
     <Reference Include="roundedButton">
       <HintPath>..\..\roundedButton\roundedButton\bin\Debug\roundedButton.dll</HintPath>
     </Reference>

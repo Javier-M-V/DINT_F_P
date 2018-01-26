@@ -73,12 +73,13 @@ namespace DINT_F_P{
                     { 
                         
                         CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
-                        cajita.Favs = Int32.Parse(reader["num_rets"].ToString());
-                        cajita.Rets = Int32.Parse(reader["num_favs"].ToString());
-                        cajita.Mensaje = reader["mensaje"].ToString();
-                        cajita.User = reader["user_emisor"].ToString();
+
+                        cajita.SetTuit(reader["mensaje"].ToString());
+                        cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
+                        cajita.SetFavs(Int32.Parse(reader["num_favs"].ToString()));
+                        cajita.SetUser(reader["user_emisor"].ToString());
+
                         flowLayoutPanelTwits.Controls.Add(cajita); //PA METER LA CAJITA
-                        MessageBox.Show(cajita.Favs.ToString());
                     }
                     reader.Close();
                 }
