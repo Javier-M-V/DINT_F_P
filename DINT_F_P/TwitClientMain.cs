@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using TuitBox;
+using System.Drawing;
+using System.Globalization;
 
 namespace DINT_F_P{
 
@@ -70,16 +73,15 @@ namespace DINT_F_P{
                     reader.Close();
                     reader = RescateTimeline(user);
                     while (reader.Read())
-                    { 
-                        
-                        CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+                    {
 
+                        CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+                        cajita.ForeColor = Color.Black;
                         cajita.SetTuit(reader["mensaje"].ToString());
                         cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
                         cajita.SetFavs(Int32.Parse(reader["num_favs"].ToString()));
                         cajita.SetUser(reader["user_emisor"].ToString());
-
-                        flowLayoutPanelTwits.Controls.Add(cajita); //PA METER LA CAJITA
+                        flowLayoutPanelTwits.Controls.Add(cajita); 
                     }
                     reader.Close();
                 }
@@ -125,8 +127,7 @@ namespace DINT_F_P{
 
             textBoxUsuario.Text =  "";
         }
-        //FIN DE CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
-
+            //FIN DE CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
 
 
         //CÓDIGO RELATIVO AL TIMELINE
@@ -165,6 +166,27 @@ namespace DINT_F_P{
             richTextBox1.Text = "";
         }
 
-        //FIN DE CÓDIGO RELATIVO AL TIMELINE  
-    }
+        //Botón de tuitear
+        private void ButtonTwittIt_Click(object sender, EventArgs e)
+        {
+            //inserción en BBDD
+            string sql = "Insert INTO mensajes VALUES(@USER,@RECEPTOR,@DATE,@MENSAJE,@FAVS,@RETS)";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            comand.Parameters.AddWithValue("@RECEPTOR", "");
+            comand.Parameters.AddWithValue("@DATE", DateTime.Now.ToString("yyyy-MM-dd h:mm:ss"));
+            comand.Parameters.AddWithValue("@MENSAJE", richTextBoxCajaTwit.Text);
+            comand.Parameters.AddWithValue("@FAVS", 0);
+            comand.Parameters.AddWithValue("@RETS", 0);
+
+            //refresco del flowlayout e inserción del tuit en la vista
+            CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+            cajita.ForeColor = Color.Black;
+            cajita.SetTuit(richTextBoxCajaTwit.Text);
+            cajita.SetRets(0);
+            cajita.SetFavs(0);
+            cajita.SetUser(Usuario);
+            flowLayoutPanelTwits.Controls.Add(cajita);
+        }           
+    }           //FIN DE CÓDIGO RELATIVO AL TIMELINE  
 }

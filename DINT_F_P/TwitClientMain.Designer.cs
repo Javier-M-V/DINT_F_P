@@ -73,7 +73,6 @@ namespace DINT_F_P
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPageConfig = new System.Windows.Forms.TabPage();
-            this.userControl11 = new CajaTwitt.UserControl1();
             this.ControlPaginas.SuspendLayout();
             this.Main.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -116,7 +115,6 @@ namespace DINT_F_P
             // 
             // Main
             // 
-            this.Main.Controls.Add(this.userControl11);
             this.Main.Controls.Add(this.label1);
             this.Main.Controls.Add(this.panel1);
             this.Main.Location = new System.Drawing.Point(4, 22);
@@ -216,6 +214,7 @@ namespace DINT_F_P
             this.ButtonTwittIt.TabIndex = 6;
             this.ButtonTwittIt.Text = "Twitt It!";
             this.ButtonTwittIt.UseVisualStyleBackColor = false;
+            this.ButtonTwittIt.Click += new System.EventHandler(this.ButtonTwittIt_Click);
             // 
             // panel8
             // 
@@ -552,18 +551,6 @@ namespace DINT_F_P
             this.tabPageConfig.Text = "Config";
             this.tabPageConfig.UseVisualStyleBackColor = true;
             // 
-            // userControl11
-            // 
-            this.userControl11.Favs = 0;
-            this.userControl11.Foto = 0;
-            this.userControl11.Location = new System.Drawing.Point(106, 56);
-            this.userControl11.Mensaje = null;
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Rets = 0;
-            this.userControl11.Size = new System.Drawing.Size(540, 121);
-            this.userControl11.TabIndex = 3;
-            this.userControl11.User = null;
-            // 
             // TwitClientMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,7 +638,6 @@ namespace DINT_F_P
         private BotonCustom.CustomButton1 ButtonTwittIt;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTwits;
-        private CajaTwitt.UserControl1 userControl11;
     }
 }
 
