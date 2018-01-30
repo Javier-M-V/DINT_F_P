@@ -71,7 +71,8 @@ namespace DINT_F_P{
                     //cargamos todos los tuits necesarios en las páginas correspondientes
                     Reader.Close();
                     RescateTimeline(Usuario);
-                    
+                    RescateTwittsSelfUsuario(Usuario);
+
                 }
                 else{
 
@@ -85,6 +86,13 @@ namespace DINT_F_P{
                 Reader.Close();
             }
         }
+        //Comportamiento de tecla enter en el login
+        private void customButton1Login_Enter(object sender, EventArgs e)
+        {
+            CustomButton1Login_Click(sender, e);
+        }
+
+        //rellena el flowlayout con los tuits de los usuarios que sigue el usuario logueado
         private void RescateTimeline(string User) {
 
             string sql = "SELECT * from mensajes WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) ORDER BY fecha";
@@ -105,8 +113,8 @@ namespace DINT_F_P{
             Reader.Close();  
         }
 
+        //rellena el flowlayout con los tuits del usuario logueado
         private void RescateTwittsSelfUsuario (string Usuario) {
-
             string sql = "SELECT * from mensajes WHERE user_emisor = @USER ORDER BY fecha";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", Usuario);
@@ -120,7 +128,6 @@ namespace DINT_F_P{
                 cajita.SetFavs(Int32.Parse(Reader["num_favs"].ToString()));
                 cajita.SetUser(Reader["user_emisor"].ToString());
                 flowLayoutPanelLastTuits.Controls.Add(cajita);
-                MessageBox.Show(Reader["user_emisor"].ToString());
             }
             Reader.Close();
         }
@@ -139,11 +146,6 @@ namespace DINT_F_P{
 
 
         //CÓDIGO RELATIVO AL TIMELINE
-        private void PictureBox1_Click(object sender, EventArgs e){
-
-            //button for create a twitt
-
-        }
 
         //Va a la página de notificaciones
         private void PictureBoxNotifications_Click(object sender, EventArgs e){
@@ -151,29 +153,22 @@ namespace DINT_F_P{
             ControlPaginas.SelectedTab = LastNotifications;
         }
 
-        //Va a la página principal
-        private void PictureBoxHome_Click(object sender, EventArgs e){
-
-            ControlPaginas.SelectedTab = LastTwits;
-        }
-
         //Va a la página Last twitts
         private void PictureBoxLastTwits_Click(object sender, EventArgs e){
 
-            RescateTwittsSelfUsuario(Usuario);
             ControlPaginas.SelectedTab = LastTwits;
             
         }
 
         private void PictureBoxConfig_Click(object sender, EventArgs e){
 
-            ControlPaginas.SelectedTab = LastTwits;
+            ControlPaginas.SelectedTab = tabPagePerfilUser;
         }
 
         //Si hacemos focus en la caja, borramos el contenido
         private void RichTextBoxCajaTwit_Click(object sender, EventArgs e){
 
-            //richTextBox1.Text = "";
+           // richTextBox1.Text = "";
         }
 
         //Botón de tuitear
@@ -200,6 +195,69 @@ namespace DINT_F_P{
             cajita.SetUser(Usuario);
             flowLayoutPanelTwits.Controls.Add(cajita);
             RescateTimeline(Usuario);
-        }           
-    }           //FIN DE CÓDIGO RELATIVO AL TIMELINE  
+            flowLayoutPanelLastTuits.Controls.Clear();
+            RescateTwittsSelfUsuario(Usuario);
+        }
+ 
+            //FIN DE CÓDIGO RELATIVO AL TIMELINE
+
+        //BOTONES DE CAMBIO DE PANTALLA
+        //CÓDIGO RELATIVO A LAST TUITS
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = Timeline;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastNotifications;
+        }
+
+        private void pictureBoxuser2_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = tabPagePerfilUser;
+        }
+               //FIN DE CÓDIGO RELATIVO A LAST TUITS
+        //CODIGO DE NOTIFICATIONS
+        private void pictureBoxtimeline3_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastTwits;
+        }
+
+        private void pictureBoxhome3_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = Timeline;
+        }
+
+        private void pictureBoxuser3_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = tabPagePerfilUser;
+        }
+                //FIN DE CODIGO DE NOTIFICATIONS
+        //CODIGO DE PERFIL
+        private void pictureBoxHome4_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = Timeline;
+        }
+
+        private void pictureBoxLasttuits4_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastTwits;
+        }
+
+        private void pictureBoxNotifications4_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastNotifications;
+        }
+
+        //Botón de logout
+        private void customButtonLogout_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = Main;
+            DesconectarBBDD(ref conexion);
+            Usuario = "";
+            Contrasenya = "";
+        }
+        //FIN DE CODIGO DE PERFIL
+    }
 }
