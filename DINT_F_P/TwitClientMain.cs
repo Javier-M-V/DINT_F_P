@@ -13,6 +13,7 @@ namespace DINT_F_P{
         private string Contrasenya { get; set; }
         private MySqlConnectionStringBuilder build = null;
         private MySqlConnection conexion = null;
+        private MySqlDataReader Reader = null;
 
         public TwitClientMain(){
 
@@ -52,69 +53,76 @@ namespace DINT_F_P{
 
             Usuario = textBoxUsuario.Text;
             Contrasenya = textBoxContrasenya.Text;
-
-            string user = Usuario;
             string sql = "SELECT * from usuarios WHERE usuario_twitter=@USER";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", Usuario);
-            MySqlDataReader reader = comand.ExecuteReader();
+            Reader = comand.ExecuteReader();
 
             //Si el user existe se ejecuta el bloque
-            if (reader.Read()){
+            if (Reader.Read()){
                 //si en la BBDD la contraseña coincide se ejecuta el bloque
-                if (reader["contrasena"].ToString() == Contrasenya){ 
+                if (Reader["contrasena"].ToString() == Contrasenya){ 
 
                     ControlPaginas.SelectedTab = Timeline;
                     //Fijamos el texto de labels  y textos dinamicamente
-                    richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
-                    labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
-                    labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications"; reader.Close();
+                    richTextBoxCajaTwit.Text = "twitt as " + Reader["usuario_twitter"].ToString();
+                    labelLastTwits.Text = Reader["usuario_twitter"].ToString() + " last twitts";
+                    labelLastNotifications.Text = Reader["usuario_twitter"].ToString() + " last notifications"; Reader.Close();
                     //cargamos todos los tuits necesarios en las páginas correspondientes
-                    reader.Close();
-                    reader = RescateTimeline(user);
-                    while (reader.Read())
-                    {
-
-                        CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
-                        cajita.ForeColor = Color.Black;
-                        cajita.SetTuit(reader["mensaje"].ToString());
-                        cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
-                        cajita.SetFavs(Int32.Parse(reader["num_favs"].ToString()));
-                        cajita.SetUser(reader["user_emisor"].ToString());
-                        flowLayoutPanelTwits.Controls.Add(cajita); 
-                    }
-                    reader.Close();
+                    Reader.Close();
+                    RescateTimeline(Usuario);
+                    
                 }
                 else{
 
                     MessageBox.Show("Usuario/contraeña incorrectos");
-                    reader.Close();
+                    Reader.Close();
                 }
             }
             else{
 
                 MessageBox.Show("Usuario/contraeña incorrectos");
-                reader.Close();
+                Reader.Close();
             }
         }
-        private MySqlDataReader RescateTimeline(string user) {
+        private void RescateTimeline(string User) {
 
             string sql = "SELECT * from mensajes WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) ORDER BY fecha";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
-            comand.Parameters.AddWithValue("@USER", user);
-            MySqlDataReader readertimeline = comand.ExecuteReader();
-       
-            return readertimeline;
+            comand.Parameters.AddWithValue("@USER", User);
+            Reader = comand.ExecuteReader();
+            
+            while (Reader.Read())
+            {
+                CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+                cajita.ForeColor = Color.Black;
+                cajita.SetTuit(Reader["mensaje"].ToString());
+                cajita.SetRets(Int32.Parse(Reader["num_rets"].ToString()));
+                cajita.SetFavs(Int32.Parse(Reader["num_favs"].ToString()));
+                cajita.SetUser(Reader["user_emisor"].ToString());
+                flowLayoutPanelTwits.Controls.Add(cajita);
+            }
+            Reader.Close();  
         }
 
-        private MySqlDataReader RescateTwittsSelfUsuario (string user) {
+        private void RescateTwittsSelfUsuario (string Usuario) {
 
             string sql = "SELECT * from mensajes WHERE user_emisor = @USER ORDER BY fecha";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
-            comand.Parameters.AddWithValue("@USER", user);
-            MySqlDataReader readermensajesuser = comand.ExecuteReader();
-
-            return readermensajesuser;
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            Reader = comand.ExecuteReader();
+            while (Reader.Read())
+            {
+                CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+                cajita.ForeColor = Color.Black;
+                cajita.SetTuit(Reader["mensaje"].ToString());
+                cajita.SetRets(Int32.Parse(Reader["num_rets"].ToString()));
+                cajita.SetFavs(Int32.Parse(Reader["num_favs"].ToString()));
+                cajita.SetUser(Reader["user_emisor"].ToString());
+                flowLayoutPanelLastTuits.Controls.Add(cajita);
+                MessageBox.Show(Reader["user_emisor"].ToString());
+            }
+            Reader.Close();
         }
 
         //Borra el contenido al hacer clic en la caja
@@ -152,7 +160,9 @@ namespace DINT_F_P{
         //Va a la página Last twitts
         private void PictureBoxLastTwits_Click(object sender, EventArgs e){
 
+            RescateTwittsSelfUsuario(Usuario);
             ControlPaginas.SelectedTab = LastTwits;
+            
         }
 
         private void PictureBoxConfig_Click(object sender, EventArgs e){
@@ -163,7 +173,7 @@ namespace DINT_F_P{
         //Si hacemos focus en la caja, borramos el contenido
         private void RichTextBoxCajaTwit_Click(object sender, EventArgs e){
 
-            richTextBox1.Text = "";
+            //richTextBox1.Text = "";
         }
 
         //Botón de tuitear
@@ -178,8 +188,10 @@ namespace DINT_F_P{
             comand.Parameters.AddWithValue("@MENSAJE", richTextBoxCajaTwit.Text);
             comand.Parameters.AddWithValue("@FAVS", 0);
             comand.Parameters.AddWithValue("@RETS", 0);
+            comand.ExecuteNonQuery();
 
             //refresco del flowlayout e inserción del tuit en la vista
+            flowLayoutPanelTwits.Controls.Clear();
             CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
             cajita.ForeColor = Color.Black;
             cajita.SetTuit(richTextBoxCajaTwit.Text);
@@ -187,6 +199,7 @@ namespace DINT_F_P{
             cajita.SetFavs(0);
             cajita.SetUser(Usuario);
             flowLayoutPanelTwits.Controls.Add(cajita);
+            RescateTimeline(Usuario);
         }           
     }           //FIN DE CÓDIGO RELATIVO AL TIMELINE  
 }
