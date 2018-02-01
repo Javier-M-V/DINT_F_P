@@ -91,16 +91,9 @@ namespace DINT_F_P{
 
                     ControlPaginas.SelectedTab = Timeline;
                     //Fijamos el texto de labels  y textos dinamicamente
-                    richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
-                    labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
-                    labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications";
-                    labelEstadoUser.Text = reader["estado"].ToString();
-                    byte[] avatarByte = (byte[])reader["foto"];
-                    MemoryStream ms = new MemoryStream(avatarByte);
-                    Image fotoavatar = Image.FromStream(ms);
-                    pictureBoxFotoPerfilTImeline.Image = fotoavatar;
+                    SetContenidoDinamico(reader);
                     //cargamos todos los tuits necesarios en las páginas correspondientes
-                    reader.Close();
+                    //reader.Close();
                     RescateTimeline(Usuario);
                     RescateTwittsSelfUsuario(Usuario);
                 }
@@ -116,6 +109,36 @@ namespace DINT_F_P{
                 reader.Close();
             }
         }
+
+        //Carga de todo los datos de la BBDD según el usuario logeado con éxito
+        private void SetContenidoDinamico(MySqlDataReader reader) {
+
+            richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
+            labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
+            labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications";
+            labelEstadoUser.Text = reader["estado"].ToString();
+            byte[] avatarByte = (byte[])reader["foto"];
+            MemoryStream ms = new MemoryStream(avatarByte);
+            Image fotoavatar = Image.FromStream(ms);
+            pictureBoxFotoPerfilTImeline.Image = fotoavatar;
+            pictureBoxPerfilUserFoto.Image = fotoavatar;
+            labelEstadUserPerfil.Text = reader["estado"].ToString();
+            labelNombreUserperfil.Text = reader["usuario_twitter"].ToString();
+            reader.Close();
+
+            string sql = "SELECT COUNT (mensaje) FROM mensajes WHERE user_emisor=@USER";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            MySqlDataReader readercalculo = comand.ExecuteReader();
+            if (readercalculo.Read())
+            {
+                string numtuits = readercalculo[0].ToString();
+                MessageBox.Show(numtuits);
+            }
+            
+
+        }
+
         //Comportamiento de tecla enter en el login
         private void customButton1Login_Enter(object sender, EventArgs e)
         {
@@ -280,8 +303,15 @@ namespace DINT_F_P{
             ControlPaginas.SelectedTab = LastNotifications;
         }
 
-        //Botón de logout
-        private void customButtonLogout_Click(object sender, EventArgs e)
+
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            //editar perfil
+        }
+
+        //logout text
+        private void logoutLabel_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = Main;
             DesconectarBBDD(ref conexion);
@@ -289,9 +319,14 @@ namespace DINT_F_P{
             Contrasenya = "";
         }
 
-        private void pictureBoxEditarFoto_Click(object sender, EventArgs e)
+        private void label12_MouseEnter(object sender, EventArgs e)
         {
-            //Cambiar la foto del perfil, señores
+            labelLogout.ForeColor = Color.DarkGray;
+        }
+
+        private void labelLogout_MouseLeave(object sender, EventArgs e)
+        {
+            labelLogout.ForeColor = Color.Black;
         }
         //FIN DE CODIGO DE PERFIL
     }

@@ -32,66 +32,68 @@ namespace DINT_F_P
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwitClientMain));
             this.tabPagePerfilUser = new System.Windows.Forms.TabPage();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBoxHome4 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLasttuits4 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxNotifications4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelMegustaUser = new System.Windows.Forms.Label();
-            this.labelPerfilNumTuits = new System.Windows.Forms.Label();
-            this.labelSiguiendoUser = new System.Windows.Forms.Label();
-            this.labelNumSeguidores = new System.Windows.Forms.Label();
-            this.labelPerfilSeguidores = new System.Windows.Forms.Label();
-            this.labelNumtTitsUser = new System.Windows.Forms.Label();
-            this.labellabelPerfilSiguiendo = new System.Windows.Forms.Label();
-            this.labelPerfilMegusta = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPerfilUserFoto = new System.Windows.Forms.PictureBox();
             this.labelNombreUserperfil = new System.Windows.Forms.Label();
-            this.customButtonLogout = new BotonCustom.CustomButton1();
+            this.labelEstadUserPerfil = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelPerfilMegusta = new System.Windows.Forms.Label();
+            this.labellabelPerfilSiguiendo = new System.Windows.Forms.Label();
+            this.labelNumtTitsUser = new System.Windows.Forms.Label();
+            this.labelPerfilSeguidores = new System.Windows.Forms.Label();
+            this.labelNumSeguidores = new System.Windows.Forms.Label();
+            this.labelSiguiendoUser = new System.Windows.Forms.Label();
+            this.labelPerfilNumTuits = new System.Windows.Forms.Label();
+            this.labelMegustaUser = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.labelLogout = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNotifications4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLasttuits4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHome4 = new System.Windows.Forms.PictureBox();
             this.LastNotifications = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.labelLastNotifications = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBoxhome3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxtimeline3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxuser3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBoxuser3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxtimeline3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxhome3 = new System.Windows.Forms.PictureBox();
+            this.labelLastNotifications = new System.Windows.Forms.Label();
             this.LastTwits = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.labelLastTwits = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBoxuser2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxnotifications2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxhome2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanelLastTuits = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBoxhome2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxnotifications2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxuser2 = new System.Windows.Forms.PictureBox();
+            this.labelLastTwits = new System.Windows.Forms.Label();
             this.Timeline = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBoxCajaTwit = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanelTwits = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBoxHome = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLastTwits = new System.Windows.Forms.PictureBox();
-            this.pictureBoxNotifications = new System.Windows.Forms.PictureBox();
-            this.pictureBoxConfig = new System.Windows.Forms.PictureBox();
-            this.ButtonTwittIt = new BotonCustom.CustomButton1();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelEstadoUser = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBoxFotoPerfilTImeline = new System.Windows.Forms.PictureBox();
+            this.labelEstadoUser = new System.Windows.Forms.Label();
+            this.ButtonTwittIt = new BotonCustom.CustomButton1();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBoxConfig = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNotifications = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLastTwits = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHome = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelTwits = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBoxCajaTwit = new System.Windows.Forms.RichTextBox();
             this.Main = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxUsuario = new System.Windows.Forms.TextBox();
-            this.textBoxContrasenya = new System.Windows.Forms.TextBox();
-            this.customButton1Login = new BotonCustom.CustomButton1();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.customButton1Login = new BotonCustom.CustomButton1();
+            this.textBoxContrasenya = new System.Windows.Forms.TextBox();
+            this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.ControlPaginas = new System.Windows.Forms.TabControl();
             this.tabPageContacto = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -112,43 +114,43 @@ namespace DINT_F_P
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxEditarFoto = new System.Windows.Forms.PictureBox();
             this.tabPagePerfilUser.SuspendLayout();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLasttuits4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLasttuits4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).BeginInit();
             this.LastNotifications.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).BeginInit();
             this.LastTwits.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).BeginInit();
+            this.panel5.SuspendLayout();
             this.Timeline.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastTwits)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfig)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPerfilTImeline)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastTwits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
+            this.panel2.SuspendLayout();
             this.Main.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ControlPaginas.SuspendLayout();
@@ -162,12 +164,11 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEditarFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPagePerfilUser
             // 
-            this.tabPagePerfilUser.Controls.Add(this.customButtonLogout);
+            this.tabPagePerfilUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPagePerfilUser.Controls.Add(this.tableLayoutPanel2);
             this.tabPagePerfilUser.Controls.Add(this.tableLayoutPanel1);
             this.tabPagePerfilUser.Controls.Add(this.panel12);
@@ -178,63 +179,82 @@ namespace DINT_F_P
             this.tabPagePerfilUser.Text = "Perfil";
             this.tabPagePerfilUser.UseVisualStyleBackColor = true;
             // 
-            // panel12
+            // tableLayoutPanel2
             // 
-            this.panel12.Controls.Add(this.pictureBox1);
-            this.panel12.Controls.Add(this.pictureBoxNotifications4);
-            this.panel12.Controls.Add(this.pictureBoxLasttuits4);
-            this.panel12.Controls.Add(this.pictureBoxHome4);
-            this.panel12.Location = new System.Drawing.Point(621, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(372, 68);
-            this.panel12.TabIndex = 7;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.labelNombreUserperfil, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.labelEstadUserPerfil, 0, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(390, 10);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(232, 229);
+            this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // pictureBoxHome4
+            // panel11
             // 
-            this.pictureBoxHome4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome4.Image")));
-            this.pictureBoxHome4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome4.InitialImage")));
-            this.pictureBoxHome4.Location = new System.Drawing.Point(251, 3);
-            this.pictureBoxHome4.Name = "pictureBoxHome4";
-            this.pictureBoxHome4.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxHome4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxHome4.TabIndex = 3;
-            this.pictureBoxHome4.TabStop = false;
-            this.pictureBoxHome4.Click += new System.EventHandler(this.pictureBoxHome4_Click);
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.Controls.Add(this.pictureBox8);
+            this.panel11.Controls.Add(this.pictureBoxPerfilUserFoto);
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(226, 140);
+            this.panel11.TabIndex = 2;
             // 
-            // pictureBoxLasttuits4
+            // pictureBox8
             // 
-            this.pictureBoxLasttuits4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLasttuits4.Image")));
-            this.pictureBoxLasttuits4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLasttuits4.InitialImage")));
-            this.pictureBoxLasttuits4.Location = new System.Drawing.Point(282, 3);
-            this.pictureBoxLasttuits4.Name = "pictureBoxLasttuits4";
-            this.pictureBoxLasttuits4.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxLasttuits4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLasttuits4.TabIndex = 4;
-            this.pictureBoxLasttuits4.TabStop = false;
-            this.pictureBoxLasttuits4.Click += new System.EventHandler(this.pictureBoxLasttuits4_Click);
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(175, 17);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.Editar_Click);
             // 
-            // pictureBoxNotifications4
+            // pictureBoxPerfilUserFoto
             // 
-            this.pictureBoxNotifications4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications4.Image")));
-            this.pictureBoxNotifications4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications4.InitialImage")));
-            this.pictureBoxNotifications4.Location = new System.Drawing.Point(313, 3);
-            this.pictureBoxNotifications4.Name = "pictureBoxNotifications4";
-            this.pictureBoxNotifications4.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxNotifications4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxNotifications4.TabIndex = 6;
-            this.pictureBoxNotifications4.TabStop = false;
-            this.pictureBoxNotifications4.Click += new System.EventHandler(this.pictureBoxNotifications4_Click);
+            this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxPerfilUserFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(55, 17);
+            this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
+            this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(114, 110);
+            this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPerfilUserFoto.TabIndex = 0;
+            this.pictureBoxPerfilUserFoto.TabStop = false;
             // 
-            // pictureBox1
+            // labelNombreUserperfil
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(344, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.labelNombreUserperfil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNombreUserperfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUserperfil.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelNombreUserperfil.Location = new System.Drawing.Point(3, 146);
+            this.labelNombreUserperfil.Name = "labelNombreUserperfil";
+            this.labelNombreUserperfil.Size = new System.Drawing.Size(226, 40);
+            this.labelNombreUserperfil.TabIndex = 1;
+            this.labelNombreUserperfil.Text = "nombre";
+            this.labelNombreUserperfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEstadUserPerfil
+            // 
+            this.labelEstadUserPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEstadUserPerfil.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labelEstadUserPerfil.Location = new System.Drawing.Point(3, 186);
+            this.labelEstadUserPerfil.Name = "labelEstadUserPerfil";
+            this.labelEstadUserPerfil.Size = new System.Drawing.Size(226, 43);
+            this.labelEstadUserPerfil.TabIndex = 3;
+            this.labelEstadUserPerfil.Text = "label12";
+            this.labelEstadUserPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -254,79 +274,37 @@ namespace DINT_F_P
             this.tableLayoutPanel1.Location = new System.Drawing.Point(255, 242);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(518, 100);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(518, 92);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // labelMegustaUser
+            // labelPerfilMegusta
             // 
-            this.labelMegustaUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelPerfilMegusta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelMegustaUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMegustaUser.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelMegustaUser.Location = new System.Drawing.Point(390, 0);
-            this.labelMegustaUser.Name = "labelMegustaUser";
-            this.labelMegustaUser.Size = new System.Drawing.Size(125, 14);
-            this.labelMegustaUser.TabIndex = 4;
-            this.labelMegustaUser.Text = "Me gusta";
-            this.labelMegustaUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPerfilMegusta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPerfilMegusta.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelPerfilMegusta.Location = new System.Drawing.Point(390, 24);
+            this.labelPerfilMegusta.Name = "labelPerfilMegusta";
+            this.labelPerfilMegusta.Size = new System.Drawing.Size(125, 16);
+            this.labelPerfilMegusta.TabIndex = 9;
+            this.labelPerfilMegusta.Text = "0";
+            this.labelPerfilMegusta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelPerfilNumTuits
+            // labellabelPerfilSiguiendo
             // 
-            this.labelPerfilNumTuits.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labellabelPerfilSiguiendo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPerfilNumTuits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPerfilNumTuits.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelPerfilNumTuits.Location = new System.Drawing.Point(3, 14);
-            this.labelPerfilNumTuits.Name = "labelPerfilNumTuits";
-            this.labelPerfilNumTuits.Size = new System.Drawing.Size(123, 16);
-            this.labelPerfilNumTuits.TabIndex = 5;
-            this.labelPerfilNumTuits.Text = "0";
-            this.labelPerfilNumTuits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSiguiendoUser
-            // 
-            this.labelSiguiendoUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSiguiendoUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSiguiendoUser.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelSiguiendoUser.Location = new System.Drawing.Point(261, 0);
-            this.labelSiguiendoUser.Name = "labelSiguiendoUser";
-            this.labelSiguiendoUser.Size = new System.Drawing.Size(123, 14);
-            this.labelSiguiendoUser.TabIndex = 2;
-            this.labelSiguiendoUser.Text = "Siguiendo";
-            this.labelSiguiendoUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelNumSeguidores
-            // 
-            this.labelNumSeguidores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNumSeguidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNumSeguidores.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelNumSeguidores.Location = new System.Drawing.Point(132, 0);
-            this.labelNumSeguidores.Name = "labelNumSeguidores";
-            this.labelNumSeguidores.Size = new System.Drawing.Size(123, 14);
-            this.labelNumSeguidores.TabIndex = 3;
-            this.labelNumSeguidores.Text = "Seguidores";
-            this.labelNumSeguidores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelPerfilSeguidores
-            // 
-            this.labelPerfilSeguidores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPerfilSeguidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPerfilSeguidores.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelPerfilSeguidores.Location = new System.Drawing.Point(132, 14);
-            this.labelPerfilSeguidores.Name = "labelPerfilSeguidores";
-            this.labelPerfilSeguidores.Size = new System.Drawing.Size(123, 16);
-            this.labelPerfilSeguidores.TabIndex = 7;
-            this.labelPerfilSeguidores.Text = "0";
-            this.labelPerfilSeguidores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labellabelPerfilSiguiendo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellabelPerfilSiguiendo.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labellabelPerfilSiguiendo.Location = new System.Drawing.Point(261, 24);
+            this.labellabelPerfilSiguiendo.Name = "labellabelPerfilSiguiendo";
+            this.labellabelPerfilSiguiendo.Size = new System.Drawing.Size(123, 16);
+            this.labellabelPerfilSiguiendo.TabIndex = 8;
+            this.labellabelPerfilSiguiendo.Text = "0";
+            this.labellabelPerfilSiguiendo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelNumtTitsUser
             // 
@@ -337,99 +315,151 @@ namespace DINT_F_P
             this.labelNumtTitsUser.ForeColor = System.Drawing.SystemColors.MenuText;
             this.labelNumtTitsUser.Location = new System.Drawing.Point(3, 0);
             this.labelNumtTitsUser.Name = "labelNumtTitsUser";
-            this.labelNumtTitsUser.Size = new System.Drawing.Size(123, 14);
+            this.labelNumtTitsUser.Size = new System.Drawing.Size(123, 24);
             this.labelNumtTitsUser.TabIndex = 1;
             this.labelNumtTitsUser.Text = "Tweets";
             this.labelNumtTitsUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labellabelPerfilSiguiendo
+            // labelPerfilSeguidores
             // 
-            this.labellabelPerfilSiguiendo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelPerfilSeguidores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labellabelPerfilSiguiendo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labellabelPerfilSiguiendo.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labellabelPerfilSiguiendo.Location = new System.Drawing.Point(261, 14);
-            this.labellabelPerfilSiguiendo.Name = "labellabelPerfilSiguiendo";
-            this.labellabelPerfilSiguiendo.Size = new System.Drawing.Size(123, 16);
-            this.labellabelPerfilSiguiendo.TabIndex = 8;
-            this.labellabelPerfilSiguiendo.Text = "0";
-            this.labellabelPerfilSiguiendo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPerfilSeguidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPerfilSeguidores.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelPerfilSeguidores.Location = new System.Drawing.Point(132, 24);
+            this.labelPerfilSeguidores.Name = "labelPerfilSeguidores";
+            this.labelPerfilSeguidores.Size = new System.Drawing.Size(123, 16);
+            this.labelPerfilSeguidores.TabIndex = 7;
+            this.labelPerfilSeguidores.Text = "0";
+            this.labelPerfilSeguidores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelPerfilMegusta
+            // labelNumSeguidores
             // 
-            this.labelPerfilMegusta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPerfilMegusta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPerfilMegusta.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelPerfilMegusta.Location = new System.Drawing.Point(390, 14);
-            this.labelPerfilMegusta.Name = "labelPerfilMegusta";
-            this.labelPerfilMegusta.Size = new System.Drawing.Size(125, 16);
-            this.labelPerfilMegusta.TabIndex = 9;
-            this.labelPerfilMegusta.Text = "0";
-            this.labelPerfilMegusta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.labelNombreUserperfil, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(367, 10);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(293, 229);
-            this.tableLayoutPanel2.TabIndex = 5;
-            // 
-            // panel11
-            // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelNumSeguidores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.Controls.Add(this.pictureBoxEditarFoto);
-            this.panel11.Controls.Add(this.pictureBoxPerfilUserFoto);
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(287, 160);
-            this.panel11.TabIndex = 2;
+            this.labelNumSeguidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumSeguidores.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelNumSeguidores.Location = new System.Drawing.Point(132, 0);
+            this.labelNumSeguidores.Name = "labelNumSeguidores";
+            this.labelNumSeguidores.Size = new System.Drawing.Size(123, 24);
+            this.labelNumSeguidores.TabIndex = 3;
+            this.labelNumSeguidores.Text = "Seguidores";
+            this.labelNumSeguidores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBoxPerfilUserFoto
+            // labelSiguiendoUser
             // 
-            this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(76, 21);
-            this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
-            this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(136, 136);
-            this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPerfilUserFoto.TabIndex = 0;
-            this.pictureBoxPerfilUserFoto.TabStop = false;
-            // 
-            // labelNombreUserperfil
-            // 
-            this.labelNombreUserperfil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelSiguiendoUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNombreUserperfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreUserperfil.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelNombreUserperfil.Location = new System.Drawing.Point(3, 166);
-            this.labelNombreUserperfil.Name = "labelNombreUserperfil";
-            this.labelNombreUserperfil.Size = new System.Drawing.Size(287, 63);
-            this.labelNombreUserperfil.TabIndex = 1;
-            this.labelNombreUserperfil.Text = "nombre";
-            this.labelNombreUserperfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelSiguiendoUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSiguiendoUser.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelSiguiendoUser.Location = new System.Drawing.Point(261, 0);
+            this.labelSiguiendoUser.Name = "labelSiguiendoUser";
+            this.labelSiguiendoUser.Size = new System.Drawing.Size(123, 24);
+            this.labelSiguiendoUser.TabIndex = 2;
+            this.labelSiguiendoUser.Text = "Siguiendo";
+            this.labelSiguiendoUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // customButtonLogout
+            // labelPerfilNumTuits
             // 
-            this.customButtonLogout.BackColor = System.Drawing.Color.DimGray;
-            this.customButtonLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.customButtonLogout.ForeColor = System.Drawing.Color.White;
-            this.customButtonLogout.Location = new System.Drawing.Point(476, 348);
-            this.customButtonLogout.Name = "customButtonLogout";
-            this.customButtonLogout.Size = new System.Drawing.Size(75, 24);
-            this.customButtonLogout.TabIndex = 6;
-            this.customButtonLogout.Text = "Log out";
-            this.customButtonLogout.UseVisualStyleBackColor = false;
-            this.customButtonLogout.Click += new System.EventHandler(this.customButtonLogout_Click);
+            this.labelPerfilNumTuits.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPerfilNumTuits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPerfilNumTuits.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelPerfilNumTuits.Location = new System.Drawing.Point(3, 24);
+            this.labelPerfilNumTuits.Name = "labelPerfilNumTuits";
+            this.labelPerfilNumTuits.Size = new System.Drawing.Size(123, 16);
+            this.labelPerfilNumTuits.TabIndex = 5;
+            this.labelPerfilNumTuits.Text = "0";
+            this.labelPerfilNumTuits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelMegustaUser
+            // 
+            this.labelMegustaUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMegustaUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMegustaUser.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelMegustaUser.Location = new System.Drawing.Point(390, 0);
+            this.labelMegustaUser.Name = "labelMegustaUser";
+            this.labelMegustaUser.Size = new System.Drawing.Size(125, 24);
+            this.labelMegustaUser.TabIndex = 4;
+            this.labelMegustaUser.Text = "Me gusta";
+            this.labelMegustaUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.labelLogout);
+            this.panel12.Controls.Add(this.pictureBox1);
+            this.panel12.Controls.Add(this.pictureBoxNotifications4);
+            this.panel12.Controls.Add(this.pictureBoxLasttuits4);
+            this.panel12.Controls.Add(this.pictureBoxHome4);
+            this.panel12.Location = new System.Drawing.Point(621, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(372, 68);
+            this.panel12.TabIndex = 7;
+            // 
+            // labelLogout
+            // 
+            this.labelLogout.AutoSize = true;
+            this.labelLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogout.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labelLogout.Location = new System.Drawing.Point(199, 3);
+            this.labelLogout.Name = "labelLogout";
+            this.labelLogout.Size = new System.Drawing.Size(46, 13);
+            this.labelLogout.TabIndex = 10;
+            this.labelLogout.Text = "Logout";
+            this.labelLogout.Click += new System.EventHandler(this.logoutLabel_Click);
+            this.labelLogout.MouseEnter += new System.EventHandler(this.label12_MouseEnter);
+            this.labelLogout.MouseLeave += new System.EventHandler(this.labelLogout_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(344, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxNotifications4
+            // 
+            this.pictureBoxNotifications4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications4.Image")));
+            this.pictureBoxNotifications4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications4.InitialImage")));
+            this.pictureBoxNotifications4.Location = new System.Drawing.Point(313, 3);
+            this.pictureBoxNotifications4.Name = "pictureBoxNotifications4";
+            this.pictureBoxNotifications4.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxNotifications4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxNotifications4.TabIndex = 6;
+            this.pictureBoxNotifications4.TabStop = false;
+            this.pictureBoxNotifications4.Click += new System.EventHandler(this.pictureBoxNotifications4_Click);
+            // 
+            // pictureBoxLasttuits4
+            // 
+            this.pictureBoxLasttuits4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLasttuits4.Image")));
+            this.pictureBoxLasttuits4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLasttuits4.InitialImage")));
+            this.pictureBoxLasttuits4.Location = new System.Drawing.Point(282, 3);
+            this.pictureBoxLasttuits4.Name = "pictureBoxLasttuits4";
+            this.pictureBoxLasttuits4.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxLasttuits4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLasttuits4.TabIndex = 4;
+            this.pictureBoxLasttuits4.TabStop = false;
+            this.pictureBoxLasttuits4.Click += new System.EventHandler(this.pictureBoxLasttuits4_Click);
+            // 
+            // pictureBoxHome4
+            // 
+            this.pictureBoxHome4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome4.Image")));
+            this.pictureBoxHome4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome4.InitialImage")));
+            this.pictureBoxHome4.Location = new System.Drawing.Point(251, 3);
+            this.pictureBoxHome4.Name = "pictureBoxHome4";
+            this.pictureBoxHome4.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxHome4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHome4.TabIndex = 3;
+            this.pictureBoxHome4.TabStop = false;
+            this.pictureBoxHome4.Click += new System.EventHandler(this.pictureBoxHome4_Click);
             // 
             // LastNotifications
             // 
@@ -451,16 +481,13 @@ namespace DINT_F_P
             this.panel6.Size = new System.Drawing.Size(989, 514);
             this.panel6.TabIndex = 1;
             // 
-            // labelLastNotifications
+            // panel7
             // 
-            this.labelLastNotifications.AutoSize = true;
-            this.labelLastNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastNotifications.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelLastNotifications.Location = new System.Drawing.Point(20, 44);
-            this.labelLastNotifications.Name = "labelLastNotifications";
-            this.labelLastNotifications.Size = new System.Drawing.Size(219, 25);
-            this.labelLastNotifications.TabIndex = 1;
-            this.labelLastNotifications.Text = "Your last notifications";
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(213, 86);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(576, 403);
+            this.panel7.TabIndex = 7;
             // 
             // panel10
             // 
@@ -472,41 +499,6 @@ namespace DINT_F_P
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(372, 65);
             this.panel10.TabIndex = 6;
-            // 
-            // pictureBoxhome3
-            // 
-            this.pictureBoxhome3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.Image")));
-            this.pictureBoxhome3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.InitialImage")));
-            this.pictureBoxhome3.Location = new System.Drawing.Point(251, 3);
-            this.pictureBoxhome3.Name = "pictureBoxhome3";
-            this.pictureBoxhome3.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxhome3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxhome3.TabIndex = 3;
-            this.pictureBoxhome3.TabStop = false;
-            this.pictureBoxhome3.Click += new System.EventHandler(this.pictureBoxhome3_Click);
-            // 
-            // pictureBoxtimeline3
-            // 
-            this.pictureBoxtimeline3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.Image")));
-            this.pictureBoxtimeline3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.InitialImage")));
-            this.pictureBoxtimeline3.Location = new System.Drawing.Point(282, 3);
-            this.pictureBoxtimeline3.Name = "pictureBoxtimeline3";
-            this.pictureBoxtimeline3.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxtimeline3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxtimeline3.TabIndex = 4;
-            this.pictureBoxtimeline3.TabStop = false;
-            this.pictureBoxtimeline3.Click += new System.EventHandler(this.pictureBoxtimeline3_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.InitialImage")));
-            this.pictureBox10.Location = new System.Drawing.Point(313, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(25, 21);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 6;
-            this.pictureBox10.TabStop = false;
             // 
             // pictureBoxuser3
             // 
@@ -520,13 +512,51 @@ namespace DINT_F_P
             this.pictureBoxuser3.TabStop = false;
             this.pictureBoxuser3.Click += new System.EventHandler(this.pictureBoxuser3_Click);
             // 
-            // panel7
+            // pictureBox10
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Location = new System.Drawing.Point(213, 86);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(576, 403);
-            this.panel7.TabIndex = 7;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.InitialImage")));
+            this.pictureBox10.Location = new System.Drawing.Point(313, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 6;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBoxtimeline3
+            // 
+            this.pictureBoxtimeline3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.Image")));
+            this.pictureBoxtimeline3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.InitialImage")));
+            this.pictureBoxtimeline3.Location = new System.Drawing.Point(282, 3);
+            this.pictureBoxtimeline3.Name = "pictureBoxtimeline3";
+            this.pictureBoxtimeline3.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxtimeline3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxtimeline3.TabIndex = 4;
+            this.pictureBoxtimeline3.TabStop = false;
+            this.pictureBoxtimeline3.Click += new System.EventHandler(this.pictureBoxtimeline3_Click);
+            // 
+            // pictureBoxhome3
+            // 
+            this.pictureBoxhome3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.Image")));
+            this.pictureBoxhome3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.InitialImage")));
+            this.pictureBoxhome3.Location = new System.Drawing.Point(251, 3);
+            this.pictureBoxhome3.Name = "pictureBoxhome3";
+            this.pictureBoxhome3.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxhome3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxhome3.TabIndex = 3;
+            this.pictureBoxhome3.TabStop = false;
+            this.pictureBoxhome3.Click += new System.EventHandler(this.pictureBoxhome3_Click);
+            // 
+            // labelLastNotifications
+            // 
+            this.labelLastNotifications.AutoSize = true;
+            this.labelLastNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastNotifications.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelLastNotifications.Location = new System.Drawing.Point(20, 44);
+            this.labelLastNotifications.Name = "labelLastNotifications";
+            this.labelLastNotifications.Size = new System.Drawing.Size(219, 25);
+            this.labelLastNotifications.TabIndex = 1;
+            this.labelLastNotifications.Text = "Your last notifications";
             // 
             // LastTwits
             // 
@@ -548,16 +578,63 @@ namespace DINT_F_P
             this.panel4.Size = new System.Drawing.Size(989, 514);
             this.panel4.TabIndex = 1;
             // 
-            // labelLastTwits
+            // panel9
             // 
-            this.labelLastTwits.AutoSize = true;
-            this.labelLastTwits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastTwits.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelLastTwits.Location = new System.Drawing.Point(20, 44);
-            this.labelLastTwits.Name = "labelLastTwits";
-            this.labelLastTwits.Size = new System.Drawing.Size(147, 25);
-            this.labelLastTwits.TabIndex = 1;
-            this.labelLastTwits.Text = "Your last twits";
+            this.panel9.Controls.Add(this.pictureBoxuser2);
+            this.panel9.Controls.Add(this.pictureBoxnotifications2);
+            this.panel9.Controls.Add(this.pictureBox7);
+            this.panel9.Controls.Add(this.pictureBoxhome2);
+            this.panel9.Location = new System.Drawing.Point(614, 4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(372, 65);
+            this.panel9.TabIndex = 6;
+            // 
+            // pictureBoxuser2
+            // 
+            this.pictureBoxuser2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser2.Image")));
+            this.pictureBoxuser2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser2.InitialImage")));
+            this.pictureBoxuser2.Location = new System.Drawing.Point(344, 3);
+            this.pictureBoxuser2.Name = "pictureBoxuser2";
+            this.pictureBoxuser2.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxuser2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxuser2.TabIndex = 7;
+            this.pictureBoxuser2.TabStop = false;
+            this.pictureBoxuser2.Click += new System.EventHandler(this.pictureBoxuser2_Click);
+            // 
+            // pictureBoxnotifications2
+            // 
+            this.pictureBoxnotifications2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxnotifications2.Image")));
+            this.pictureBoxnotifications2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxnotifications2.InitialImage")));
+            this.pictureBoxnotifications2.Location = new System.Drawing.Point(313, 3);
+            this.pictureBoxnotifications2.Name = "pictureBoxnotifications2";
+            this.pictureBoxnotifications2.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxnotifications2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxnotifications2.TabIndex = 6;
+            this.pictureBoxnotifications2.TabStop = false;
+            this.pictureBoxnotifications2.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.InitialImage")));
+            this.pictureBox7.Location = new System.Drawing.Point(282, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 4;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBoxhome2
+            // 
+            this.pictureBoxhome2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome2.Image")));
+            this.pictureBoxhome2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome2.InitialImage")));
+            this.pictureBoxhome2.Location = new System.Drawing.Point(251, 3);
+            this.pictureBoxhome2.Name = "pictureBoxhome2";
+            this.pictureBoxhome2.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxhome2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxhome2.TabIndex = 3;
+            this.pictureBoxhome2.TabStop = false;
+            this.pictureBoxhome2.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // panel5
             // 
@@ -575,63 +652,16 @@ namespace DINT_F_P
             this.flowLayoutPanelLastTuits.Size = new System.Drawing.Size(568, 395);
             this.flowLayoutPanelLastTuits.TabIndex = 0;
             // 
-            // panel9
+            // labelLastTwits
             // 
-            this.panel9.Controls.Add(this.pictureBoxuser2);
-            this.panel9.Controls.Add(this.pictureBoxnotifications2);
-            this.panel9.Controls.Add(this.pictureBox7);
-            this.panel9.Controls.Add(this.pictureBoxhome2);
-            this.panel9.Location = new System.Drawing.Point(614, 4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(372, 65);
-            this.panel9.TabIndex = 6;
-            // 
-            // pictureBoxhome2
-            // 
-            this.pictureBoxhome2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome2.Image")));
-            this.pictureBoxhome2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome2.InitialImage")));
-            this.pictureBoxhome2.Location = new System.Drawing.Point(251, 3);
-            this.pictureBoxhome2.Name = "pictureBoxhome2";
-            this.pictureBoxhome2.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxhome2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxhome2.TabIndex = 3;
-            this.pictureBoxhome2.TabStop = false;
-            this.pictureBoxhome2.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.InitialImage")));
-            this.pictureBox7.Location = new System.Drawing.Point(282, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 21);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 4;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBoxnotifications2
-            // 
-            this.pictureBoxnotifications2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxnotifications2.Image")));
-            this.pictureBoxnotifications2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxnotifications2.InitialImage")));
-            this.pictureBoxnotifications2.Location = new System.Drawing.Point(313, 3);
-            this.pictureBoxnotifications2.Name = "pictureBoxnotifications2";
-            this.pictureBoxnotifications2.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxnotifications2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxnotifications2.TabIndex = 6;
-            this.pictureBoxnotifications2.TabStop = false;
-            this.pictureBoxnotifications2.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBoxuser2
-            // 
-            this.pictureBoxuser2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser2.Image")));
-            this.pictureBoxuser2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser2.InitialImage")));
-            this.pictureBoxuser2.Location = new System.Drawing.Point(344, 3);
-            this.pictureBoxuser2.Name = "pictureBoxuser2";
-            this.pictureBoxuser2.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxuser2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxuser2.TabIndex = 7;
-            this.pictureBoxuser2.TabStop = false;
-            this.pictureBoxuser2.Click += new System.EventHandler(this.pictureBoxuser2_Click);
+            this.labelLastTwits.AutoSize = true;
+            this.labelLastTwits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastTwits.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelLastTwits.Location = new System.Drawing.Point(20, 44);
+            this.labelLastTwits.Name = "labelLastTwits";
+            this.labelLastTwits.Size = new System.Drawing.Size(147, 25);
+            this.labelLastTwits.TabIndex = 1;
+            this.labelLastTwits.Text = "Your last twits";
             // 
             // Timeline
             // 
@@ -657,26 +687,120 @@ namespace DINT_F_P
             this.panel3.Size = new System.Drawing.Size(989, 514);
             this.panel3.TabIndex = 0;
             // 
-            // richTextBoxCajaTwit
+            // tableLayoutPanel3
             // 
-            this.richTextBoxCajaTwit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBoxCajaTwit.Location = new System.Drawing.Point(213, 73);
-            this.richTextBoxCajaTwit.Name = "richTextBoxCajaTwit";
-            this.richTextBoxCajaTwit.Size = new System.Drawing.Size(291, 63);
-            this.richTextBoxCajaTwit.TabIndex = 2;
-            this.richTextBoxCajaTwit.Text = "";
-            this.richTextBoxCajaTwit.Click += new System.EventHandler(this.RichTextBoxCajaTwit_Click);
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.panel13, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelEstadoUser, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 73);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 208);
+            this.tableLayoutPanel3.TabIndex = 7;
             // 
-            // label2
+            // panel13
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label2.Location = new System.Drawing.Point(20, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Timeline";
+            this.panel13.Controls.Add(this.pictureBoxFotoPerfilTImeline);
+            this.panel13.Location = new System.Drawing.Point(3, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(194, 100);
+            this.panel13.TabIndex = 0;
+            // 
+            // pictureBoxFotoPerfilTImeline
+            // 
+            this.pictureBoxFotoPerfilTImeline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFotoPerfilTImeline.Location = new System.Drawing.Point(55, 10);
+            this.pictureBoxFotoPerfilTImeline.Name = "pictureBoxFotoPerfilTImeline";
+            this.pictureBoxFotoPerfilTImeline.Size = new System.Drawing.Size(90, 90);
+            this.pictureBoxFotoPerfilTImeline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxFotoPerfilTImeline.TabIndex = 0;
+            this.pictureBoxFotoPerfilTImeline.TabStop = false;
+            // 
+            // labelEstadoUser
+            // 
+            this.labelEstadoUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEstadoUser.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labelEstadoUser.Location = new System.Drawing.Point(3, 114);
+            this.labelEstadoUser.Name = "labelEstadoUser";
+            this.labelEstadoUser.Size = new System.Drawing.Size(194, 94);
+            this.labelEstadoUser.TabIndex = 1;
+            this.labelEstadoUser.Text = "WTF";
+            this.labelEstadoUser.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ButtonTwittIt
+            // 
+            this.ButtonTwittIt.BackColor = System.Drawing.Color.Black;
+            this.ButtonTwittIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ButtonTwittIt.ForeColor = System.Drawing.Color.White;
+            this.ButtonTwittIt.Location = new System.Drawing.Point(510, 113);
+            this.ButtonTwittIt.Name = "ButtonTwittIt";
+            this.ButtonTwittIt.Size = new System.Drawing.Size(66, 23);
+            this.ButtonTwittIt.TabIndex = 6;
+            this.ButtonTwittIt.Text = "Twitt It!";
+            this.ButtonTwittIt.UseVisualStyleBackColor = false;
+            this.ButtonTwittIt.Click += new System.EventHandler(this.ButtonTwittIt_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.pictureBoxConfig);
+            this.panel8.Controls.Add(this.pictureBoxNotifications);
+            this.panel8.Controls.Add(this.pictureBoxLastTwits);
+            this.panel8.Controls.Add(this.pictureBoxHome);
+            this.panel8.Location = new System.Drawing.Point(614, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(372, 65);
+            this.panel8.TabIndex = 5;
+            // 
+            // pictureBoxConfig
+            // 
+            this.pictureBoxConfig.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxConfig.Image")));
+            this.pictureBoxConfig.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxConfig.InitialImage")));
+            this.pictureBoxConfig.Location = new System.Drawing.Point(344, 3);
+            this.pictureBoxConfig.Name = "pictureBoxConfig";
+            this.pictureBoxConfig.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxConfig.TabIndex = 7;
+            this.pictureBoxConfig.TabStop = false;
+            this.pictureBoxConfig.Click += new System.EventHandler(this.PictureBoxConfig_Click);
+            // 
+            // pictureBoxNotifications
+            // 
+            this.pictureBoxNotifications.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications.Image")));
+            this.pictureBoxNotifications.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications.InitialImage")));
+            this.pictureBoxNotifications.Location = new System.Drawing.Point(313, 3);
+            this.pictureBoxNotifications.Name = "pictureBoxNotifications";
+            this.pictureBoxNotifications.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxNotifications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxNotifications.TabIndex = 6;
+            this.pictureBoxNotifications.TabStop = false;
+            this.pictureBoxNotifications.Click += new System.EventHandler(this.PictureBoxNotifications_Click);
+            // 
+            // pictureBoxLastTwits
+            // 
+            this.pictureBoxLastTwits.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLastTwits.Image")));
+            this.pictureBoxLastTwits.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLastTwits.InitialImage")));
+            this.pictureBoxLastTwits.Location = new System.Drawing.Point(282, 3);
+            this.pictureBoxLastTwits.Name = "pictureBoxLastTwits";
+            this.pictureBoxLastTwits.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxLastTwits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLastTwits.TabIndex = 4;
+            this.pictureBoxLastTwits.TabStop = false;
+            this.pictureBoxLastTwits.Click += new System.EventHandler(this.PictureBoxLastTwits_Click);
+            // 
+            // pictureBoxHome
+            // 
+            this.pictureBoxHome.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome.Image")));
+            this.pictureBoxHome.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome.InitialImage")));
+            this.pictureBoxHome.Location = new System.Drawing.Point(251, 3);
+            this.pictureBoxHome.Name = "pictureBoxHome";
+            this.pictureBoxHome.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHome.TabIndex = 3;
+            this.pictureBoxHome.TabStop = false;
             // 
             // panel2
             // 
@@ -695,119 +819,26 @@ namespace DINT_F_P
             this.flowLayoutPanelTwits.Size = new System.Drawing.Size(576, 332);
             this.flowLayoutPanelTwits.TabIndex = 0;
             // 
-            // panel8
+            // label2
             // 
-            this.panel8.Controls.Add(this.pictureBoxConfig);
-            this.panel8.Controls.Add(this.pictureBoxNotifications);
-            this.panel8.Controls.Add(this.pictureBoxLastTwits);
-            this.panel8.Controls.Add(this.pictureBoxHome);
-            this.panel8.Location = new System.Drawing.Point(614, 4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(372, 65);
-            this.panel8.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label2.Location = new System.Drawing.Point(20, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Timeline";
             // 
-            // pictureBoxHome
+            // richTextBoxCajaTwit
             // 
-            this.pictureBoxHome.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome.Image")));
-            this.pictureBoxHome.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome.InitialImage")));
-            this.pictureBoxHome.Location = new System.Drawing.Point(251, 3);
-            this.pictureBoxHome.Name = "pictureBoxHome";
-            this.pictureBoxHome.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxHome.TabIndex = 3;
-            this.pictureBoxHome.TabStop = false;
-            // 
-            // pictureBoxLastTwits
-            // 
-            this.pictureBoxLastTwits.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLastTwits.Image")));
-            this.pictureBoxLastTwits.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLastTwits.InitialImage")));
-            this.pictureBoxLastTwits.Location = new System.Drawing.Point(282, 3);
-            this.pictureBoxLastTwits.Name = "pictureBoxLastTwits";
-            this.pictureBoxLastTwits.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxLastTwits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLastTwits.TabIndex = 4;
-            this.pictureBoxLastTwits.TabStop = false;
-            this.pictureBoxLastTwits.Click += new System.EventHandler(this.PictureBoxLastTwits_Click);
-            // 
-            // pictureBoxNotifications
-            // 
-            this.pictureBoxNotifications.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications.Image")));
-            this.pictureBoxNotifications.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotifications.InitialImage")));
-            this.pictureBoxNotifications.Location = new System.Drawing.Point(313, 3);
-            this.pictureBoxNotifications.Name = "pictureBoxNotifications";
-            this.pictureBoxNotifications.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxNotifications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxNotifications.TabIndex = 6;
-            this.pictureBoxNotifications.TabStop = false;
-            this.pictureBoxNotifications.Click += new System.EventHandler(this.PictureBoxNotifications_Click);
-            // 
-            // pictureBoxConfig
-            // 
-            this.pictureBoxConfig.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxConfig.Image")));
-            this.pictureBoxConfig.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxConfig.InitialImage")));
-            this.pictureBoxConfig.Location = new System.Drawing.Point(344, 3);
-            this.pictureBoxConfig.Name = "pictureBoxConfig";
-            this.pictureBoxConfig.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxConfig.TabIndex = 7;
-            this.pictureBoxConfig.TabStop = false;
-            this.pictureBoxConfig.Click += new System.EventHandler(this.PictureBoxConfig_Click);
-            // 
-            // ButtonTwittIt
-            // 
-            this.ButtonTwittIt.BackColor = System.Drawing.Color.DimGray;
-            this.ButtonTwittIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ButtonTwittIt.ForeColor = System.Drawing.Color.White;
-            this.ButtonTwittIt.Location = new System.Drawing.Point(510, 113);
-            this.ButtonTwittIt.Name = "ButtonTwittIt";
-            this.ButtonTwittIt.Size = new System.Drawing.Size(66, 23);
-            this.ButtonTwittIt.TabIndex = 6;
-            this.ButtonTwittIt.Text = "Twitt It!";
-            this.ButtonTwittIt.UseVisualStyleBackColor = false;
-            this.ButtonTwittIt.Click += new System.EventHandler(this.ButtonTwittIt_Click);
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.panel13, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.labelEstadoUser, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 73);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 208);
-            this.tableLayoutPanel3.TabIndex = 7;
-            // 
-            // labelEstadoUser
-            // 
-            this.labelEstadoUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEstadoUser.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.labelEstadoUser.Location = new System.Drawing.Point(3, 114);
-            this.labelEstadoUser.Name = "labelEstadoUser";
-            this.labelEstadoUser.Size = new System.Drawing.Size(194, 94);
-            this.labelEstadoUser.TabIndex = 1;
-            this.labelEstadoUser.Text = "pene";
-            this.labelEstadoUser.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.pictureBoxFotoPerfilTImeline);
-            this.panel13.Location = new System.Drawing.Point(3, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(194, 100);
-            this.panel13.TabIndex = 0;
-            // 
-            // pictureBoxFotoPerfilTImeline
-            // 
-            this.pictureBoxFotoPerfilTImeline.Location = new System.Drawing.Point(55, 10);
-            this.pictureBoxFotoPerfilTImeline.Name = "pictureBoxFotoPerfilTImeline";
-            this.pictureBoxFotoPerfilTImeline.Size = new System.Drawing.Size(90, 90);
-            this.pictureBoxFotoPerfilTImeline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxFotoPerfilTImeline.TabIndex = 0;
-            this.pictureBoxFotoPerfilTImeline.TabStop = false;
+            this.richTextBoxCajaTwit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxCajaTwit.Location = new System.Drawing.Point(213, 73);
+            this.richTextBoxCajaTwit.Name = "richTextBoxCajaTwit";
+            this.richTextBoxCajaTwit.Size = new System.Drawing.Size(291, 63);
+            this.richTextBoxCajaTwit.TabIndex = 2;
+            this.richTextBoxCajaTwit.Text = "";
+            this.richTextBoxCajaTwit.Click += new System.EventHandler(this.RichTextBoxCajaTwit_Click);
             // 
             // Main
             // 
@@ -821,6 +852,17 @@ namespace DINT_F_P
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label1.Location = new System.Drawing.Point(354, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(339, 37);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Start to use TwitClient!";
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -832,29 +874,9 @@ namespace DINT_F_P
             this.panel1.Size = new System.Drawing.Size(371, 103);
             this.panel1.TabIndex = 1;
             // 
-            // textBoxUsuario
-            // 
-            this.textBoxUsuario.Location = new System.Drawing.Point(86, 14);
-            this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(195, 20);
-            this.textBoxUsuario.TabIndex = 1;
-            this.textBoxUsuario.Text = "@twitterUser";
-            this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxUsuario.Click += new System.EventHandler(this.TextBoxUsuario_Click);
-            // 
-            // textBoxContrasenya
-            // 
-            this.textBoxContrasenya.Location = new System.Drawing.Point(86, 40);
-            this.textBoxContrasenya.Name = "textBoxContrasenya";
-            this.textBoxContrasenya.Size = new System.Drawing.Size(195, 20);
-            this.textBoxContrasenya.TabIndex = 2;
-            this.textBoxContrasenya.Text = "*****";
-            this.textBoxContrasenya.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxContrasenya.Click += new System.EventHandler(this.TextBoxContrasenya_Click);
-            // 
             // customButton1Login
             // 
-            this.customButton1Login.BackColor = System.Drawing.Color.DimGray;
+            this.customButton1Login.BackColor = System.Drawing.Color.Black;
             this.customButton1Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.customButton1Login.ForeColor = System.Drawing.Color.White;
             this.customButton1Login.Location = new System.Drawing.Point(126, 66);
@@ -866,16 +888,27 @@ namespace DINT_F_P
             this.customButton1Login.Click += new System.EventHandler(this.CustomButton1Login_Click);
             this.customButton1Login.Enter += new System.EventHandler(this.customButton1Login_Enter);
             // 
-            // label1
+            // textBoxContrasenya
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(354, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 37);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Start to use TwitClient!";
+            this.textBoxContrasenya.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxContrasenya.Location = new System.Drawing.Point(86, 40);
+            this.textBoxContrasenya.Name = "textBoxContrasenya";
+            this.textBoxContrasenya.Size = new System.Drawing.Size(195, 20);
+            this.textBoxContrasenya.TabIndex = 2;
+            this.textBoxContrasenya.Text = "*****";
+            this.textBoxContrasenya.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxContrasenya.Click += new System.EventHandler(this.TextBoxContrasenya_Click);
+            // 
+            // textBoxUsuario
+            // 
+            this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxUsuario.Location = new System.Drawing.Point(86, 14);
+            this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.Size = new System.Drawing.Size(195, 20);
+            this.textBoxUsuario.TabIndex = 1;
+            this.textBoxUsuario.Text = "@twitterUser";
+            this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxUsuario.Click += new System.EventHandler(this.TextBoxUsuario_Click);
             // 
             // ControlPaginas
             // 
@@ -1139,17 +1172,6 @@ namespace DINT_F_P
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBoxEditarFoto
-            // 
-            this.pictureBoxEditarFoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEditarFoto.Image")));
-            this.pictureBoxEditarFoto.Location = new System.Drawing.Point(218, 132);
-            this.pictureBoxEditarFoto.Name = "pictureBoxEditarFoto";
-            this.pictureBoxEditarFoto.Size = new System.Drawing.Size(25, 25);
-            this.pictureBoxEditarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxEditarFoto.TabIndex = 1;
-            this.pictureBoxEditarFoto.TabStop = false;
-            this.pictureBoxEditarFoto.Click += new System.EventHandler(this.pictureBoxEditarFoto_Click);
-            // 
             // TwitClientMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1161,44 +1183,46 @@ namespace DINT_F_P
             this.Text = "TwitClient";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwitClientMain_FormClosed);
             this.tabPagePerfilUser.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLasttuits4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLasttuits4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).EndInit();
             this.LastNotifications.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).EndInit();
             this.LastTwits.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.Timeline.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastTwits)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfig)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPerfilTImeline)).EndInit();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastTwits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.Main.ResumeLayout(false);
             this.Main.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1214,7 +1238,6 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEditarFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1222,11 +1245,9 @@ namespace DINT_F_P
         #endregion
 
         private System.Windows.Forms.TabPage tabPagePerfilUser;
-        private BotonCustom.CustomButton1 customButtonLogout;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label labelNombreUserperfil;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.PictureBox pictureBoxEditarFoto;
         private System.Windows.Forms.PictureBox pictureBoxPerfilUserFoto;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label labelPerfilMegusta;
@@ -1303,6 +1324,9 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label labelEstadUserPerfil;
+        private System.Windows.Forms.Label labelLogout;
     }
 }
 
