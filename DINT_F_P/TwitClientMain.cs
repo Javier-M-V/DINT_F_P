@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using TuitBox;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 
 namespace DINT_F_P{
 
@@ -18,7 +19,10 @@ namespace DINT_F_P{
         public TwitClientMain(){
 
             InitializeComponent();
-            ConectarBBDD(ref build, ref conexion);   
+            ConectarBBDD(ref build, ref conexion);
+            /*Usuario = "@miguel";
+            SubirAvatar("C:\\Users\\Alumno\\source\\repos\\DINT_F_P\\DINT_F_P\\bin\\Debug\\images.jpg");*/
+
         }
         public void ConectarBBDD(ref MySqlConnectionStringBuilder build, ref MySqlConnection conexion) {
 
@@ -30,7 +34,9 @@ namespace DINT_F_P{
                 build.Password = "12345";
                 build.Database = "twittclient";
                 conexion = new MySqlConnection(build.ToString());
-                conexion.Open(); 
+                conexion.Open();
+
+                
             }
             catch (MySqlException) { MessageBox.Show("Error de conexión a BBDD"); }
         }
@@ -47,6 +53,26 @@ namespace DINT_F_P{
 
             DesconectarBBDD(ref conexion);
         }
+        //conversión de ruta de una foto a byte[]
+        private byte[] FotoABytes(string ruta)
+        {
+            FileStream stream = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+            BinaryReader reader = new BinaryReader(stream);
+            byte[] fotobytes = reader.ReadBytes((int)stream.Length);
+            reader.Close();
+            stream.Close();
+            return fotobytes;
+        }
+        //conversión de bytes[] a blob para subir a BBDD
+        private void SubirAvatar(string ruta)
+        {
+            byte[] foto = FotoABytes(ruta);
+            string sql = "UPDATE usuarios SET foto = @foto WHERE usuario_twitter=@USER";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.Add("@foto", MySqlDbType.MediumBlob, foto.Length).Value = foto;
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            comand.ExecuteNonQuery();
+        }
 
         //CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
         private void CustomButton1Login_Click(object sender, EventArgs e){
@@ -56,34 +82,38 @@ namespace DINT_F_P{
             string sql = "SELECT * from usuarios WHERE usuario_twitter=@USER";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", Usuario);
-            Reader = comand.ExecuteReader();
-
+            MySqlDataReader reader = comand.ExecuteReader();
+            //MessageBox.Show(Reader[0].ToString());
             //Si el user existe se ejecuta el bloque
-            if (Reader.Read()){
+            if (reader.Read()){
                 //si en la BBDD la contraseña coincide se ejecuta el bloque
-                if (Reader["contrasena"].ToString() == Contrasenya){ 
+                if (reader["contrasena"].ToString() == Contrasenya){ 
 
                     ControlPaginas.SelectedTab = Timeline;
                     //Fijamos el texto de labels  y textos dinamicamente
-                    richTextBoxCajaTwit.Text = "twitt as " + Reader["usuario_twitter"].ToString();
-                    labelLastTwits.Text = Reader["usuario_twitter"].ToString() + " last twitts";
-                    labelLastNotifications.Text = Reader["usuario_twitter"].ToString() + " last notifications"; Reader.Close();
+                    richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
+                    labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
+                    labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications";
+                    labelEstadoUser.Text = reader["estado"].ToString();
+                    byte[] avatarByte = (byte[])reader["foto"];
+                    MemoryStream ms = new MemoryStream(avatarByte);
+                    Image fotoavatar = Image.FromStream(ms);
+                    pictureBoxFotoPerfilTImeline.Image = fotoavatar;
                     //cargamos todos los tuits necesarios en las páginas correspondientes
-                    Reader.Close();
+                    reader.Close();
                     RescateTimeline(Usuario);
                     RescateTwittsSelfUsuario(Usuario);
-
                 }
                 else{
 
                     MessageBox.Show("Usuario/contraeña incorrectos");
-                    Reader.Close();
+                    reader.Close();
                 }
             }
             else{
 
                 MessageBox.Show("Usuario/contraeña incorrectos");
-                Reader.Close();
+                reader.Close();
             }
         }
         //Comportamiento de tecla enter en el login
@@ -257,6 +287,11 @@ namespace DINT_F_P{
             DesconectarBBDD(ref conexion);
             Usuario = "";
             Contrasenya = "";
+        }
+
+        private void pictureBoxEditarFoto_Click(object sender, EventArgs e)
+        {
+            //Cambiar la foto del perfil, señores
         }
         //FIN DE CODIGO DE PERFIL
     }

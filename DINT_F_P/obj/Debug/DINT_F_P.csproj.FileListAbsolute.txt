@@ -31,3 +31,5 @@ C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\BotonCustom.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\TuitBox.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.pdb
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.dll
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\WindowsFormsControlLibrary1.dll
