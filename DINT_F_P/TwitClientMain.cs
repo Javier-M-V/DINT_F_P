@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using TuitBox;
 using System.Drawing;
-using System.Globalization;
 using System.IO;
 
 namespace DINT_F_P{
@@ -15,13 +14,12 @@ namespace DINT_F_P{
         private MySqlConnectionStringBuilder build = null;
         private MySqlConnection conexion = null;
 
+
+        //CÓDIGO DE INICIALIZACIÓN DE LA APLICACIÓN
         public TwitClientMain(){
 
             InitializeComponent();
             ConectarBBDD(ref build, ref conexion);
-            /*Usuario = "@miguel";
-            SubirAvatar("C:\\Users\\Alumno\\source\\repos\\DINT_F_P\\DINT_F_P\\bin\\Debug\\images.jpg");*/
-
         }
         public void ConectarBBDD(ref MySqlConnectionStringBuilder build, ref MySqlConnection conexion) {
 
@@ -52,7 +50,8 @@ namespace DINT_F_P{
 
             DesconectarBBDD(ref conexion);
         }
-        //conversión de ruta de una foto a byte[]
+
+        //conversión de ruta de una foto a byte[] CÓDIGO AUX
         private byte[] FotoABytes(string ruta)
         {
             FileStream stream = new FileStream(ruta, FileMode.Open, FileAccess.Read);
@@ -62,7 +61,7 @@ namespace DINT_F_P{
             stream.Close();
             return fotobytes;
         }
-        //conversión de bytes[] a blob para subir a BBDD
+        //conversión de bytes[] a blob para subir a BBDD CÓDIGO AUX
         private void SubirAvatar(string ruta)
         {
             byte[] foto = FotoABytes(ruta);
@@ -82,26 +81,14 @@ namespace DINT_F_P{
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", Usuario);
             MySqlDataReader Reader = comand.ExecuteReader();
-            //MessageBox.Show(Reader[0].ToString());
             //Si el user existe se ejecuta el bloque
             if (Reader.Read()){
                 //si en la BBDD la contraseña coincide se ejecuta el bloque
                 if (Reader["contrasena"].ToString() == Contrasenya){ 
 
                     ControlPaginas.SelectedTab = Timeline;
-                    //Fijamos el texto de labels  y textos dinamicamente
-                    richTextBoxCajaTwit.Text = "twitt as " + Reader["usuario_twitter"].ToString();
-                    labelLastTwits.Text = Reader["usuario_twitter"].ToString() + " last twitts";
-                    labelLastNotifications.Text = Reader["usuario_twitter"].ToString() + " last notifications";
-                    labelEstadoUser.Text = Reader["estado"].ToString();
-                    byte[] avatarByte = (byte[])Reader["foto"];
-                    MemoryStream ms = new MemoryStream(avatarByte);
-                    Image fotoavatar = Image.FromStream(ms);
-                    pictureBoxFotoPerfilTImeline.Image = fotoavatar;
-                    pictureBoxPerfilUserFoto.Image = fotoavatar;
-                    labelEstadUserPerfil.Text = Reader["estado"].ToString();
-                    labelNombreUserperfil.Text = Reader["usuario_twitter"].ToString();                 
-                    //cargamos todos los tuits necesarios en las páginas correspondientes
+                    RescateInfoDinamica(ref Reader);//Fijamos todo el contenido diámico, usamos este reader solo con este fin
+                    //Aqui antes andaba todo el cuerpo de la función de arriba (POSIBELS BUGAZOS!)
                     Reader.Close();
                     RescateTimeline(Usuario);
                     RescateTwittsSelfUsuario(Usuario);
@@ -110,7 +97,6 @@ namespace DINT_F_P{
 
                     MessageBox.Show("Usuario/contraeña incorrectos");
                     Reader.Close();
-
                 }
             }
             else{
@@ -120,13 +106,24 @@ namespace DINT_F_P{
             }
             
         }
-        //Comportamiento de tecla enter en el login
-        private void customButton1Login_Enter(object sender, EventArgs e)
-        {
-            CustomButton1Login_Click(sender, e);
+        //Búsqueda de datos relativos al usuario logueado con éxito y rellenado de campos
+        private void RescateInfoDinamica (ref MySqlDataReader Reader){
+
+            richTextBoxCajaTwit.Text = "twitt as " + Reader["usuario_twitter"].ToString();
+            labelLastTwits.Text = Reader["usuario_twitter"].ToString() + " last twitts";
+            labelLastNotifications.Text = Reader["usuario_twitter"].ToString() + " last notifications";
+            labelEstadoUser.Text = Reader["estado"].ToString();
+            byte[] avatarByte = (byte[])Reader["foto"];
+            MemoryStream ms = new MemoryStream(avatarByte);
+            Image fotoavatar = Image.FromStream(ms);
+            pictureBoxFotoPerfilTImeline.Image = fotoavatar;
+            pictureBoxPerfilUserFoto.Image = fotoavatar;
+            labelEstadUserPerfil.Text = Reader["estado"].ToString();
+            labelNombreUserperfil.Text = Reader["usuario_twitter"].ToString();
+
         }
 
-        //rellena el flowlayout con los tuits de los usuarios que sigue el usuario logueado
+        //rellena el flowlayout del timeline del usuario logueado
         private void RescateTimeline(string User) {
 
             string sql = "SELECT * from mensajes WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) ORDER BY fecha";
@@ -147,9 +144,9 @@ namespace DINT_F_P{
             reader.Close();  
         }
 
-        //rellena el flowlayout con los tuits del usuario logueado
+        //rellena el flowlayout con los tuits del propio usuario logueado
         private void RescateTwittsSelfUsuario (string Usuario) {
-            string sql = "SELECT * from mensajes WHERE user_emisor = @USER ORDER BY fecha";
+            string sql = "SELECT * from mensajes WHERE user_emisor = @USER ORDER BY fecha ASC";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", Usuario);
             MySqlDataReader reader = comand.ExecuteReader();
@@ -297,6 +294,9 @@ namespace DINT_F_P{
             ControlPaginas.SelectedTab = Main;
             Usuario = "";
             Contrasenya = "";
+            //ESTO NO SE SI ES DEL TODO NECESARIO
+            flowLayoutPanelLastTuits.Controls.Clear();
+            flowLayoutPanelTwits.Controls.Clear();
         }
 
         private void label12_MouseEnter(object sender, EventArgs e)

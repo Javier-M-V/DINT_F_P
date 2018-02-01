@@ -886,7 +886,6 @@ namespace DINT_F_P
             this.customButton1Login.Text = "Login";
             this.customButton1Login.UseVisualStyleBackColor = false;
             this.customButton1Login.Click += new System.EventHandler(this.CustomButton1Login_Click);
-            this.customButton1Login.Enter += new System.EventHandler(this.customButton1Login_Enter);
             // 
             // textBoxContrasenya
             // 
