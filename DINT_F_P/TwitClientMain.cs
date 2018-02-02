@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using TuitBox;
 using System.Drawing;
 using System.IO;
 
@@ -31,9 +30,7 @@ namespace DINT_F_P{
                 build.Password = "12345";
                 build.Database = "twittclient";
                 conexion = new MySqlConnection(build.ToString());
-                conexion.Open();
-
-                
+                conexion.Open();               
             }
             catch (MySqlException) { MessageBox.Show("Error de conexión a BBDD"); }
         }
@@ -77,19 +74,17 @@ namespace DINT_F_P{
 
             Usuario = textBoxUsuario.Text;
             Contrasenya = textBoxContrasenya.Text;
-            string sql = "SELECT * from usuarios WHERE usuario_twitter=@USER";
+
+            string sql = "SELECT contrasena from usuarios WHERE usuario_twitter=@USER";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", Usuario);
             MySqlDataReader Reader = comand.ExecuteReader();
-            //Si el user existe se ejecuta el bloque
             if (Reader.Read()){
-                //si en la BBDD la contraseña coincide se ejecuta el bloque
-                if (Reader["contrasena"].ToString() == Contrasenya){ 
-
-                    ControlPaginas.SelectedTab = Timeline;
-                    RescateInfoDinamica(ref Reader);//Fijamos todo el contenido diámico, usamos este reader solo con este fin
-                    //Aqui antes andaba todo el cuerpo de la función de arriba (POSIBELS BUGAZOS!)
+                
+                if (Reader["contrasena"].ToString() == Contrasenya){
                     Reader.Close();
+                    ControlPaginas.SelectedTab = Timeline;//Entamos en la pantalla principal
+                    RescateInfoDinamica(Usuario);//cargamos bloque a bloque todos los datos del usuario
                     RescateTimeline(Usuario);
                     RescateTwittsSelfUsuario(Usuario);
                 }
@@ -103,24 +98,41 @@ namespace DINT_F_P{
 
                 MessageBox.Show("Usuario/contraeña incorrectos");
                 Reader.Close();
-            }
-            
+            }    
         }
         //Búsqueda de datos relativos al usuario logueado con éxito y rellenado de campos
-        private void RescateInfoDinamica (ref MySqlDataReader Reader){
+        private void RescateInfoDinamica (string Usuario){
 
-            richTextBoxCajaTwit.Text = "twitt as " + Reader["usuario_twitter"].ToString();
-            labelLastTwits.Text = Reader["usuario_twitter"].ToString() + " last twitts";
-            labelLastNotifications.Text = Reader["usuario_twitter"].ToString() + " last notifications";
-            labelEstadoUser.Text = Reader["estado"].ToString();
-            byte[] avatarByte = (byte[])Reader["foto"];
-            MemoryStream ms = new MemoryStream(avatarByte);
-            Image fotoavatar = Image.FromStream(ms);
-            pictureBoxFotoPerfilTImeline.Image = fotoavatar;
-            pictureBoxPerfilUserFoto.Image = fotoavatar;
-            labelEstadUserPerfil.Text = Reader["estado"].ToString();
-            labelNombreUserperfil.Text = Reader["usuario_twitter"].ToString();
+            byte[] avatarByte = null;
+            string sql = "SELECT * from usuarios WHERE usuario_twitter=@USER";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            MySqlDataReader reader = comand.ExecuteReader();
 
+            if (reader.Read()) {
+
+                richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
+                labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
+                labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications";
+                labelEstadoUser.Text = reader["estado"].ToString();
+                labelEstadUserPerfil.Text = reader["estado"].ToString();
+                labelNombreUserperfil.Text = reader["usuario_twitter"].ToString();
+                try{
+
+                    avatarByte = (byte[])reader["foto"];
+                    MemoryStream ms = new MemoryStream(avatarByte);
+                    Image fotoavatar = Image.FromStream(ms);
+                    pictureBoxFotoPerfilTImeline.Image = fotoavatar;
+                    pictureBoxPerfilUserFoto.Image = fotoavatar;
+
+                } catch (InvalidCastException) {
+
+                    pictureBoxPerfilUserFoto.Image = null;//TODO: METER IMAGEN POR DEFECTO
+                }
+
+                reader.Close();
+                CargarEstadisticas();
+            }          
         }
 
         //rellena el flowlayout del timeline del usuario logueado
@@ -187,8 +199,7 @@ namespace DINT_F_P{
         //Va a la página Last twitts
         private void PictureBoxLastTwits_Click(object sender, EventArgs e){
 
-            ControlPaginas.SelectedTab = LastTwits;
-            
+            ControlPaginas.SelectedTab = LastTwits;   
         }
 
         private void PictureBoxConfig_Click(object sender, EventArgs e){
@@ -282,7 +293,6 @@ namespace DINT_F_P{
         }
 
 
-
         private void Editar_Click(object sender, EventArgs e)
         {
             //editar perfil
@@ -309,5 +319,55 @@ namespace DINT_F_P{
             labelLogout.ForeColor = Color.Black;
         }
         //FIN DE CODIGO DE PERFIL
+
+
+        private void CargarEstadisticas(){
+
+
+            String sql = "SELECT COUNT(mensaje) from mensajes WHERE user_emisor=@USER";
+            MySqlCommand  comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            MySqlDataReader reader = comand.ExecuteReader();
+
+            if (reader.Read())
+            {
+                labelPerfilNumTuits.Text = reader[0].ToString();//numero de tuits
+
+            }
+            reader.Close();
+
+            sql = "SELECT COUNT(user_seguido) from seguimiento WHERE user_sigue=@USER";
+            comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            reader = comand.ExecuteReader();
+            if (reader.Read())
+            {
+                labellabelPerfilSiguiendo.Text = reader[0].ToString();//siguiendo
+
+            }
+            reader.Close();
+
+            sql = "SELECT COUNT(user_sigue) from seguimiento WHERE user_seguido=@USER";
+            comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            reader = comand.ExecuteReader();
+            if (reader.Read())
+            {
+                labelPerfilSeguidores.Text = reader[0].ToString();//seguidores
+
+            }
+            reader.Close();
+
+            sql = "SELECT SUM(num_favs) from mensajes WHERE user_emisor=@USER";
+            comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            reader = comand.ExecuteReader();
+            if (reader.Read())
+            {
+                labelPerfilMegusta.Text = reader[0].ToString();
+
+            }
+            reader.Close();
+        }
     }
 }
