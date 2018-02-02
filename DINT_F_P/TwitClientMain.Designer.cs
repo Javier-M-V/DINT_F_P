@@ -676,15 +676,16 @@ namespace DINT_F_P
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.tableLayoutPanel3);
             this.panel3.Controls.Add(this.ButtonTwittIt);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.richTextBoxCajaTwit);
-            this.panel3.Location = new System.Drawing.Point(6, 6);
+            this.panel3.Location = new System.Drawing.Point(0, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(989, 514);
+            this.panel3.Size = new System.Drawing.Size(1008, 514);
             this.panel3.TabIndex = 0;
             // 
             // tableLayoutPanel3
