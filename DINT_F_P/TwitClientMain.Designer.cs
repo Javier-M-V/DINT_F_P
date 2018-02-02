@@ -32,9 +32,11 @@ namespace DINT_F_P
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwitClientMain));
             this.tabPagePerfilUser = new System.Windows.Forms.TabPage();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelLastTuits = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPerfilUserFoto = new System.Windows.Forms.PictureBox();
             this.labelNombreUserperfil = new System.Windows.Forms.Label();
             this.labelEstadUserPerfil = new System.Windows.Forms.Label();
@@ -69,8 +71,6 @@ namespace DINT_F_P
             this.pictureBoxnotifications2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBoxhome2 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanelLastTuits = new System.Windows.Forms.FlowLayoutPanel();
             this.labelLastTwits = new System.Windows.Forms.Label();
             this.Timeline = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -115,9 +115,10 @@ namespace DINT_F_P
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPagePerfilUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -139,7 +140,6 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).BeginInit();
-            this.panel5.SuspendLayout();
             this.Timeline.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -169,6 +169,8 @@ namespace DINT_F_P
             // tabPagePerfilUser
             // 
             this.tabPagePerfilUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPagePerfilUser.Controls.Add(this.pictureBox8);
+            this.tabPagePerfilUser.Controls.Add(this.panel5);
             this.tabPagePerfilUser.Controls.Add(this.tableLayoutPanel2);
             this.tabPagePerfilUser.Controls.Add(this.tableLayoutPanel1);
             this.tabPagePerfilUser.Controls.Add(this.panel12);
@@ -179,6 +181,33 @@ namespace DINT_F_P
             this.tabPagePerfilUser.Text = "Perfil";
             this.tabPagePerfilUser.UseVisualStyleBackColor = true;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(109, 256);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.Editar_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.flowLayoutPanelLastTuits);
+            this.panel5.Location = new System.Drawing.Point(254, 101);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(576, 403);
+            this.panel5.TabIndex = 8;
+            // 
+            // flowLayoutPanelLastTuits
+            // 
+            this.flowLayoutPanelLastTuits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanelLastTuits.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanelLastTuits.Name = "flowLayoutPanelLastTuits";
+            this.flowLayoutPanelLastTuits.Size = new System.Drawing.Size(568, 395);
+            this.flowLayoutPanelLastTuits.TabIndex = 0;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -186,7 +215,7 @@ namespace DINT_F_P
             this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelNombreUserperfil, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelEstadUserPerfil, 0, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(390, 10);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -200,29 +229,17 @@ namespace DINT_F_P
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.Controls.Add(this.pictureBox8);
             this.panel11.Controls.Add(this.pictureBoxPerfilUserFoto);
             this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(226, 140);
             this.panel11.TabIndex = 2;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(175, 17);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 8;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.Editar_Click);
-            // 
             // pictureBoxPerfilUserFoto
             // 
             this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxPerfilUserFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(55, 17);
+            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(59, 17);
             this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
             this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(114, 110);
             this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -271,7 +288,7 @@ namespace DINT_F_P
             this.tableLayoutPanel1.Controls.Add(this.labelSiguiendoUser, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelPerfilNumTuits, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelMegustaUser, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(255, 242);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(269, 30);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
@@ -571,7 +588,6 @@ namespace DINT_F_P
             // panel4
             // 
             this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.labelLastTwits);
             this.panel4.Location = new System.Drawing.Point(6, 6);
             this.panel4.Name = "panel4";
@@ -635,22 +651,6 @@ namespace DINT_F_P
             this.pictureBoxhome2.TabIndex = 3;
             this.pictureBoxhome2.TabStop = false;
             this.pictureBoxhome2.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.flowLayoutPanelLastTuits);
-            this.panel5.Location = new System.Drawing.Point(212, 87);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(576, 403);
-            this.panel5.TabIndex = 3;
-            // 
-            // flowLayoutPanelLastTuits
-            // 
-            this.flowLayoutPanelLastTuits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelLastTuits.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanelLastTuits.Name = "flowLayoutPanelLastTuits";
-            this.flowLayoutPanelLastTuits.Size = new System.Drawing.Size(568, 395);
-            this.flowLayoutPanelLastTuits.TabIndex = 0;
             // 
             // labelLastTwits
             // 
@@ -897,6 +897,7 @@ namespace DINT_F_P
             this.textBoxContrasenya.Text = "*****";
             this.textBoxContrasenya.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxContrasenya.Click += new System.EventHandler(this.TextBoxContrasenya_Click);
+            this.textBoxContrasenya.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxContrasenya_KeyDown);
             // 
             // textBoxUsuario
             // 
@@ -908,6 +909,7 @@ namespace DINT_F_P
             this.textBoxUsuario.Text = "@twitterUser";
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxUsuario.Click += new System.EventHandler(this.TextBoxUsuario_Click);
+            this.textBoxUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUsuario_KeyDown);
             // 
             // ControlPaginas
             // 
@@ -1182,9 +1184,10 @@ namespace DINT_F_P
             this.Text = "TwitClient";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwitClientMain_FormClosed);
             this.tabPagePerfilUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -1209,7 +1212,6 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).EndInit();
-            this.panel5.ResumeLayout(false);
             this.Timeline.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -1278,8 +1280,6 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBoxnotifications2;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBoxhome2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLastTuits;
         private System.Windows.Forms.Label labelLastTwits;
         private System.Windows.Forms.TabPage Timeline;
         private System.Windows.Forms.Panel panel3;
@@ -1326,6 +1326,8 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label labelEstadUserPerfil;
         private System.Windows.Forms.Label labelLogout;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLastTuits;
     }
 }
 

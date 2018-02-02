@@ -199,7 +199,7 @@ namespace DINT_F_P{
         //Va a la página Last twitts
         private void PictureBoxLastTwits_Click(object sender, EventArgs e){
 
-            ControlPaginas.SelectedTab = LastTwits;   
+
         }
 
         private void PictureBoxConfig_Click(object sender, EventArgs e){
@@ -284,7 +284,7 @@ namespace DINT_F_P{
 
         private void pictureBoxLasttuits4_Click(object sender, EventArgs e)
         {
-            ControlPaginas.SelectedTab = LastTwits;
+            
         }
 
         private void pictureBoxNotifications4_Click(object sender, EventArgs e)
@@ -368,6 +368,22 @@ namespace DINT_F_P{
 
             }
             reader.Close();
+        }
+
+        private void textBoxUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CustomButton1Login_Click(sender, e);
+            }
+        }
+
+        private void textBoxContrasenya_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CustomButton1Login_Click(sender, e);
+            }
         }
     }
 }
