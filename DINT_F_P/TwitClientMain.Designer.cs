@@ -257,7 +257,7 @@ namespace DINT_F_P
             // 
             this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxPerfilUserFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(57, 17);
+            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(59, 17);
             this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
             this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(114, 110);
             this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -885,9 +885,9 @@ namespace DINT_F_P
             // pictureBoxMunequito
             // 
             this.pictureBoxMunequito.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMunequito.Image")));
-            this.pictureBoxMunequito.Location = new System.Drawing.Point(546, 6);
+            this.pictureBoxMunequito.Location = new System.Drawing.Point(538, 6);
             this.pictureBoxMunequito.Name = "pictureBoxMunequito";
-            this.pictureBoxMunequito.Size = new System.Drawing.Size(301, 195);
+            this.pictureBoxMunequito.Size = new System.Drawing.Size(311, 195);
             this.pictureBoxMunequito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMunequito.TabIndex = 2;
             this.pictureBoxMunequito.TabStop = false;
@@ -982,8 +982,7 @@ namespace DINT_F_P
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Amatic SC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
@@ -992,7 +991,7 @@ namespace DINT_F_P
             this.label3.Size = new System.Drawing.Size(287, 63);
             this.label3.TabIndex = 1;
             this.label3.Text = "nombre";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel14
             // 
@@ -1008,7 +1007,7 @@ namespace DINT_F_P
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(76, 21);
+            this.pictureBox2.Location = new System.Drawing.Point(78, 21);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(136, 136);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
