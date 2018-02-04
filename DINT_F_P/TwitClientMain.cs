@@ -263,7 +263,7 @@ namespace DINT_F_P{
         //CODIGO DE NOTIFICATIONS
         private void pictureBoxtimeline3_Click(object sender, EventArgs e)
         {
-            ControlPaginas.SelectedTab = LastTwits;
+
         }
 
         private void pictureBoxhome3_Click(object sender, EventArgs e)

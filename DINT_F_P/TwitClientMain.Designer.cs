@@ -32,6 +32,7 @@ namespace DINT_F_P
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwitClientMain));
             this.tabPagePerfilUser = new System.Windows.Forms.TabPage();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanelLastTuits = new System.Windows.Forms.FlowLayoutPanel();
@@ -74,6 +75,7 @@ namespace DINT_F_P
             this.labelLastTwits = new System.Windows.Forms.Label();
             this.Timeline = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBoxFotoPerfilTImeline = new System.Windows.Forms.PictureBox();
@@ -89,7 +91,7 @@ namespace DINT_F_P
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBoxCajaTwit = new System.Windows.Forms.RichTextBox();
             this.Main = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxMunequito = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.customButton1Login = new BotonCustom.CustomButton1();
             this.textBoxContrasenya = new System.Windows.Forms.TextBox();
@@ -114,7 +116,9 @@ namespace DINT_F_P
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabPagePerfilUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -142,6 +146,7 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).BeginInit();
             this.Timeline.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPerfilTImeline)).BeginInit();
@@ -152,6 +157,7 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
             this.panel2.SuspendLayout();
             this.Main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMunequito)).BeginInit();
             this.panel1.SuspendLayout();
             this.ControlPaginas.SuspendLayout();
             this.tabPageContacto.SuspendLayout();
@@ -164,12 +170,13 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPagePerfilUser
             // 
             this.tabPagePerfilUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPagePerfilUser.Controls.Add(this.pictureBox8);
+            this.tabPagePerfilUser.Controls.Add(this.pictureBox9);
             this.tabPagePerfilUser.Controls.Add(this.panel5);
             this.tabPagePerfilUser.Controls.Add(this.tableLayoutPanel2);
             this.tabPagePerfilUser.Controls.Add(this.tableLayoutPanel1);
@@ -181,10 +188,20 @@ namespace DINT_F_P
             this.tabPagePerfilUser.Text = "Perfil";
             this.tabPagePerfilUser.UseVisualStyleBackColor = true;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(169, 426);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 9;
+            this.pictureBox9.TabStop = false;
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(109, 256);
+            this.pictureBox8.Location = new System.Drawing.Point(177, 16);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(27, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,17 +228,17 @@ namespace DINT_F_P
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.labelNombreUserperfil, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelEstadUserPerfil, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(232, 229);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(232, 268);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // panel11
@@ -230,16 +247,17 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.Controls.Add(this.pictureBoxPerfilUserFoto);
+            this.panel11.Controls.Add(this.pictureBox8);
             this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(226, 140);
+            this.panel11.Size = new System.Drawing.Size(226, 144);
             this.panel11.TabIndex = 2;
             // 
             // pictureBoxPerfilUserFoto
             // 
             this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxPerfilUserFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(59, 17);
+            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(57, 17);
             this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
             this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(114, 110);
             this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -248,17 +266,16 @@ namespace DINT_F_P
             // 
             // labelNombreUserperfil
             // 
-            this.labelNombreUserperfil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelNombreUserperfil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNombreUserperfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUserperfil.Font = new System.Drawing.Font("Amatic SC", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreUserperfil.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelNombreUserperfil.Location = new System.Drawing.Point(3, 146);
+            this.labelNombreUserperfil.Location = new System.Drawing.Point(3, 150);
             this.labelNombreUserperfil.Name = "labelNombreUserperfil";
-            this.labelNombreUserperfil.Size = new System.Drawing.Size(226, 40);
+            this.labelNombreUserperfil.Size = new System.Drawing.Size(226, 62);
             this.labelNombreUserperfil.TabIndex = 1;
             this.labelNombreUserperfil.Text = "nombre";
-            this.labelNombreUserperfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNombreUserperfil.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelEstadUserPerfil
             // 
@@ -266,12 +283,12 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEstadUserPerfil.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.labelEstadUserPerfil.Location = new System.Drawing.Point(3, 186);
+            this.labelEstadUserPerfil.Location = new System.Drawing.Point(3, 212);
             this.labelEstadUserPerfil.Name = "labelEstadUserPerfil";
-            this.labelEstadUserPerfil.Size = new System.Drawing.Size(226, 43);
+            this.labelEstadUserPerfil.Size = new System.Drawing.Size(226, 56);
             this.labelEstadUserPerfil.TabIndex = 3;
             this.labelEstadUserPerfil.Text = "label12";
-            this.labelEstadUserPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelEstadUserPerfil.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -490,6 +507,7 @@ namespace DINT_F_P
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.pictureBox12);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.labelLastNotifications);
@@ -567,11 +585,11 @@ namespace DINT_F_P
             // labelLastNotifications
             // 
             this.labelLastNotifications.AutoSize = true;
-            this.labelLastNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastNotifications.Font = new System.Drawing.Font("Amatic SC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLastNotifications.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelLastNotifications.Location = new System.Drawing.Point(20, 44);
+            this.labelLastNotifications.Location = new System.Drawing.Point(19, 31);
             this.labelLastNotifications.Name = "labelLastNotifications";
-            this.labelLastNotifications.Size = new System.Drawing.Size(219, 25);
+            this.labelLastNotifications.Size = new System.Drawing.Size(296, 52);
             this.labelLastNotifications.TabIndex = 1;
             this.labelLastNotifications.Text = "Your last notifications";
             // 
@@ -677,6 +695,7 @@ namespace DINT_F_P
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.pictureBox11);
             this.panel3.Controls.Add(this.tableLayoutPanel3);
             this.panel3.Controls.Add(this.ButtonTwittIt);
             this.panel3.Controls.Add(this.panel8);
@@ -687,6 +706,16 @@ namespace DINT_F_P
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1008, 514);
             this.panel3.TabIndex = 0;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(132, 401);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 10;
+            this.pictureBox11.TabStop = false;
             // 
             // tableLayoutPanel3
             // 
@@ -823,11 +852,11 @@ namespace DINT_F_P
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Amatic SC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label2.Location = new System.Drawing.Point(20, 44);
+            this.label2.Location = new System.Drawing.Point(14, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.Size = new System.Drawing.Size(126, 52);
             this.label2.TabIndex = 1;
             this.label2.Text = "Timeline";
             // 
@@ -843,7 +872,7 @@ namespace DINT_F_P
             // 
             // Main
             // 
-            this.Main.Controls.Add(this.label1);
+            this.Main.Controls.Add(this.pictureBoxMunequito);
             this.Main.Controls.Add(this.panel1);
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
@@ -853,16 +882,15 @@ namespace DINT_F_P
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // pictureBoxMunequito
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(354, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 37);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Start to use TwitClient!";
+            this.pictureBoxMunequito.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMunequito.Image")));
+            this.pictureBoxMunequito.Location = new System.Drawing.Point(546, 6);
+            this.pictureBoxMunequito.Name = "pictureBoxMunequito";
+            this.pictureBoxMunequito.Size = new System.Drawing.Size(301, 195);
+            this.pictureBoxMunequito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMunequito.TabIndex = 2;
+            this.pictureBoxMunequito.TabStop = false;
             // 
             // panel1
             // 
@@ -870,7 +898,7 @@ namespace DINT_F_P
             this.panel1.Controls.Add(this.customButton1Login);
             this.panel1.Controls.Add(this.textBoxContrasenya);
             this.panel1.Controls.Add(this.textBoxUsuario);
-            this.panel1.Location = new System.Drawing.Point(338, 181);
+            this.panel1.Location = new System.Drawing.Point(344, 207);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 103);
             this.panel1.TabIndex = 1;
@@ -957,7 +985,7 @@ namespace DINT_F_P
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Amatic SC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
             this.label3.Location = new System.Drawing.Point(3, 166);
             this.label3.Name = "label3";
@@ -1174,6 +1202,16 @@ namespace DINT_F_P
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(134, 411);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 11;
+            this.pictureBox12.TabStop = false;
+            // 
             // TwitClientMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1185,6 +1223,7 @@ namespace DINT_F_P
             this.Text = "TwitClient";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwitClientMain_FormClosed);
             this.tabPagePerfilUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1216,6 +1255,7 @@ namespace DINT_F_P
             this.Timeline.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPerfilTImeline)).EndInit();
@@ -1226,7 +1266,7 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).EndInit();
             this.panel2.ResumeLayout(false);
             this.Main.ResumeLayout(false);
-            this.Main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMunequito)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ControlPaginas.ResumeLayout(false);
@@ -1240,6 +1280,7 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1299,7 +1340,6 @@ namespace DINT_F_P
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBoxCajaTwit;
         private System.Windows.Forms.TabPage Main;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private BotonCustom.CustomButton1 customButton1Login;
         private System.Windows.Forms.TextBox textBoxContrasenya;
@@ -1329,6 +1369,10 @@ namespace DINT_F_P
         private System.Windows.Forms.Label labelLogout;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLastTuits;
+        private System.Windows.Forms.PictureBox pictureBoxMunequito;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }
 
