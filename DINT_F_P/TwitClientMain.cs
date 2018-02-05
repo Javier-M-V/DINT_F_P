@@ -140,6 +140,7 @@ namespace DINT_F_P{
 
             byte[] avatarByte = null;
             Image fotoavatar = null;
+            MemoryStream ms;
             string sql = "SELECT mensaje,num_rets,num_favs,user_emisor,foto FROM mensajes, usuarios WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) AND mensajes.user_emisor =usuarios.usuario_twitter ORDER BY fecha";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", User);
@@ -153,15 +154,13 @@ namespace DINT_F_P{
                 cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
                 cajita.SetFavs(Int32.Parse(reader["num_favs"].ToString()));
                 cajita.SetUser(reader["user_emisor"].ToString());
-                
                 try
                 {                   
-                    reader.Read();
                     avatarByte = (byte[])reader["foto"];
-                    MemoryStream ms = new MemoryStream(avatarByte);
-                    fotoavatar = Image.FromStream(ms);
-                    
-                }catch (InvalidCastException){
+                    ms = new MemoryStream(avatarByte);
+                    fotoavatar = Image.FromStream(ms, false, false);
+                }
+                catch (InvalidCastException){
 
                     pictureBoxPerfilUserFoto.Image = null;//TODO: METER IMAGEN POR DEFECTO
                 }

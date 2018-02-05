@@ -61,6 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEditarcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarcs.Designer.cs">
+      <DependentUpon>FormEditarcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="TwitClientMain.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -33,14 +33,14 @@ namespace DINT_F_P
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwitClientMain));
             this.tabPagePerfilUser = new System.Windows.Forms.TabPage();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanelLastTuits = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBoxPerfilUserFoto = new System.Windows.Forms.PictureBox();
             this.labelNombreUserperfil = new System.Windows.Forms.Label();
             this.labelEstadUserPerfil = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBoxPerfilUserFoto = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelPerfilMegusta = new System.Windows.Forms.Label();
             this.labellabelPerfilSiguiendo = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@ namespace DINT_F_P
             this.pictureBoxHome4 = new System.Windows.Forms.PictureBox();
             this.LastNotifications = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBoxuser3 = new System.Windows.Forms.PictureBox();
@@ -116,14 +117,13 @@ namespace DINT_F_P
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabPagePerfilUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -132,6 +132,7 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).BeginInit();
             this.LastNotifications.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -170,7 +171,6 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPagePerfilUser
@@ -197,17 +197,6 @@ namespace DINT_F_P
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 9;
             this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(177, 16);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 8;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.Editar_Click);
             // 
             // panel5
             // 
@@ -241,29 +230,6 @@ namespace DINT_F_P
             this.tableLayoutPanel2.Size = new System.Drawing.Size(232, 268);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // panel11
-            // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.Controls.Add(this.pictureBoxPerfilUserFoto);
-            this.panel11.Controls.Add(this.pictureBox8);
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(226, 144);
-            this.panel11.TabIndex = 2;
-            // 
-            // pictureBoxPerfilUserFoto
-            // 
-            this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxPerfilUserFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(59, 17);
-            this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
-            this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(114, 110);
-            this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPerfilUserFoto.TabIndex = 0;
-            this.pictureBoxPerfilUserFoto.TabStop = false;
-            // 
             // labelNombreUserperfil
             // 
             this.labelNombreUserperfil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -289,6 +255,40 @@ namespace DINT_F_P
             this.labelEstadUserPerfil.TabIndex = 3;
             this.labelEstadUserPerfil.Text = "label12";
             this.labelEstadUserPerfil.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.Controls.Add(this.pictureBoxPerfilUserFoto);
+            this.panel11.Controls.Add(this.pictureBox8);
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(226, 144);
+            this.panel11.TabIndex = 2;
+            // 
+            // pictureBoxPerfilUserFoto
+            // 
+            this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxPerfilUserFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(59, 17);
+            this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
+            this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(114, 110);
+            this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPerfilUserFoto.TabIndex = 0;
+            this.pictureBoxPerfilUserFoto.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(177, 16);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.Editar_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -516,6 +516,16 @@ namespace DINT_F_P
             this.panel6.Size = new System.Drawing.Size(989, 514);
             this.panel6.TabIndex = 1;
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(134, 411);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 11;
+            this.pictureBox12.TabStop = false;
+            // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -625,8 +635,7 @@ namespace DINT_F_P
             // 
             // pictureBoxuser2
             // 
-            this.pictureBoxuser2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser2.Image")));
-            this.pictureBoxuser2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser2.InitialImage")));
+            this.pictureBoxuser2.InitialImage = null;
             this.pictureBoxuser2.Location = new System.Drawing.Point(344, 3);
             this.pictureBoxuser2.Name = "pictureBoxuser2";
             this.pictureBoxuser2.Size = new System.Drawing.Size(25, 21);
@@ -637,8 +646,7 @@ namespace DINT_F_P
             // 
             // pictureBoxnotifications2
             // 
-            this.pictureBoxnotifications2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxnotifications2.Image")));
-            this.pictureBoxnotifications2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxnotifications2.InitialImage")));
+            this.pictureBoxnotifications2.InitialImage = null;
             this.pictureBoxnotifications2.Location = new System.Drawing.Point(313, 3);
             this.pictureBoxnotifications2.Name = "pictureBoxnotifications2";
             this.pictureBoxnotifications2.Size = new System.Drawing.Size(25, 21);
@@ -649,8 +657,7 @@ namespace DINT_F_P
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.InitialImage")));
+            this.pictureBox7.InitialImage = null;
             this.pictureBox7.Location = new System.Drawing.Point(282, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(25, 21);
@@ -660,8 +667,7 @@ namespace DINT_F_P
             // 
             // pictureBoxhome2
             // 
-            this.pictureBoxhome2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome2.Image")));
-            this.pictureBoxhome2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome2.InitialImage")));
+            this.pictureBoxhome2.InitialImage = null;
             this.pictureBoxhome2.Location = new System.Drawing.Point(251, 3);
             this.pictureBoxhome2.Name = "pictureBoxhome2";
             this.pictureBoxhome2.Size = new System.Drawing.Size(25, 21);
@@ -1201,16 +1207,6 @@ namespace DINT_F_P
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(134, 411);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(73, 78);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 11;
-            this.pictureBox12.TabStop = false;
-            // 
             // TwitClientMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1218,16 +1214,17 @@ namespace DINT_F_P
             this.ClientSize = new System.Drawing.Size(1010, 557);
             this.Controls.Add(this.ControlPaginas);
             this.ForeColor = System.Drawing.SystemColors.Window;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TwitClientMain";
             this.Text = "TwitClient";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwitClientMain_FormClosed);
             this.tabPagePerfilUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -1238,6 +1235,7 @@ namespace DINT_F_P
             this.LastNotifications.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -1279,7 +1277,6 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
