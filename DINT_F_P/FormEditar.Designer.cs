@@ -1,6 +1,6 @@
 ﻿namespace DINT_F_P
 {
-    partial class FormEditarcs
+    partial class FormEditar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarcs));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditar));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxNuevoMensajePerfil = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBoxPerfilUserFoto = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNuevaFoto = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevaFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,29 +68,30 @@
             this.textBoxNuevoMensajePerfil.TabIndex = 4;
             this.textBoxNuevoMensajePerfil.Text = "Tu nuevo mensaje de perfil";
             this.textBoxNuevoMensajePerfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNuevoMensajePerfil.Click += new System.EventHandler(this.textBoxNuevoMensajePerfil_Click);
             // 
             // panel11
             // 
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel11.Controls.Add(this.pictureBoxPerfilUserFoto);
+            this.panel11.Controls.Add(this.pictureBoxNuevaFoto);
             this.panel11.Controls.Add(this.pictureBox8);
             this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(226, 144);
             this.panel11.TabIndex = 2;
             // 
-            // pictureBoxPerfilUserFoto
+            // pictureBoxNuevaFoto
             // 
-            this.pictureBoxPerfilUserFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxPerfilUserFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPerfilUserFoto.Location = new System.Drawing.Point(59, 17);
-            this.pictureBoxPerfilUserFoto.Name = "pictureBoxPerfilUserFoto";
-            this.pictureBoxPerfilUserFoto.Size = new System.Drawing.Size(114, 110);
-            this.pictureBoxPerfilUserFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPerfilUserFoto.TabIndex = 0;
-            this.pictureBoxPerfilUserFoto.TabStop = false;
+            this.pictureBoxNuevaFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxNuevaFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxNuevaFoto.Location = new System.Drawing.Point(59, 17);
+            this.pictureBoxNuevaFoto.Name = "pictureBoxNuevaFoto";
+            this.pictureBoxNuevaFoto.Size = new System.Drawing.Size(114, 110);
+            this.pictureBoxNuevaFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxNuevaFoto.TabIndex = 0;
+            this.pictureBoxNuevaFoto.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -125,7 +126,7 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.cancel_Click);
             // 
-            // FormEditarcs
+            // FormEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,12 +135,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormEditarcs";
+            this.Name = "FormEditar";
             this.Text = "FormEditarcs";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfilUserFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevaFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -152,7 +153,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox textBoxNuevoMensajePerfil;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.PictureBox pictureBoxPerfilUserFoto;
+        private System.Windows.Forms.PictureBox pictureBoxNuevaFoto;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

@@ -27,3 +27,4 @@ C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csprojResolveAssemblyReference.cache
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.FormEditar.resources

@@ -309,7 +309,12 @@ namespace DINT_F_P{
 
         private void Editar_Click(object sender, EventArgs e)
         {
-            //editar perfil
+            FormEditar editar = new FormEditar();
+            editar.ShowDialog();
+            Image nuevaimagen = editar.Nuevaimagen;
+            string nuevomensaje = editar.Mensajeperfil;
+
+            //TODO: HACER EL UPDATE, PERRA
         }
 
         //logout text

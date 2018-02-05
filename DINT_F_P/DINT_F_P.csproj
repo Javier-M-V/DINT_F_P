@@ -61,11 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormEditarcs.cs">
+    <Compile Include="FormEditar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditarcs.Designer.cs">
-      <DependentUpon>FormEditarcs.cs</DependentUpon>
+    <Compile Include="FormEditar.Designer.cs">
+      <DependentUpon>FormEditar.cs</DependentUpon>
     </Compile>
     <Compile Include="TwitClientMain.cs">
       <SubType>Form</SubType>
@@ -75,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEditar.resx">
+      <DependentUpon>FormEditar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TwitClientMain.resx">
       <DependentUpon>TwitClientMain.cs</DependentUpon>
     </EmbeddedResource>
