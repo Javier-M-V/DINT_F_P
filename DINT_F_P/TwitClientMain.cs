@@ -313,8 +313,16 @@ namespace DINT_F_P{
             editar.ShowDialog();
             Image nuevaimagen = editar.Nuevaimagen;
             string nuevomensaje = editar.Mensajeperfil;
-
-            //TODO: HACER EL UPDATE, PERRA
+            MemoryStream ms = new MemoryStream();
+            nuevaimagen.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            byte[] fotobytes = ms.ToArray();
+            string sql = "UPDATE usuarios SET estado=@ESTADO, foto=@FOTO WHERE usuario_twitter = @USER";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@FOTO", fotobytes);
+            comand.Parameters.AddWithValue("@ESTADO", nuevomensaje);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            comand.ExecuteNonQuery();
+            RescateInfoDinamica(Usuario);//refresco de la info del usuario
         }
 
         //logout text
