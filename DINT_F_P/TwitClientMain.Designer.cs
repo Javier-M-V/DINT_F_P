@@ -54,7 +54,7 @@ namespace DINT_F_P
             this.labelLogout = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxNotifications4 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLasttuits4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTuits4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxHome4 = new System.Windows.Forms.PictureBox();
             this.LastNotifications = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -128,7 +128,7 @@ namespace DINT_F_P
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLasttuits4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTuits4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).BeginInit();
             this.LastNotifications.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -427,7 +427,7 @@ namespace DINT_F_P
             this.panel12.Controls.Add(this.labelLogout);
             this.panel12.Controls.Add(this.pictureBox1);
             this.panel12.Controls.Add(this.pictureBoxNotifications4);
-            this.panel12.Controls.Add(this.pictureBoxLasttuits4);
+            this.panel12.Controls.Add(this.pictureBoxTuits4);
             this.panel12.Controls.Add(this.pictureBoxHome4);
             this.panel12.Location = new System.Drawing.Point(621, 10);
             this.panel12.Name = "panel12";
@@ -471,17 +471,17 @@ namespace DINT_F_P
             this.pictureBoxNotifications4.TabStop = false;
             this.pictureBoxNotifications4.Click += new System.EventHandler(this.pictureBoxNotifications4_Click);
             // 
-            // pictureBoxLasttuits4
+            // pictureBoxTuits4
             // 
-            this.pictureBoxLasttuits4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLasttuits4.Image")));
-            this.pictureBoxLasttuits4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLasttuits4.InitialImage")));
-            this.pictureBoxLasttuits4.Location = new System.Drawing.Point(282, 3);
-            this.pictureBoxLasttuits4.Name = "pictureBoxLasttuits4";
-            this.pictureBoxLasttuits4.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxLasttuits4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLasttuits4.TabIndex = 4;
-            this.pictureBoxLasttuits4.TabStop = false;
-            this.pictureBoxLasttuits4.Click += new System.EventHandler(this.pictureBoxLasttuits4_Click);
+            this.pictureBoxTuits4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTuits4.Image")));
+            this.pictureBoxTuits4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxTuits4.InitialImage")));
+            this.pictureBoxTuits4.Location = new System.Drawing.Point(282, 3);
+            this.pictureBoxTuits4.Name = "pictureBoxTuits4";
+            this.pictureBoxTuits4.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxTuits4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxTuits4.TabIndex = 4;
+            this.pictureBoxTuits4.TabStop = false;
+            this.pictureBoxTuits4.Click += new System.EventHandler(this.pictureBoxLasttuits4_Click);
             // 
             // pictureBoxHome4
             // 
@@ -813,7 +813,7 @@ namespace DINT_F_P
             this.pictureBoxNotifications.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNotifications.TabIndex = 6;
             this.pictureBoxNotifications.TabStop = false;
-            this.pictureBoxNotifications.Click += new System.EventHandler(this.PictureBoxNotifications_Click);
+            this.pictureBoxNotifications.Click += new System.EventHandler(this.PictureBoxTuitear_Click);
             // 
             // pictureBoxLastTwits
             // 
@@ -1195,6 +1195,7 @@ namespace DINT_F_P
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -1214,6 +1215,7 @@ namespace DINT_F_P
             this.ClientSize = new System.Drawing.Size(1010, 557);
             this.Controls.Add(this.ControlPaginas);
             this.ForeColor = System.Drawing.SystemColors.Window;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TwitClientMain";
             this.Text = "TwitClient";
@@ -1230,7 +1232,7 @@ namespace DINT_F_P
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLasttuits4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTuits4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).EndInit();
             this.LastNotifications.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -1300,7 +1302,7 @@ namespace DINT_F_P
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBoxNotifications4;
-        private System.Windows.Forms.PictureBox pictureBoxLasttuits4;
+        private System.Windows.Forms.PictureBox pictureBoxTuits4;
         private System.Windows.Forms.PictureBox pictureBoxHome4;
         private System.Windows.Forms.TabPage LastNotifications;
         private System.Windows.Forms.Panel panel6;

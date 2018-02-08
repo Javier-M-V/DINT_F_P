@@ -12,13 +12,15 @@ namespace DINT_F_P{
         private string Contrasenya { get; set; }
         private MySqlConnectionStringBuilder build = null;
         private MySqlConnection conexion = null;
-
+        /*https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes*/
 
         //CÓDIGO DE INICIALIZACIÓN DE LA APLICACIÓN
         public TwitClientMain(){
 
             InitializeComponent();
             ConectarBBDD(ref build, ref conexion);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
         public void ConectarBBDD(ref MySqlConnectionStringBuilder build, ref MySqlConnection conexion) {
 
@@ -205,15 +207,15 @@ namespace DINT_F_P{
         //CÓDIGO RELATIVO AL TIMELINE
 
         //Va a la página de notificaciones
-        private void PictureBoxNotifications_Click(object sender, EventArgs e){
+        private void PictureBoxTuitear_Click(object sender, EventArgs e){
 
             ControlPaginas.SelectedTab = LastNotifications;
         }
 
-        //Va a la página Last twitts
+        //lanza el form para crear un tuit
         private void PictureBoxLastTwits_Click(object sender, EventArgs e){
 
-
+            VentanaTuit();
         }
 
         private void PictureBoxConfig_Click(object sender, EventArgs e){
@@ -277,7 +279,7 @@ namespace DINT_F_P{
         //CODIGO DE NOTIFICATIONS
         private void pictureBoxtimeline3_Click(object sender, EventArgs e)
         {
-
+            PictureBoxTuitear_Click(sender, e);
         }
 
         private void pictureBoxhome3_Click(object sender, EventArgs e)
@@ -298,7 +300,7 @@ namespace DINT_F_P{
 
         private void pictureBoxLasttuits4_Click(object sender, EventArgs e)
         {
-            
+            VentanaTuit();
         }
 
         private void pictureBoxNotifications4_Click(object sender, EventArgs e)
@@ -347,6 +349,29 @@ namespace DINT_F_P{
         }
         //FIN DE CODIGO DE PERFIL
 
+        private void VentanaTuit(){
+            Mascara mask = new Mascara();
+            mask.Show();
+            Tuitear tuitventana = new Tuitear();
+            tuitventana.ShowDialog();
+            if (tuitventana.DialogResult == DialogResult.OK)
+            {
+                string tuit = tuitventana.Texto;
+                string sql = "Insert INTO mensajes VALUES(@USER,@RECEPTOR,@DATE,@MENSAJE,@FAVS,@RETS)";
+                MySqlCommand comand = new MySqlCommand(sql, conexion);
+                comand.Parameters.AddWithValue("@USER", Usuario);
+                comand.Parameters.AddWithValue("@RECEPTOR", "");
+                comand.Parameters.AddWithValue("@DATE", DateTime.Now.ToString("yyyy-MM-dd h:mm:ss"));
+                comand.Parameters.AddWithValue("@MENSAJE", tuit);
+                comand.Parameters.AddWithValue("@FAVS", 0);
+                comand.Parameters.AddWithValue("@RETS", 0);
+                comand.ExecuteNonQuery();
+                RescateTwittsSelfUsuario(Usuario);
+
+            }
+            mask.Close();
+           
+        }
 
         private void CargarEstadisticas(){
 
@@ -411,6 +436,11 @@ namespace DINT_F_P{
             {
                 CustomButton1Login_Click(sender, e);
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

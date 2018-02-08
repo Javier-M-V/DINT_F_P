@@ -12,6 +12,8 @@ namespace DINT_F_P{
         public FormEditar(){
 
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void OK_Click(object sender, EventArgs e) {

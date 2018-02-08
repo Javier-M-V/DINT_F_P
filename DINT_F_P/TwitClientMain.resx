@@ -3360,7 +3360,7 @@
         gAACCCCAAAIIIIAAAjMS+D9G/AyHKmOOuwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBoxLasttuits4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxTuits4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAIFQTFRF////
         AAAA+Pj4s7Oz8PDw/Pz84eHhV1dXpaWl+vr66+vr9vb2ycnJq6urj4+P0tLSZWVllpaWLCwsurq6bW1t
@@ -3404,7 +3404,7 @@
         si9zxdiw41jsBP4fC1dtE0RyR/gAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBoxLasttuits4.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxTuits4.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAADGjSURBVHhe7d2Bcdw4EoXhDUEhKASHoBAUgkJwCMrA
