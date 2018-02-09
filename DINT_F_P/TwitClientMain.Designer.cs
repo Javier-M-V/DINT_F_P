@@ -56,24 +56,6 @@ namespace DINT_F_P
             this.pictureBoxNotifications4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxTuits4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxHome4 = new System.Windows.Forms.PictureBox();
-            this.LastNotifications = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBoxuser3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxtimeline3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxhome3 = new System.Windows.Forms.PictureBox();
-            this.labelLastNotifications = new System.Windows.Forms.Label();
-            this.LastTwits = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBoxuser2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxnotifications2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxhome2 = new System.Windows.Forms.PictureBox();
-            this.labelLastTwits = new System.Windows.Forms.Label();
             this.Timeline = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -117,6 +99,26 @@ namespace DINT_F_P
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.labelLastNotifications = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBoxhome3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxtimeline3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxuser3 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.LastNotifications = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabPagePerfilUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel5.SuspendLayout();
@@ -130,21 +132,6 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTuits4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).BeginInit();
-            this.LastNotifications.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).BeginInit();
-            this.LastTwits.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).BeginInit();
             this.Timeline.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -171,6 +158,21 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.LastNotifications.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPagePerfilUser
@@ -495,198 +497,6 @@ namespace DINT_F_P
             this.pictureBoxHome4.TabStop = false;
             this.pictureBoxHome4.Click += new System.EventHandler(this.pictureBoxHome4_Click);
             // 
-            // LastNotifications
-            // 
-            this.LastNotifications.Controls.Add(this.panel6);
-            this.LastNotifications.Location = new System.Drawing.Point(4, 22);
-            this.LastNotifications.Name = "LastNotifications";
-            this.LastNotifications.Size = new System.Drawing.Size(1011, 525);
-            this.LastNotifications.TabIndex = 4;
-            this.LastNotifications.Text = "LastNotifications";
-            this.LastNotifications.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox12);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.panel10);
-            this.panel6.Controls.Add(this.labelLastNotifications);
-            this.panel6.Location = new System.Drawing.Point(6, 6);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(989, 514);
-            this.panel6.TabIndex = 1;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(134, 411);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(73, 78);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 11;
-            this.pictureBox12.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Location = new System.Drawing.Point(213, 86);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(576, 403);
-            this.panel7.TabIndex = 7;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.pictureBoxuser3);
-            this.panel10.Controls.Add(this.pictureBox10);
-            this.panel10.Controls.Add(this.pictureBoxtimeline3);
-            this.panel10.Controls.Add(this.pictureBoxhome3);
-            this.panel10.Location = new System.Drawing.Point(614, 4);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(372, 65);
-            this.panel10.TabIndex = 6;
-            // 
-            // pictureBoxuser3
-            // 
-            this.pictureBoxuser3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser3.Image")));
-            this.pictureBoxuser3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser3.InitialImage")));
-            this.pictureBoxuser3.Location = new System.Drawing.Point(344, 3);
-            this.pictureBoxuser3.Name = "pictureBoxuser3";
-            this.pictureBoxuser3.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxuser3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxuser3.TabIndex = 7;
-            this.pictureBoxuser3.TabStop = false;
-            this.pictureBoxuser3.Click += new System.EventHandler(this.pictureBoxuser3_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.InitialImage")));
-            this.pictureBox10.Location = new System.Drawing.Point(313, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(25, 21);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 6;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBoxtimeline3
-            // 
-            this.pictureBoxtimeline3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.Image")));
-            this.pictureBoxtimeline3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.InitialImage")));
-            this.pictureBoxtimeline3.Location = new System.Drawing.Point(282, 3);
-            this.pictureBoxtimeline3.Name = "pictureBoxtimeline3";
-            this.pictureBoxtimeline3.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxtimeline3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxtimeline3.TabIndex = 4;
-            this.pictureBoxtimeline3.TabStop = false;
-            this.pictureBoxtimeline3.Click += new System.EventHandler(this.pictureBoxtimeline3_Click);
-            // 
-            // pictureBoxhome3
-            // 
-            this.pictureBoxhome3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.Image")));
-            this.pictureBoxhome3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.InitialImage")));
-            this.pictureBoxhome3.Location = new System.Drawing.Point(251, 3);
-            this.pictureBoxhome3.Name = "pictureBoxhome3";
-            this.pictureBoxhome3.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxhome3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxhome3.TabIndex = 3;
-            this.pictureBoxhome3.TabStop = false;
-            this.pictureBoxhome3.Click += new System.EventHandler(this.pictureBoxhome3_Click);
-            // 
-            // labelLastNotifications
-            // 
-            this.labelLastNotifications.AutoSize = true;
-            this.labelLastNotifications.Font = new System.Drawing.Font("Amatic SC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastNotifications.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelLastNotifications.Location = new System.Drawing.Point(19, 31);
-            this.labelLastNotifications.Name = "labelLastNotifications";
-            this.labelLastNotifications.Size = new System.Drawing.Size(296, 52);
-            this.labelLastNotifications.TabIndex = 1;
-            this.labelLastNotifications.Text = "Your last notifications";
-            // 
-            // LastTwits
-            // 
-            this.LastTwits.Controls.Add(this.panel4);
-            this.LastTwits.Location = new System.Drawing.Point(4, 22);
-            this.LastTwits.Name = "LastTwits";
-            this.LastTwits.Size = new System.Drawing.Size(1011, 525);
-            this.LastTwits.TabIndex = 2;
-            this.LastTwits.Text = "LastTwits";
-            this.LastTwits.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.labelLastTwits);
-            this.panel4.Location = new System.Drawing.Point(6, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(989, 514);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.pictureBoxuser2);
-            this.panel9.Controls.Add(this.pictureBoxnotifications2);
-            this.panel9.Controls.Add(this.pictureBox7);
-            this.panel9.Controls.Add(this.pictureBoxhome2);
-            this.panel9.Location = new System.Drawing.Point(614, 4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(372, 65);
-            this.panel9.TabIndex = 6;
-            // 
-            // pictureBoxuser2
-            // 
-            this.pictureBoxuser2.InitialImage = null;
-            this.pictureBoxuser2.Location = new System.Drawing.Point(344, 3);
-            this.pictureBoxuser2.Name = "pictureBoxuser2";
-            this.pictureBoxuser2.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxuser2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxuser2.TabIndex = 7;
-            this.pictureBoxuser2.TabStop = false;
-            this.pictureBoxuser2.Click += new System.EventHandler(this.pictureBoxuser2_Click);
-            // 
-            // pictureBoxnotifications2
-            // 
-            this.pictureBoxnotifications2.InitialImage = null;
-            this.pictureBoxnotifications2.Location = new System.Drawing.Point(313, 3);
-            this.pictureBoxnotifications2.Name = "pictureBoxnotifications2";
-            this.pictureBoxnotifications2.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxnotifications2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxnotifications2.TabIndex = 6;
-            this.pictureBoxnotifications2.TabStop = false;
-            this.pictureBoxnotifications2.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.InitialImage = null;
-            this.pictureBox7.Location = new System.Drawing.Point(282, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 21);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 4;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBoxhome2
-            // 
-            this.pictureBoxhome2.InitialImage = null;
-            this.pictureBoxhome2.Location = new System.Drawing.Point(251, 3);
-            this.pictureBoxhome2.Name = "pictureBoxhome2";
-            this.pictureBoxhome2.Size = new System.Drawing.Size(25, 21);
-            this.pictureBoxhome2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxhome2.TabIndex = 3;
-            this.pictureBoxhome2.TabStop = false;
-            this.pictureBoxhome2.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // labelLastTwits
-            // 
-            this.labelLastTwits.AutoSize = true;
-            this.labelLastTwits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastTwits.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelLastTwits.Location = new System.Drawing.Point(20, 44);
-            this.labelLastTwits.Name = "labelLastTwits";
-            this.labelLastTwits.Size = new System.Drawing.Size(147, 25);
-            this.labelLastTwits.TabIndex = 1;
-            this.labelLastTwits.Text = "Your last twits";
-            // 
             // Timeline
             // 
             this.Timeline.Controls.Add(this.panel3);
@@ -950,7 +760,6 @@ namespace DINT_F_P
             // 
             this.ControlPaginas.Controls.Add(this.Main);
             this.ControlPaginas.Controls.Add(this.Timeline);
-            this.ControlPaginas.Controls.Add(this.LastTwits);
             this.ControlPaginas.Controls.Add(this.LastNotifications);
             this.ControlPaginas.Controls.Add(this.tabPagePerfilUser);
             this.ControlPaginas.Controls.Add(this.tabPageContacto);
@@ -1208,6 +1017,211 @@ namespace DINT_F_P
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel16);
+            this.panel6.Location = new System.Drawing.Point(6, 6);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(989, 514);
+            this.panel6.TabIndex = 1;
+            // 
+            // labelLastNotifications
+            // 
+            this.labelLastNotifications.AutoSize = true;
+            this.labelLastNotifications.Font = new System.Drawing.Font("Amatic SC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastNotifications.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelLastNotifications.Location = new System.Drawing.Point(19, 31);
+            this.labelLastNotifications.Name = "labelLastNotifications";
+            this.labelLastNotifications.Size = new System.Drawing.Size(296, 52);
+            this.labelLastNotifications.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(614, 4);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(372, 65);
+            this.panel10.TabIndex = 6;
+            // 
+            // pictureBoxhome3
+            // 
+            this.pictureBoxhome3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.Image")));
+            this.pictureBoxhome3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxhome3.InitialImage")));
+            this.pictureBoxhome3.Location = new System.Drawing.Point(251, 3);
+            this.pictureBoxhome3.Name = "pictureBoxhome3";
+            this.pictureBoxhome3.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxhome3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxhome3.TabIndex = 3;
+            this.pictureBoxhome3.TabStop = false;
+            this.pictureBoxhome3.Click += new System.EventHandler(this.pictureBoxhome3_Click);
+            // 
+            // pictureBoxtimeline3
+            // 
+            this.pictureBoxtimeline3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.Image")));
+            this.pictureBoxtimeline3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxtimeline3.InitialImage")));
+            this.pictureBoxtimeline3.Location = new System.Drawing.Point(282, 3);
+            this.pictureBoxtimeline3.Name = "pictureBoxtimeline3";
+            this.pictureBoxtimeline3.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxtimeline3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxtimeline3.TabIndex = 4;
+            this.pictureBoxtimeline3.TabStop = false;
+            this.pictureBoxtimeline3.Click += new System.EventHandler(this.pictureBoxtimeline3_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.InitialImage")));
+            this.pictureBox10.Location = new System.Drawing.Point(313, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 6;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBoxuser3
+            // 
+            this.pictureBoxuser3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser3.Image")));
+            this.pictureBoxuser3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxuser3.InitialImage")));
+            this.pictureBoxuser3.Location = new System.Drawing.Point(344, 3);
+            this.pictureBoxuser3.Name = "pictureBoxuser3";
+            this.pictureBoxuser3.Size = new System.Drawing.Size(25, 21);
+            this.pictureBoxuser3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxuser3.TabIndex = 7;
+            this.pictureBoxuser3.TabStop = false;
+            this.pictureBoxuser3.Click += new System.EventHandler(this.pictureBoxuser3_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(213, 86);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(576, 403);
+            this.panel7.TabIndex = 7;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(134, 411);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 11;
+            this.pictureBox12.TabStop = false;
+            // 
+            // LastNotifications
+            // 
+            this.LastNotifications.Controls.Add(this.panel6);
+            this.LastNotifications.Location = new System.Drawing.Point(4, 22);
+            this.LastNotifications.Name = "LastNotifications";
+            this.LastNotifications.Size = new System.Drawing.Size(1011, 525);
+            this.LastNotifications.TabIndex = 4;
+            this.LastNotifications.Text = "LastNotifications";
+            this.LastNotifications.UseVisualStyleBackColor = true;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Transparent;
+            this.panel16.Controls.Add(this.pictureBox13);
+            this.panel16.Controls.Add(this.panel18);
+            this.panel16.Controls.Add(this.panel19);
+            this.panel16.Controls.Add(this.label12);
+            this.panel16.Location = new System.Drawing.Point(-10, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1008, 514);
+            this.panel16.TabIndex = 1;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(132, 401);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 10;
+            this.pictureBox13.TabStop = false;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.pictureBox15);
+            this.panel18.Controls.Add(this.pictureBox16);
+            this.panel18.Controls.Add(this.pictureBox17);
+            this.panel18.Controls.Add(this.pictureBox18);
+            this.panel18.Location = new System.Drawing.Point(614, 4);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(372, 65);
+            this.panel18.TabIndex = 5;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.InitialImage")));
+            this.pictureBox15.Location = new System.Drawing.Point(344, 3);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 7;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox16.InitialImage")));
+            this.pictureBox16.Location = new System.Drawing.Point(313, 3);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 6;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.InitialImage")));
+            this.pictureBox17.Location = new System.Drawing.Point(282, 3);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 4;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.InitialImage")));
+            this.pictureBox18.Location = new System.Drawing.Point(251, 3);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(25, 21);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 3;
+            this.pictureBox18.TabStop = false;
+            // 
+            // panel19
+            // 
+            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel19.Controls.Add(this.flowLayoutPanel1);
+            this.panel19.Location = new System.Drawing.Point(213, 142);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(581, 337);
+            this.panel19.TabIndex = 3;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(576, 332);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Amatic SC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label12.Location = new System.Drawing.Point(14, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(235, 52);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Last Notifications";
+            // 
             // TwitClientMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1234,23 +1248,6 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTuits4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).EndInit();
-            this.LastNotifications.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).EndInit();
-            this.LastTwits.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxnotifications2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome2)).EndInit();
             this.Timeline.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -1279,6 +1276,22 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxhome3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtimeline3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.LastNotifications.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.panel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.panel19.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1304,23 +1317,6 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBoxNotifications4;
         private System.Windows.Forms.PictureBox pictureBoxTuits4;
         private System.Windows.Forms.PictureBox pictureBoxHome4;
-        private System.Windows.Forms.TabPage LastNotifications;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.PictureBox pictureBoxuser3;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBoxtimeline3;
-        private System.Windows.Forms.PictureBox pictureBoxhome3;
-        private System.Windows.Forms.Label labelLastNotifications;
-        private System.Windows.Forms.TabPage LastTwits;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBoxuser2;
-        private System.Windows.Forms.PictureBox pictureBoxnotifications2;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBoxhome2;
-        private System.Windows.Forms.Label labelLastTwits;
         private System.Windows.Forms.TabPage Timeline;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -1370,6 +1366,25 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBoxMunequito;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.TabPage LastNotifications;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelLastNotifications;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.PictureBox pictureBoxhome3;
+        private System.Windows.Forms.PictureBox pictureBoxtimeline3;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBoxuser3;
+        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

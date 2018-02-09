@@ -114,7 +114,6 @@ namespace DINT_F_P{
             if (reader.Read()) {
 
                 richTextBoxCajaTwit.Text = "twitt as " + reader["usuario_twitter"].ToString();
-                labelLastTwits.Text = reader["usuario_twitter"].ToString() + " last twitts";
                 labelLastNotifications.Text = reader["usuario_twitter"].ToString() + " last notifications";
                 labelEstadoUser.Text = reader["estado"].ToString();
                 labelEstadUserPerfil.Text = reader["estado"].ToString();
