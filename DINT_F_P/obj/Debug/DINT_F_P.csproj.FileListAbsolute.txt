@@ -29,4 +29,3 @@ C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csprojResolveAssemblyReference.cache
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.FormEditar.resources
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.Tuitear.resources
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.Mascara.resources

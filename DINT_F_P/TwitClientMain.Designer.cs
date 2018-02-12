@@ -446,9 +446,9 @@ namespace DINT_F_P
             this.labelLogout.Size = new System.Drawing.Size(46, 13);
             this.labelLogout.TabIndex = 10;
             this.labelLogout.Text = "Logout";
-            this.labelLogout.Click += new System.EventHandler(this.logoutLabel_Click);
-            this.labelLogout.MouseEnter += new System.EventHandler(this.label12_MouseEnter);
-            this.labelLogout.MouseLeave += new System.EventHandler(this.labelLogout_MouseLeave);
+            this.labelLogout.Click += new System.EventHandler(this.LogoutLabel_Click);
+            this.labelLogout.MouseEnter += new System.EventHandler(this.Label12_MouseEnter);
+            this.labelLogout.MouseLeave += new System.EventHandler(this.LabelLogout_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -471,7 +471,7 @@ namespace DINT_F_P
             this.pictureBoxNotifications4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNotifications4.TabIndex = 6;
             this.pictureBoxNotifications4.TabStop = false;
-            this.pictureBoxNotifications4.Click += new System.EventHandler(this.pictureBoxNotifications4_Click);
+            this.pictureBoxNotifications4.Click += new System.EventHandler(this.PictureBoxNotifications4_Click);
             // 
             // pictureBoxTuits4
             // 
@@ -483,7 +483,7 @@ namespace DINT_F_P
             this.pictureBoxTuits4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxTuits4.TabIndex = 4;
             this.pictureBoxTuits4.TabStop = false;
-            this.pictureBoxTuits4.Click += new System.EventHandler(this.pictureBoxLasttuits4_Click);
+            this.pictureBoxTuits4.Click += new System.EventHandler(this.PictureBoxLasttuits4_Clic);
             // 
             // pictureBoxHome4
             // 
@@ -495,7 +495,7 @@ namespace DINT_F_P
             this.pictureBoxHome4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxHome4.TabIndex = 3;
             this.pictureBoxHome4.TabStop = false;
-            this.pictureBoxHome4.Click += new System.EventHandler(this.pictureBoxHome4_Click);
+            this.pictureBoxHome4.Click += new System.EventHandler(this.PictureBoxHome4_Clic);
             // 
             // Timeline
             // 
@@ -742,7 +742,7 @@ namespace DINT_F_P
             this.textBoxContrasenya.Text = "*****";
             this.textBoxContrasenya.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxContrasenya.Click += new System.EventHandler(this.TextBoxContrasenya_Click);
-            this.textBoxContrasenya.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxContrasenya_KeyDown);
+            this.textBoxContrasenya.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxContrasenya_KeyDown);
             // 
             // textBoxUsuario
             // 
@@ -754,7 +754,7 @@ namespace DINT_F_P
             this.textBoxUsuario.Text = "@twitterUser";
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxUsuario.Click += new System.EventHandler(this.TextBoxUsuario_Click);
-            this.textBoxUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUsuario_KeyDown);
+            this.textBoxUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxUsuario_KeyDown);
             // 
             // ControlPaginas
             // 
@@ -1052,7 +1052,7 @@ namespace DINT_F_P
             this.pictureBoxhome3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxhome3.TabIndex = 3;
             this.pictureBoxhome3.TabStop = false;
-            this.pictureBoxhome3.Click += new System.EventHandler(this.pictureBoxhome3_Click);
+            this.pictureBoxhome3.Click += new System.EventHandler(this.PictureBoxhome3_Click);
             // 
             // pictureBoxtimeline3
             // 
@@ -1064,7 +1064,7 @@ namespace DINT_F_P
             this.pictureBoxtimeline3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxtimeline3.TabIndex = 4;
             this.pictureBoxtimeline3.TabStop = false;
-            this.pictureBoxtimeline3.Click += new System.EventHandler(this.pictureBoxtimeline3_Click);
+            this.pictureBoxtimeline3.Click += new System.EventHandler(this.PictureBoxtimeline3_Click);
             // 
             // pictureBox10
             // 
@@ -1087,7 +1087,7 @@ namespace DINT_F_P
             this.pictureBoxuser3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxuser3.TabIndex = 7;
             this.pictureBoxuser3.TabStop = false;
-            this.pictureBoxuser3.Click += new System.EventHandler(this.pictureBoxuser3_Click);
+            this.pictureBoxuser3.Click += new System.EventHandler(this.PictureBoxuser3_Click);
             // 
             // panel7
             // 

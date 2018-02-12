@@ -6,6 +6,11 @@ using System.IO;
 
 namespace DINT_F_P{
 
+
+    /// <summary>
+    /// Formulario principal.
+    /// Contiene las funciones básicas de comportamiento.
+    /// </summary>
     public partial class TwitClientMain : Form {
 
         private string Usuario { get; set; }
@@ -14,7 +19,10 @@ namespace DINT_F_P{
         private MySqlConnection conexion = null;
         /*https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes*/
 
-        //CÓDIGO DE INICIALIZACIÓN DE LA APLICACIÓN
+        /// <summary>
+        /// Constructor del formulario.
+        /// Inicializa la conexión con la BBDD.
+        /// </summary>
         public TwitClientMain(){
 
             InitializeComponent();
@@ -22,6 +30,13 @@ namespace DINT_F_P{
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
+        /// <summary>
+        /// Constructor del formulario.
+        /// Inicializa la conexión con la BBDD.
+        /// </summary>
+        /// <param name="conexion">conexion es la referencia a la base de datos mysql.</param>
+        /// <param name="build">build es la referencia al builder constructor del string para conectase a la BBDD.</param>
+
         public void ConectarBBDD(ref MySqlConnectionStringBuilder build, ref MySqlConnection conexion) {
 
             try{
@@ -36,6 +51,11 @@ namespace DINT_F_P{
             }
             catch (MySqlException) { MessageBox.Show("Error de conexión a BBDD"); }
         }
+
+        /// <summary>
+        /// Desconecta de la BBDD.
+        /// <param name="conexion">conexion es la referencia a la base de datos mysql.</param>
+        /// </summary>
         public void DesconectarBBDD(ref MySqlConnection conexion) {
 
             try{
@@ -44,13 +64,22 @@ namespace DINT_F_P{
             }
             catch (MySqlException e) { e.ToString(); }
         }
-        //EVENTO AL CIERRE DE LA APLICACIÓN: cerrar la conexión a BBDD
+
+        /// <summary>
+        /// Llama a la desconexión de la BBDD como respuesta al cierrde de la App.
+        /// </summary>
         private void TwitClientMain_FormClosed(object sender, FormClosedEventArgs e){
 
             DesconectarBBDD(ref conexion);
         }
 
-        //conversión de ruta de una foto a byte[] CÓDIGO AUX
+        /// <summary>
+        /// Convierte una imagen a un array de bytes para tratarla como un blob.
+        /// </summary>
+        /// <param name="ruta">ruta es la ruta de la imagen a convertir.</param>
+        /// <returns>
+        /// La imagen que en forma de array de bytes.
+        /// </returns>
         private byte[] FotoABytes(string ruta)
         {
             FileStream stream = new FileStream(ruta, FileMode.Open, FileAccess.Read);
@@ -60,8 +89,12 @@ namespace DINT_F_P{
             stream.Close();
             return fotobytes;
         }
-        //conversión de bytes[] a blob para subir a BBDD CÓDIGO AUX
-        private void SubirAvatar(string ruta)
+
+        /// <summary>
+        /// Sube la foto a la base de datos como blob.
+        /// </summary>
+        /// <param name="ruta">ruta es la ruta de la imagen a convertir.</param>
+        private void SubirFoto(string ruta)
         {
             byte[] foto = FotoABytes(ruta);
             string sql = "UPDATE usuarios SET foto = @foto WHERE usuario_twitter=@USER";
@@ -72,6 +105,10 @@ namespace DINT_F_P{
         }
 
         //CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
+
+        /// <summary>
+        /// Entra en la página principal y carga todos los datos dinámicos del usuario.
+        /// </summary>
         private void CustomButton1Login_Click(object sender, EventArgs e){
 
             Usuario = textBoxUsuario.Text;
@@ -87,8 +124,8 @@ namespace DINT_F_P{
                     Reader.Close();
                     ControlPaginas.SelectedTab = Timeline;//Entamos en la pantalla principal
                     RescateInfoDinamica(Usuario);//cargamos bloque a bloque todos los datos del usuario
-                    RescateTimeline(Usuario);
-                    RescateTwittsSelfUsuario(Usuario);
+                    RescateTimeline(Usuario);//buscamos los tuits de los seguidos por el usuario
+                    RescateTwittsSelfUsuario(Usuario); //buscamos los tuits del propio usuario
                 }
                 else{
 
@@ -102,7 +139,9 @@ namespace DINT_F_P{
                 Reader.Close();
             }    
         }
-        //Búsqueda de datos relativos al usuario logueado con éxito y rellenado de campos
+        /// <summary>
+        /// Rescatamos los datos del usuario en todas las pantallas.
+        /// </summary>
         private void RescateInfoDinamica (string Usuario){
 
             byte[] avatarByte = null;
@@ -136,7 +175,10 @@ namespace DINT_F_P{
             }          
         }
 
-        //rellena el flowlayout del timeline del usuario logueado
+        /// <summary>
+        /// Rellena el flowlayout de los tuits de los seguidos por el usuario.
+        /// 
+        /// </summary>
         private void RescateTimeline(string User) {
 
             byte[] avatarByte = null;
@@ -149,7 +191,7 @@ namespace DINT_F_P{
             
             while (reader.Read())
             {
-                CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+                CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1(ref conexion);
                 cajita.ForeColor = Color.Black;
                 cajita.SetTuit(reader["mensaje"].ToString());
                 cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
@@ -171,7 +213,9 @@ namespace DINT_F_P{
             reader.Close();  
         }
 
-        //rellena el flowlayout con los tuits del propio usuario logueado
+        /// <summary>
+        /// Rescata de la BBDD los tuits del propio usuario.
+        /// </summary>
         private void RescateTwittsSelfUsuario (string Usuario) {
             string sql = "SELECT * from mensajes WHERE user_emisor = @USER ORDER BY fecha ASC";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
@@ -179,7 +223,7 @@ namespace DINT_F_P{
             MySqlDataReader reader = comand.ExecuteReader();
             while (reader.Read())
             {
-                CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+                CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1(ref conexion);
                 cajita.ForeColor = Color.Black;
                 cajita.SetTuit(reader["mensaje"].ToString());
                 cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
@@ -190,45 +234,59 @@ namespace DINT_F_P{
             reader.Close();
         }
 
-        //Borra el contenido al hacer clic en la caja
+        /// <summary>
+        /// Borra el texto de la caja al hacer clic.
+        /// </summary>
         private void TextBoxContrasenya_Click(object sender, EventArgs e){
 
             textBoxContrasenya.Text = "";
         }
-        //Borra el contenido al hacer clic en la caja
+        /// <summary>
+        /// Borra el texto de la caja al hacer clic.
+        /// </summary>
         private void TextBoxUsuario_Click(object sender, EventArgs e){
 
             textBoxUsuario.Text =  "";
         }
-            //FIN DE CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
+        //FIN DE CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
 
 
         //CÓDIGO RELATIVO AL TIMELINE
-
-        //Va a la página de notificaciones
+        /// <summary>
+        /// Lleva a Notificaciones.
+        /// </summary>
         private void PictureBoxTuitear_Click(object sender, EventArgs e){
 
             ControlPaginas.SelectedTab = LastNotifications;
         }
 
-        //lanza el form para crear un tuit
+        /// <summary>
+        /// Lanza el form para tuitear.
+        /// </summary>
         private void PictureBoxLastTwits_Click(object sender, EventArgs e){
 
             VentanaTuit();
         }
 
+        /// <summary>
+        /// Lleva al perfil de usuario.
+        /// </summary>
         private void PictureBoxConfig_Click(object sender, EventArgs e){
 
             ControlPaginas.SelectedTab = tabPagePerfilUser;
         }
 
-        //Si hacemos focus en la caja, borramos el contenido
+        /// <summary>
+        /// Borra el texto del richtextbox al hacer clic.
+        /// </summary>
         private void RichTextBoxCajaTwit_Click(object sender, EventArgs e){
 
            // richTextBox1.Text = "";
         }
 
-        //Botón de tuitear
+        /// <summary>
+        /// Evento que responde al botón de tuitear.
+        /// </summary>
         private void ButtonTwittIt_Click(object sender, EventArgs e)
         {
             //inserción en BBDD
@@ -244,7 +302,7 @@ namespace DINT_F_P{
 
             //refresco del flowlayout e inserción del tuit en la vista
             flowLayoutPanelTwits.Controls.Clear();
-            CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1();
+            CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1(ref conexion);
             cajita.ForeColor = Color.Black;
             cajita.SetTuit(richTextBoxCajaTwit.Text);
             cajita.SetRets(0);
@@ -255,59 +313,119 @@ namespace DINT_F_P{
             flowLayoutPanelLastTuits.Controls.Clear();
             RescateTwittsSelfUsuario(Usuario);
         }
- 
-            //FIN DE CÓDIGO RELATIVO AL TIMELINE
+
 
         //BOTONES DE CAMBIO DE PANTALLA
-        //CÓDIGO RELATIVO A LAST TUITS
+        /// <summary>
+        /// Evento que responde al botón de tuitear.
+        /// </summary>
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = Timeline;
         }
 
+        /// <summary>
+        /// Evento que responde al botón de tuitear.
+        /// </summary>
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = LastNotifications;
         }
 
-        private void pictureBoxuser2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Evento que responde al botón de tuitear.
+        /// </summary>
+        private void PictureBoxuser2_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = tabPagePerfilUser;
         }
-               //FIN DE CÓDIGO RELATIVO A LAST TUITS
+
+        /// <summary>
+        /// Respuesta de la tecla enter en el login.
+        /// Nombre de usuario.
+        /// </summary>
+        private void TextBoxUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CustomButton1Login_Click(sender, e);
+            }
+        }
+
+        /// <summary>
+        /// Respuesta de la tecla enter en el login.
+        /// Contraseña.
+        /// </summary>
+        private void TextBoxContrasenya_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CustomButton1Login_Click(sender, e);
+            }
+        }
+
+        //FIN DE CÓDIGO RELATIVO AL TIMELINE
+
+
         //CODIGO DE NOTIFICATIONS
-        private void pictureBoxtimeline3_Click(object sender, EventArgs e)
+        //BOTONES DE CAMBIO DE PANTALLA
+        /// <summary>
+        /// Llama a la función de generar formulario para hacer tuit.
+        /// </summary>
+        private void PictureBoxtimeline3_Click(object sender, EventArgs e)
         {
             PictureBoxTuitear_Click(sender, e);
         }
 
-        private void pictureBoxhome3_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Va al timeline.
+        /// </summary>
+        private void PictureBoxhome3_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = Timeline;
         }
 
-        private void pictureBoxuser3_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Va al perfil.
+        /// </summary>
+        private void PictureBoxuser3_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = tabPagePerfilUser;
         }
-                //FIN DE CODIGO DE NOTIFICATIONS
+        //FIN DE CODIGO DE NOTIFICATIONS
+
+
+
         //CODIGO DE PERFIL
-        private void pictureBoxHome4_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Va al timeline.
+        /// </summary>
+        private void PictureBoxHome4_Clic(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = Timeline;
         }
 
-        private void pictureBoxLasttuits4_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Evento que responde al botón de tuitear.
+        /// </summary>
+        private void PictureBoxLasttuits4_Clic(object sender, EventArgs e)
         {
             VentanaTuit();
         }
 
-        private void pictureBoxNotifications4_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Va a notificaciones.
+        /// </summary>
+        private void PictureBoxNotifications4_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = LastNotifications;
         }
 
 
+        /// <summary>
+        /// Evento que responde al botón de editar el perfil.
+        /// Abre el formulario para editar y hace update.
+        /// </summary>
         private void Editar_Click(object sender, EventArgs e)
         {
             FormEditar editar = new FormEditar();
@@ -326,31 +444,45 @@ namespace DINT_F_P{
             RescateInfoDinamica(Usuario);//refresco de la info del usuario
         }
 
-        //logout text
-        private void logoutLabel_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Evento que responde al logout.
+        /// Elimina todos los datos del user y te lleva al inicio.
+        /// </summary>
+        private void LogoutLabel_Click(object sender, EventArgs e)
         {
             ControlPaginas.SelectedTab = Main;
             Usuario = "";
             Contrasenya = "";
-            //ESTO NO SE SI ES DEL TODO NECESARIO
+            //ESTO NO SE SI ES DEL TODO NECESARIO. TODO
             flowLayoutPanelLastTuits.Controls.Clear();
             flowLayoutPanelTwits.Controls.Clear();
         }
 
-        private void label12_MouseEnter(object sender, EventArgs e)
+        /// <summary>
+        /// Hace hover en el texto de logout.
+        /// </summary>
+        /// <see cref="LabelLogout_MouseLeave"/>
+        private void Label12_MouseEnter(object sender, EventArgs e)
         {
             labelLogout.ForeColor = Color.DarkGray;
         }
 
-        private void labelLogout_MouseLeave(object sender, EventArgs e)
+        /// <summary>
+        /// Hace hover en el texto de logout.
+        /// </summary>
+        ///<see cref="Label12_MouseEnter"/>
+        private void LabelLogout_MouseLeave(object sender, EventArgs e)
         {
             labelLogout.ForeColor = Color.Black;
         }
         //FIN DE CODIGO DE PERFIL
 
+
+        //CÓDIGO DE FUNCIONES GENERALES DE LA APP
+        /// <summary>
+        /// Abre el form para hacer tuit y updatea la BBDD al salir.
+        /// </summary>
         private void VentanaTuit(){
-            Mascara mask = new Mascara();
-            mask.Show();
             Tuitear tuitventana = new Tuitear();
             tuitventana.ShowDialog();
             if (tuitventana.DialogResult == DialogResult.OK)
@@ -367,13 +499,13 @@ namespace DINT_F_P{
                 comand.ExecuteNonQuery();
                 RescateTwittsSelfUsuario(Usuario);
 
-            }
-            mask.Close();
-           
+            }          
         }
 
+        /// <summary>
+        /// Rellena los campos del perfil de usuario con sus estadísiticas de tuiter.
+        /// </summary>
         private void CargarEstadisticas(){
-
 
             String sql = "SELECT COUNT(mensaje) from mensajes WHERE user_emisor=@USER";
             MySqlCommand  comand = new MySqlCommand(sql, conexion);
@@ -419,22 +551,6 @@ namespace DINT_F_P{
 
             }
             reader.Close();
-        }
-
-        private void textBoxUsuario_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                CustomButton1Login_Click(sender, e);
-            }
-        }
-
-        private void textBoxContrasenya_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                CustomButton1Login_Click(sender, e);
-            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

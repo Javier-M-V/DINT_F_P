@@ -4,6 +4,10 @@ using System.Windows.Forms;
 
 namespace DINT_F_P{
 
+    /// <summary>
+    /// Formulario de edición del perfil de usuario.
+    /// Contiene las funciones básicas de comportamiento.
+    /// </summary>
     public partial class FormEditar : Form {
 
         public string Mensajeperfil { get; set; }
@@ -16,6 +20,10 @@ namespace DINT_F_P{
             this.MinimizeBox = false;
         }
 
+        /// <summary>
+        /// Responde al Ok del usuario y cierra el form.
+        /// Setea el dialog result, la imagen nueva y el estado si son válidos.
+        /// </summary>
         private void OK_Click(object sender, EventArgs e) {
 
             if (textBoxNuevoMensajePerfil.Text == ""){
@@ -30,12 +38,18 @@ namespace DINT_F_P{
             }           
         }
 
+        /// <summary>
+        /// Responde al cancel del usuario, setea al dialogresult y cierra el form.
+        /// </summary>
         private void cancel_Click(object sender, EventArgs e){
 
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
+        /// <summary>
+        /// Abre un FileDialog y carga la nueva imagen desde local.
+        /// </summary>
         private void EditarFoto_Click(object sender, EventArgs e)
         {
 
@@ -51,6 +65,9 @@ namespace DINT_F_P{
                 pictureBoxNuevaFoto.Image = a;
             }
         }
+        /// <summary>
+        /// Responmde al clic en la caja dejando el texto vacío.
+        /// </summary>
         private void textBoxNuevoMensajePerfil_Click(object sender, EventArgs e)
         {
             textBoxNuevoMensajePerfil.Text = "";

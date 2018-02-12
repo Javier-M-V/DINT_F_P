@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DINT_F_P
 {
-    
 
+    /// <summary>
+    /// Formulario para tuitear.
+    /// Contiene las funciones básicas de scomportamiento.
+    /// </summary>
     public partial class Tuitear : Form
     {
         public string Texto { get; set; }
@@ -22,6 +18,9 @@ namespace DINT_F_P
             this.MinimizeBox = false;
         }
 
+        /// <summary>
+        /// Responde al botón y setea el nuevo mensaje y el dialogresult si no está vacío.
+        /// </summary>
         private void ButtonTwittItForm_Click(object sender, EventArgs e)
         {
             if (PopTuitcaja.Text == "")
