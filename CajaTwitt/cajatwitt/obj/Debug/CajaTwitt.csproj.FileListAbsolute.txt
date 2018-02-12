@@ -1,0 +1,9 @@
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\bin\Debug\CajaTwitt.dll
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\bin\Debug\CajaTwitt.pdb
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\obj\Debug\CajaTwitt.UserControl1.resources
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\obj\Debug\CajaTwitt.csproj.GenerateResource.Cache
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\obj\Debug\CajaTwitt.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\obj\Debug\CajaTwitt.dll
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\obj\Debug\CajaTwitt.pdb
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\obj\Debug\CajaTwitt.Properties.Resources.resources
+C:\Users\Alumno\source\repos\CajaTwitt\CajaTwitt\obj\Debug\CajaTwitt.csprojResolveAssemblyReference.cache
