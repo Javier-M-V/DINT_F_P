@@ -18,9 +18,8 @@ namespace DINT_F_P{
         private string Contrasenya { get; set; }
         private MySqlConnectionStringBuilder build = null;
         private MySqlConnection conexion = null;
+        private byte[] amatic = Resources.Amatic;
 
-        
-        
 
         /// <summary>
         /// Constructor del formulario.
@@ -32,7 +31,7 @@ namespace DINT_F_P{
             ConectarBBDD(ref build, ref conexion);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            byte[] amatic = Resources.Amatic;
+            
         }
         /// <summary>
         /// Constructor del formulario.
@@ -163,16 +162,15 @@ namespace DINT_F_P{
             comand.Parameters.AddWithValue("@USER", User);
             MySqlDataReader reader = comand.ExecuteReader();
             
-            while (reader.Read())
-            {
+            while (reader.Read()){
+
                 CajaTwitt.UserControl1 cajita = new CajaTwitt.UserControl1(ref conexion);
                 cajita.ForeColor = Color.Black;
                 cajita.SetTuit(reader["mensaje"].ToString());
                 cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
                 cajita.SetFavs(Int32.Parse(reader["num_favs"].ToString()));
                 cajita.SetUser(reader["user_emisor"].ToString());
-                try
-                {                   
+                try{                   
                     avatarByte = (byte[])reader["foto"];
                     ms = new MemoryStream(avatarByte);
                     fotoavatar = Image.FromStream(ms, false, false);
@@ -527,7 +525,6 @@ namespace DINT_F_P{
                 comand.Parameters.AddWithValue("@RETS", 0);
                 comand.ExecuteNonQuery();
                 RescateTwittsSelfUsuario(Usuario);
-
             }          
         }
 
@@ -544,7 +541,6 @@ namespace DINT_F_P{
             if (reader.Read())
             {
                 labelPerfilNumTuits.Text = reader[0].ToString();//numero de tuits
-
             }
             reader.Close();
 
@@ -555,7 +551,6 @@ namespace DINT_F_P{
             if (reader.Read())
             {
                 labellabelPerfilSiguiendo.Text = reader[0].ToString();//siguiendo
-
             }
             reader.Close();
 
