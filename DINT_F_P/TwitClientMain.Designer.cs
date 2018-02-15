@@ -504,7 +504,7 @@ namespace DINT_F_P
             this.Timeline.Location = new System.Drawing.Point(4, 22);
             this.Timeline.Name = "Timeline";
             this.Timeline.Padding = new System.Windows.Forms.Padding(3);
-            this.Timeline.Size = new System.Drawing.Size(1011, 525);
+            this.Timeline.Size = new System.Drawing.Size(1011, 531);
             this.Timeline.TabIndex = 1;
             this.Timeline.Text = "Timeline";
             this.Timeline.UseVisualStyleBackColor = true;
@@ -694,7 +694,7 @@ namespace DINT_F_P
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(1011, 525);
+            this.Main.Size = new System.Drawing.Size(1014, 562);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
@@ -702,7 +702,7 @@ namespace DINT_F_P
             // pictureBoxMunequito
             // 
             this.pictureBoxMunequito.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMunequito.Image")));
-            this.pictureBoxMunequito.Location = new System.Drawing.Point(538, 6);
+            this.pictureBoxMunequito.Location = new System.Drawing.Point(535, 16);
             this.pictureBoxMunequito.Name = "pictureBoxMunequito";
             this.pictureBoxMunequito.Size = new System.Drawing.Size(311, 195);
             this.pictureBoxMunequito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -715,7 +715,7 @@ namespace DINT_F_P
             this.panel1.Controls.Add(this.customButton1Login);
             this.panel1.Controls.Add(this.textBoxContrasenya);
             this.panel1.Controls.Add(this.textBoxUsuario);
-            this.panel1.Location = new System.Drawing.Point(344, 207);
+            this.panel1.Location = new System.Drawing.Point(341, 217);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 103);
             this.panel1.TabIndex = 1;
@@ -764,10 +764,10 @@ namespace DINT_F_P
             this.ControlPaginas.Controls.Add(this.LastNotifications);
             this.ControlPaginas.Controls.Add(this.tabPagePerfilUser);
             this.ControlPaginas.Controls.Add(this.tabPageContacto);
-            this.ControlPaginas.Location = new System.Drawing.Point(12, 5);
+            this.ControlPaginas.Location = new System.Drawing.Point(-3, -26);
             this.ControlPaginas.Name = "ControlPaginas";
             this.ControlPaginas.SelectedIndex = 0;
-            this.ControlPaginas.Size = new System.Drawing.Size(1019, 557);
+            this.ControlPaginas.Size = new System.Drawing.Size(1022, 588);
             this.ControlPaginas.TabIndex = 1;
             // 
             // LastNotifications
@@ -1131,7 +1131,6 @@ namespace DINT_F_P
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 

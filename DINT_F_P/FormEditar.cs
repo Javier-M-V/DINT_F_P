@@ -18,6 +18,9 @@ namespace DINT_F_P{
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            Nuevaimagen = null;
+ 
+
         }
 
         /// <summary>
@@ -26,11 +29,15 @@ namespace DINT_F_P{
         /// </summary>
         private void OK_Click(object sender, EventArgs e) {
 
-            if (textBoxNuevoMensajePerfil.Text == ""){
+            if (textBoxNuevoMensajePerfil.Text == "" || pictureBoxNuevaFoto.Image == null)
+            {
 
-                MessageBox.Show("No hay nada en la caja de tu mensaje");
+                MessageBox.Show("No has cambiado nada");
+                DialogResult = DialogResult.Abort;
             }
-            else {
+  
+            else
+            {
                 Nuevaimagen = pictureBoxNuevaFoto.Image;
                 Mensajeperfil = textBoxNuevoMensajePerfil.Text;
                 DialogResult = DialogResult.OK;
