@@ -52,8 +52,12 @@
     <Reference Include="BotonCustom">
       <HintPath>..\..\BotonCustom\BotonCustom\bin\Debug\BotonCustom.dll</HintPath>
     </Reference>
-    <Reference Include="CajaTwitt">
-      <HintPath>..\..\CajaTwitt\CajaTwitt\bin\Debug\CajaTwitt.dll</HintPath>
+    <Reference Include="CajaNot">
+      <HintPath>..\..\CajaNot\CajaNot\bin\Debug\CajaNot.dll</HintPath>
+    </Reference>
+    <Reference Include="CajaTwitt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CajaTwitt\cajatwitt\bin\Debug\CajaTwitt.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="roundedButton">

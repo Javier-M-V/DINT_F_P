@@ -1,0 +1,8 @@
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\bin\Debug\CajaNot.dll
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\bin\Debug\CajaNot.pdb
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\obj\Debug\CajaNot.csprojResolveAssemblyReference.cache
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\obj\Debug\CajaNot.CajaNotificaciones.resources
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\obj\Debug\CajaNot.csproj.GenerateResource.Cache
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\obj\Debug\CajaNot.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\obj\Debug\CajaNot.dll
+C:\Users\Alumno\source\repos\CajaNot\CajaNot\obj\Debug\CajaNot.pdb

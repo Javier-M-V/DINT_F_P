@@ -18,6 +18,8 @@ namespace CajaTwitt
         public string Mensaje { get; set; }
         public string User { get; set; }
         public Image foto { get; set; }
+
+
         public MySqlConnection conexion;
 
         public UserControl1(ref MySqlConnection conex)
@@ -25,7 +27,7 @@ namespace CajaTwitt
 
             InitializeComponent();
             conexion = conex;
-
+  
         }
 
         /// <summary>
@@ -38,6 +40,12 @@ namespace CajaTwitt
             favs += 1;
             this.labelFavs.Text = favs.ToString();
             //TODO: y guardamos en base de datos
+
+            string sql = "UPDATE mensajes SET num_favs=@FAVS where mensaje = @MENSAJE";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@MENSAJE", Mensaje);
+            comand.Parameters.AddWithValue("@FAVS", favs);
+            comand.ExecuteNonQuery();
         }
 
         /// <summary>
@@ -50,6 +58,12 @@ namespace CajaTwitt
             rets += 1;
             this.labelRets.Text = rets.ToString();
             //TODO: y guardamos en base de datos
+
+            string sql = "UPDATE mensajes SET num_rets=@RETS where mensaje = @MENSAJE";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@MENSAJE", Mensaje);
+            comand.Parameters.AddWithValue("@RETS", rets);
+            comand.ExecuteNonQuery();
         }
 
         /// <summary>
