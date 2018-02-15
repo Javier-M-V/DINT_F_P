@@ -185,7 +185,7 @@ namespace DINT_F_P
             this.tabPagePerfilUser.Controls.Add(this.panel12);
             this.tabPagePerfilUser.Location = new System.Drawing.Point(4, 22);
             this.tabPagePerfilUser.Name = "tabPagePerfilUser";
-            this.tabPagePerfilUser.Size = new System.Drawing.Size(1011, 525);
+            this.tabPagePerfilUser.Size = new System.Drawing.Size(1011, 531);
             this.tabPagePerfilUser.TabIndex = 5;
             this.tabPagePerfilUser.Text = "Perfil";
             this.tabPagePerfilUser.UseVisualStyleBackColor = true;
@@ -210,6 +210,7 @@ namespace DINT_F_P
             // 
             // flowLayoutPanelLastTuits
             // 
+            this.flowLayoutPanelLastTuits.AutoScroll = true;
             this.flowLayoutPanelLastTuits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelLastTuits.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanelLastTuits.Name = "flowLayoutPanelLastTuits";
@@ -763,10 +764,10 @@ namespace DINT_F_P
             this.ControlPaginas.Controls.Add(this.LastNotifications);
             this.ControlPaginas.Controls.Add(this.tabPagePerfilUser);
             this.ControlPaginas.Controls.Add(this.tabPageContacto);
-            this.ControlPaginas.Location = new System.Drawing.Point(-3, 3);
+            this.ControlPaginas.Location = new System.Drawing.Point(12, 5);
             this.ControlPaginas.Name = "ControlPaginas";
             this.ControlPaginas.SelectedIndex = 0;
-            this.ControlPaginas.Size = new System.Drawing.Size(1019, 551);
+            this.ControlPaginas.Size = new System.Drawing.Size(1019, 557);
             this.ControlPaginas.TabIndex = 1;
             // 
             // LastNotifications
@@ -774,7 +775,7 @@ namespace DINT_F_P
             this.LastNotifications.Controls.Add(this.panel6);
             this.LastNotifications.Location = new System.Drawing.Point(4, 22);
             this.LastNotifications.Name = "LastNotifications";
-            this.LastNotifications.Size = new System.Drawing.Size(1011, 525);
+            this.LastNotifications.Size = new System.Drawing.Size(1011, 531);
             this.LastNotifications.TabIndex = 4;
             this.LastNotifications.Text = "LastNotifications";
             this.LastNotifications.UseVisualStyleBackColor = true;
@@ -830,6 +831,7 @@ namespace DINT_F_P
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 7;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
             // pictureBox16
             // 
@@ -852,6 +854,7 @@ namespace DINT_F_P
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 4;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
             // pictureBox18
             // 
@@ -863,6 +866,7 @@ namespace DINT_F_P
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox18.TabIndex = 3;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
             // 
             // panel19
             // 
@@ -899,7 +903,7 @@ namespace DINT_F_P
             this.tabPageContacto.Controls.Add(this.panel15);
             this.tabPageContacto.Location = new System.Drawing.Point(4, 22);
             this.tabPageContacto.Name = "tabPageContacto";
-            this.tabPageContacto.Size = new System.Drawing.Size(1011, 525);
+            this.tabPageContacto.Size = new System.Drawing.Size(1011, 531);
             this.tabPageContacto.TabIndex = 7;
             this.tabPageContacto.Text = "Contacto";
             this.tabPageContacto.UseVisualStyleBackColor = true;

@@ -17,7 +17,6 @@ namespace DINT_F_P{
         private string Contrasenya { get; set; }
         private MySqlConnectionStringBuilder build = null;
         private MySqlConnection conexion = null;
-        /*https://docs.microsoft.com/en-us/dotnet/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes*/
 
         /// <summary>
         /// Constructor del formulario.
@@ -190,7 +189,7 @@ namespace DINT_F_P{
             byte[] avatarByte = null;
             Image fotoavatar = null;
             MemoryStream ms;
-            string sql = "SELECT mensaje, num_rets,num_favs,user_emisor,foto from mensajes,usuarios WHERE user_emisor = @USER AND user_emisor = usuario_twitter ORDER BY fecha ASC";
+            string sql = "SELECT mensaje, num_rets,num_favs,user_emisor,foto from mensajes,usuarios WHERE user_emisor = @USER AND user_emisor = usuario_twitter ORDER BY fecha DESC";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", Usuario);
             MySqlDataReader reader = comand.ExecuteReader();
@@ -220,6 +219,9 @@ namespace DINT_F_P{
             reader.Close();
         }
 
+        /// <summary>
+        /// Rescata de la BBDD las notificaciones guardadas.
+        /// </summary>
         private void RescateNotifications(){
 
             byte[] avatarByte = null;
@@ -250,7 +252,6 @@ namespace DINT_F_P{
                 flowLayoutPanelNotifications.Controls.Add(cajita);
             }
             reader.Close();
-
         }
 
         /// <summary>
@@ -606,6 +607,21 @@ namespace DINT_F_P{
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = tabPagePerfilUser;
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = Timeline;
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            VentanaTuit();
         }
     }
 }

@@ -38,13 +38,12 @@ namespace CajaTwitt
         {
             int favs = Int32.Parse(this.labelFavs.Text);
             favs += 1;
-            this.labelFavs.Text = favs.ToString();
-            //TODO: y guardamos en base de datos
-
-            string sql = "UPDATE mensajes SET num_favs=@FAVS where mensaje = @MENSAJE";
+            this.labelFavs.Text = favs.ToString();       
+            string sql = "UPDATE mensajes SET num_favs=@FAVS where mensaje = @MENSAJE AND user_emisor = @USER";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@MENSAJE", Mensaje);
             comand.Parameters.AddWithValue("@FAVS", favs);
+            comand.Parameters.AddWithValue("@USER", User);
             comand.ExecuteNonQuery();
         }
 
@@ -57,12 +56,11 @@ namespace CajaTwitt
             int rets = Int32.Parse(this.labelRets.Text);
             rets += 1;
             this.labelRets.Text = rets.ToString();
-            //TODO: y guardamos en base de datos
-
-            string sql = "UPDATE mensajes SET num_rets=@RETS where mensaje = @MENSAJE";
+            string sql = "UPDATE mensajes SET num_rets=@RETS where mensaje = @MENSAJE AND user_emisor = @USER";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@MENSAJE", Mensaje);
             comand.Parameters.AddWithValue("@RETS", rets);
+            comand.Parameters.AddWithValue("@USER", User);
             comand.ExecuteNonQuery();
         }
 
