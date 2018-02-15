@@ -22,7 +22,7 @@ namespace DINT_F_P.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DINT_F_P.Properties {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DINT_F_P.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace DINT_F_P.Properties {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,20 +61,21 @@ namespace DINT_F_P.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
-        internal static string Fuente {
+        public static byte[] Amatic {
             get {
-                return ResourceManager.GetString("Fuente", resourceCulture);
+                object obj = ResourceManager.GetObject("Amatic", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
-        internal static byte[] PICOBLA_ {
+        public static byte[] AmaticSC_Regular {
             get {
-                object obj = ResourceManager.GetObject("PICOBLA_", resourceCulture);
+                object obj = ResourceManager.GetObject("AmaticSC_Regular", resourceCulture);
                 return ((byte[])(obj));
             }
         }

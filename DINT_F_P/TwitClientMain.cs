@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.IO;
+using DINT_F_P.Properties;
 
 namespace DINT_F_P{
 
@@ -18,6 +19,9 @@ namespace DINT_F_P{
         private MySqlConnectionStringBuilder build = null;
         private MySqlConnection conexion = null;
 
+        
+        
+
         /// <summary>
         /// Constructor del formulario.
         /// Inicializa la conexión con la BBDD.
@@ -28,6 +32,7 @@ namespace DINT_F_P{
             ConectarBBDD(ref build, ref conexion);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            byte[] amatic = Resources.Amatic;
         }
         /// <summary>
         /// Constructor del formulario.
