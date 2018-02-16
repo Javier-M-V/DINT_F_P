@@ -10,7 +10,7 @@ namespace CajaTwitt
     /// Componente personalizado con el layout y el tratamiento de datos de cada tuit.
     /// Contiene las funciones básicas de comportamiento.
     /// </summary>
-    public partial class UserControl1: UserControl
+    public partial class BoxTwit: UserControl
     {
         public int Foto { get; set; }
         public int Favs { get; set; }
@@ -18,11 +18,11 @@ namespace CajaTwitt
         public string Mensaje { get; set; }
         public string User { get; set; }
         public Image foto { get; set; }
-
+        public event EventHandler ClicEnFoto;
 
         public MySqlConnection conexion;
 
-        public UserControl1(ref MySqlConnection conex)
+        public BoxTwit(ref MySqlConnection conex)
         {
 
             InitializeComponent();
@@ -107,18 +107,15 @@ namespace CajaTwitt
         public void SetFoto(Image foto)
         {
             this.foto = foto;
-            pictureBoxFotoPerfil.Image = foto; ;
-        }
-
-        //goto_perfil
-        private void FotoPerfilReturnUsuario(object sender, EventArgs e)
-        {
-            
+            pictureBoxFotoPerfil.Image = foto;
+            pictureBoxFotoPerfil.Tag = this.User;
         }
 
         private void pictureBoxFotoPerfil_Click(object sender, EventArgs e)
         {
-
+            if (ClicEnFoto != null)
+                ClicEnFoto(sender, e);
         }
+   
     }
 }

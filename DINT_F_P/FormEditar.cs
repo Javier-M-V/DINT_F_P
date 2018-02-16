@@ -12,15 +12,16 @@ namespace DINT_F_P{
 
         public string Mensajeperfil { get; set; }
         public Image Nuevaimagen { get; set; }
+        public Image imagenvieja;
 
-        public FormEditar(){
+        public FormEditar(Image imagenvieja){
 
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             Nuevaimagen = null;
- 
-
+            this.imagenvieja = imagenvieja;
+            pictureBoxNuevaFoto.Image = imagenvieja;
         }
 
         /// <summary>
@@ -29,15 +30,18 @@ namespace DINT_F_P{
         /// </summary>
         private void OK_Click(object sender, EventArgs e) {
 
-            if (textBoxNuevoMensajePerfil.Text == "" || pictureBoxNuevaFoto.Image == null)
-            {
+            if (textBoxNuevoMensajePerfil.Text == "" ) {
 
-                MessageBox.Show("No has cambiado nada");
+                MessageBox.Show("El mensaje no puede estar vacío");
                 DialogResult = DialogResult.Abort;
             }
-  
-            else
-            {
+            else if (pictureBoxNuevaFoto.Image == null) {
+
+                DialogResult = DialogResult.Abort;
+            }
+
+            else {
+
                 Nuevaimagen = pictureBoxNuevaFoto.Image;
                 Mensajeperfil = textBoxNuevoMensajePerfil.Text;
                 DialogResult = DialogResult.OK;
@@ -57,26 +61,32 @@ namespace DINT_F_P{
         /// <summary>
         /// Abre un FileDialog y carga la nueva imagen desde local.
         /// </summary>
-        private void EditarFoto_Click(object sender, EventArgs e)
-        {
+        private void EditarFoto_Click(object sender, EventArgs e){
 
             OpenFileDialog dialog = new OpenFileDialog();
+            try
+            {
+                dialog.Title = "Carga una imagen";
+                dialog.Filter = "Image Files(*.JPG;*.PNG)|*.JPG;*.PNG";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    String ruta = dialog.FileName;
 
-            dialog.Title = "Carga una imagen";
-            dialog.Filter = "Image Files(*.JPG;*.PNG)|*.JPG;*.PNG";
-            if (dialog.ShowDialog() == DialogResult.OK){
-                String ruta = dialog.FileName;
-
-                Image a = new Bitmap(ruta);
-                Nuevaimagen = a;
-                pictureBoxNuevaFoto.Image = a;
+                    Image a = new Bitmap(ruta);
+                    Nuevaimagen = a;
+                    pictureBoxNuevaFoto.Image = a;
+                }
             }
+            catch (Exception) {
+                MessageBox.Show("Algo en la foto se ha roto");
+            }
+           
         }
         /// <summary>
         /// Responmde al clic en la caja dejando el texto vacío.
         /// </summary>
-        private void textBoxNuevoMensajePerfil_Click(object sender, EventArgs e)
-        {
+        private void textBoxNuevoMensajePerfil_Click(object sender, EventArgs e) {
+
             textBoxNuevoMensajePerfil.Text = "";
         }
     }

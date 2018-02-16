@@ -94,17 +94,17 @@ namespace DINT_F_P
             this.label12 = new System.Windows.Forms.Label();
             this.tabPageContacto = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelNombreContacto = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxContacto = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelContactosMegusta = new System.Windows.Forms.Label();
+            this.labelLabelContactoSiguiendo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelContactoNumseguidres = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelContactoNumTuits = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -161,7 +161,7 @@ namespace DINT_F_P
             this.tabPageContacto.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContacto)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -185,7 +185,7 @@ namespace DINT_F_P
             this.tabPagePerfilUser.Controls.Add(this.panel12);
             this.tabPagePerfilUser.Location = new System.Drawing.Point(4, 22);
             this.tabPagePerfilUser.Name = "tabPagePerfilUser";
-            this.tabPagePerfilUser.Size = new System.Drawing.Size(1011, 531);
+            this.tabPagePerfilUser.Size = new System.Drawing.Size(1014, 534);
             this.tabPagePerfilUser.TabIndex = 5;
             this.tabPagePerfilUser.Text = "Perfil";
             this.tabPagePerfilUser.UseVisualStyleBackColor = true;
@@ -504,7 +504,7 @@ namespace DINT_F_P
             this.Timeline.Location = new System.Drawing.Point(4, 22);
             this.Timeline.Name = "Timeline";
             this.Timeline.Padding = new System.Windows.Forms.Padding(3);
-            this.Timeline.Size = new System.Drawing.Size(1011, 531);
+            this.Timeline.Size = new System.Drawing.Size(1014, 534);
             this.Timeline.TabIndex = 1;
             this.Timeline.Text = "Timeline";
             this.Timeline.UseVisualStyleBackColor = true;
@@ -694,7 +694,7 @@ namespace DINT_F_P
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(1014, 562);
+            this.Main.Size = new System.Drawing.Size(1014, 534);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
@@ -764,10 +764,10 @@ namespace DINT_F_P
             this.ControlPaginas.Controls.Add(this.LastNotifications);
             this.ControlPaginas.Controls.Add(this.tabPagePerfilUser);
             this.ControlPaginas.Controls.Add(this.tabPageContacto);
-            this.ControlPaginas.Location = new System.Drawing.Point(-3, -26);
+            this.ControlPaginas.Location = new System.Drawing.Point(-3, 2);
             this.ControlPaginas.Name = "ControlPaginas";
             this.ControlPaginas.SelectedIndex = 0;
-            this.ControlPaginas.Size = new System.Drawing.Size(1022, 588);
+            this.ControlPaginas.Size = new System.Drawing.Size(1022, 560);
             this.ControlPaginas.TabIndex = 1;
             // 
             // LastNotifications
@@ -775,7 +775,7 @@ namespace DINT_F_P
             this.LastNotifications.Controls.Add(this.panel6);
             this.LastNotifications.Location = new System.Drawing.Point(4, 22);
             this.LastNotifications.Name = "LastNotifications";
-            this.LastNotifications.Size = new System.Drawing.Size(1011, 531);
+            this.LastNotifications.Size = new System.Drawing.Size(1014, 534);
             this.LastNotifications.TabIndex = 4;
             this.LastNotifications.Text = "LastNotifications";
             this.LastNotifications.UseVisualStyleBackColor = true;
@@ -903,7 +903,7 @@ namespace DINT_F_P
             this.tabPageContacto.Controls.Add(this.panel15);
             this.tabPageContacto.Location = new System.Drawing.Point(4, 22);
             this.tabPageContacto.Name = "tabPageContacto";
-            this.tabPageContacto.Size = new System.Drawing.Size(1011, 531);
+            this.tabPageContacto.Size = new System.Drawing.Size(1014, 534);
             this.tabPageContacto.TabIndex = 7;
             this.tabPageContacto.Text = "Contacto";
             this.tabPageContacto.UseVisualStyleBackColor = true;
@@ -912,7 +912,7 @@ namespace DINT_F_P
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.labelNombreContacto, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.panel14, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(367, 10);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -922,39 +922,39 @@ namespace DINT_F_P
             this.tableLayoutPanel4.Size = new System.Drawing.Size(293, 229);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
-            // label3
+            // labelNombreContacto
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelNombreContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Amatic SC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label3.Location = new System.Drawing.Point(3, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(287, 63);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "nombre";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelNombreContacto.Font = new System.Drawing.Font("Amatic SC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreContacto.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelNombreContacto.Location = new System.Drawing.Point(3, 166);
+            this.labelNombreContacto.Name = "labelNombreContacto";
+            this.labelNombreContacto.Size = new System.Drawing.Size(287, 63);
+            this.labelNombreContacto.TabIndex = 1;
+            this.labelNombreContacto.Text = "nombre";
+            this.labelNombreContacto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel14
             // 
             this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel14.Controls.Add(this.pictureBox2);
+            this.panel14.Controls.Add(this.pictureBoxContacto);
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(287, 160);
             this.panel14.TabIndex = 2;
             // 
-            // pictureBox2
+            // pictureBoxContacto
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(78, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(136, 136);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxContacto.Location = new System.Drawing.Point(78, 21);
+            this.pictureBoxContacto.Name = "pictureBoxContacto";
+            this.pictureBoxContacto.Size = new System.Drawing.Size(136, 136);
+            this.pictureBoxContacto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxContacto.TabIndex = 0;
+            this.pictureBoxContacto.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -963,13 +963,13 @@ namespace DINT_F_P
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Controls.Add(this.label4, 3, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label5, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.labelContactosMegusta, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.labelLabelContactoSiguiendo, 2, 1);
             this.tableLayoutPanel5.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label7, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.labelContactoNumseguidres, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label8, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label9, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.labelContactoNumTuits, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.label11, 3, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(255, 242);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -980,31 +980,31 @@ namespace DINT_F_P
             this.tableLayoutPanel5.Size = new System.Drawing.Size(518, 100);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
-            // label4
+            // labelContactosMegusta
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelContactosMegusta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label4.Location = new System.Drawing.Point(390, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "0";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelContactosMegusta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContactosMegusta.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelContactosMegusta.Location = new System.Drawing.Point(390, 14);
+            this.labelContactosMegusta.Name = "labelContactosMegusta";
+            this.labelContactosMegusta.Size = new System.Drawing.Size(125, 16);
+            this.labelContactosMegusta.TabIndex = 9;
+            this.labelContactosMegusta.Text = "0";
+            this.labelContactosMegusta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // labelLabelContactoSiguiendo
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelLabelContactoSiguiendo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label5.Location = new System.Drawing.Point(261, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "0";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelLabelContactoSiguiendo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLabelContactoSiguiendo.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelLabelContactoSiguiendo.Location = new System.Drawing.Point(261, 14);
+            this.labelLabelContactoSiguiendo.Name = "labelLabelContactoSiguiendo";
+            this.labelLabelContactoSiguiendo.Size = new System.Drawing.Size(123, 16);
+            this.labelLabelContactoSiguiendo.TabIndex = 8;
+            this.labelLabelContactoSiguiendo.Text = "0";
+            this.labelLabelContactoSiguiendo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -1020,18 +1020,18 @@ namespace DINT_F_P
             this.label6.Text = "Tweets";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // labelContactoNumseguidres
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelContactoNumseguidres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label7.Location = new System.Drawing.Point(132, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 16);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "0";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelContactoNumseguidres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContactoNumseguidres.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelContactoNumseguidres.Location = new System.Drawing.Point(132, 14);
+            this.labelContactoNumseguidres.Name = "labelContactoNumseguidres";
+            this.labelContactoNumseguidres.Size = new System.Drawing.Size(123, 16);
+            this.labelContactoNumseguidres.TabIndex = 7;
+            this.labelContactoNumseguidres.Text = "0";
+            this.labelContactoNumseguidres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -1061,18 +1061,18 @@ namespace DINT_F_P
             this.label9.Text = "Siguiendo";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // labelContactoNumTuits
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelContactoNumTuits.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label10.Location = new System.Drawing.Point(3, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 16);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelContactoNumTuits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContactoNumTuits.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.labelContactoNumTuits.Location = new System.Drawing.Point(3, 14);
+            this.labelContactoNumTuits.Name = "labelContactoNumTuits";
+            this.labelContactoNumTuits.Size = new System.Drawing.Size(123, 16);
+            this.labelContactoNumTuits.TabIndex = 5;
+            this.labelContactoNumTuits.Text = "0";
+            this.labelContactoNumTuits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -1283,7 +1283,7 @@ namespace DINT_F_P
             this.tabPageContacto.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContacto)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1344,17 +1344,17 @@ namespace DINT_F_P
         private System.Windows.Forms.TabControl ControlPaginas;
         private System.Windows.Forms.TabPage tabPageContacto;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelNombreContacto;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxContacto;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelContactosMegusta;
+        private System.Windows.Forms.Label labelLabelContactoSiguiendo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelContactoNumseguidres;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelContactoNumTuits;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.PictureBox pictureBox3;
