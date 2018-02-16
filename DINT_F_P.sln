@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		DINT_F_P\bin\res\font\AmaticSC-Regular.ttf = DINT_F_P\bin\res\font\AmaticSC-Regular.ttf
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TwittClientInstaller", "TwittClientInstaller\TwittClientInstaller.vdproj", "{7FD4B086-17C6-410A-B17B-220377AD1694}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,8 @@ Global
 		{C2A79568-BE7E-492C-8BFC-AE763E0FBBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2A79568-BE7E-492C-8BFC-AE763E0FBBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2A79568-BE7E-492C-8BFC-AE763E0FBBFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD4B086-17C6-410A-B17B-220377AD1694}.Debug|Any CPU.ActiveCfg = Debug
+		{7FD4B086-17C6-410A-B17B-220377AD1694}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

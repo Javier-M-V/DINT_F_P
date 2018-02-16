@@ -719,7 +719,6 @@ namespace DINT_F_P{
         {
             byte[] avatarByte;
             MemoryStream ms;
-            Image fotoavatar;
 
             PictureBox a = sender as PictureBox;
             ControlPaginas.SelectedTab = tabPageContacto;
