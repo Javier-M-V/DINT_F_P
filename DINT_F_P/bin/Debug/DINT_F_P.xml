@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DINT_F_P</name>
+    </assembly>
+    <members>
+        <member name="T:DINT_F_P.FormEditar">
+            <summary>
+            Formulario de edición del perfil de usuario.
+            Contiene las funciones básicas de comportamiento.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.FormEditar.OK_Click(System.Object,System.EventArgs)">
+            <summary>
+            Responde al Ok del usuario y cierra el form.
+            Setea el dialog result, la imagen nueva y el estado si son válidos.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.FormEditar.cancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Responde al cancel del usuario, setea al dialogresult y cierra el form.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.FormEditar.EditarFoto_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre un FileDialog y carga la nueva imagen desde local.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.FormEditar.textBoxNuevoMensajePerfil_Click(System.Object,System.EventArgs)">
+            <summary>
+            Responmde al clic en la caja dejando el texto vacío.
+            </summary>
+        </member>
+        <member name="F:DINT_F_P.FormEditar.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.FormEditar.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DINT_F_P.FormEditar.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DINT_F_P.Tuitear">
+            <summary>
+            Formulario para tuitear.
+            Contiene las funciones básicas de scomportamiento.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.Tuitear.ButtonTwittItForm_Click(System.Object,System.EventArgs)">
+            <summary>
+            Responde al botón y setea el nuevo mensaje y el dialogresult si no está vacío.
+            </summary>
+        </member>
+        <member name="F:DINT_F_P.Tuitear.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.Tuitear.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DINT_F_P.Tuitear.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DINT_F_P.TwitClientMain">
+            <summary>
+            Formulario principal.
+            Contiene las funciones básicas de comportamiento.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.#ctor">
+            <summary>
+            Constructor del formulario.
+            Inicializa la conexión con la BBDD.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.ConectarBBDD(MySql.Data.MySqlClient.MySqlConnectionStringBuilder@,MySql.Data.MySqlClient.MySqlConnection@)">
+            <summary>
+            Constructor del formulario.
+            Inicializa la conexión con la BBDD.
+            </summary>
+            <param name="conexion">conexion es la referencia a la base de datos mysql.</param>
+            <param name="build">build es la referencia al builder constructor del string para conectase a la BBDD.</param>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.DesconectarBBDD(MySql.Data.MySqlClient.MySqlConnection@)">
+            <summary>
+            Desconecta de la BBDD.
+            <param name="conexion">conexion es la referencia a la base de datos mysql.</param>
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.TwitClientMain_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            Llama a la desconexión de la BBDD como respuesta al cierrde de la App.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.CustomButton1Login_Click(System.Object,System.EventArgs)">
+            <summary>
+            Entra en la página principal y carga todos los datos dinámicos del usuario.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.RescateInfoDinamica(System.String)">
+            <summary>
+            Rescatamos los datos del usuario en todas las pantallas.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.RescateTimeline(System.String)">
+            <summary>
+            Rellena el flowlayout de los tuits de los seguidos por el usuario.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.RescateTwittsSelfUsuario(System.String)">
+            <summary>
+            Rescata de la BBDD los tuits del propio usuario.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.RescateNotifications">
+            <summary>
+            Rescata de la BBDD las notificaciones guardadas.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.TextBoxContrasenya_Click(System.Object,System.EventArgs)">
+            <summary>
+            Borra el texto de la caja al hacer clic.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.TextBoxUsuario_Click(System.Object,System.EventArgs)">
+            <summary>
+            Borra el texto de la caja al hacer clic.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxTuitear_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lleva a Notificaciones.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxLastTwits_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lanza el form para tuitear.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxConfig_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lleva al perfil de usuario.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.RichTextBoxCajaTwit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Borra el texto del richtextbox al hacer clic.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.ButtonTwittIt_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que responde al botón de tuitear.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBox8_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que responde al botón de tuitear.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBox6_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que responde al botón de tuitear.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxuser2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que responde al botón de tuitear.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.TextBoxUsuario_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Respuesta de la tecla enter en el login.
+            Nombre de usuario.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.TextBoxContrasenya_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Respuesta de la tecla enter en el login.
+            Contraseña.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxtimeline3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Llama a la función de generar formulario para hacer tuit.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxhome3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Va al timeline.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxuser3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Va al perfil.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxHome4_Clic(System.Object,System.EventArgs)">
+            <summary>
+            Va al timeline.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxLasttuits4_Clic(System.Object,System.EventArgs)">
+            <summary>
+            Evento que responde al botón de tuitear.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.PictureBoxNotifications4_Click(System.Object,System.EventArgs)">
+            <summary>
+            Va a notificaciones.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.Editar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que responde al botón de editar el perfil.
+            Abre el formulario para editar y hace update.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.LogoutLabel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que responde al logout.
+            Elimina todos los datos del user y te lleva al inicio.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.Label12_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Hace hover en el texto de logout.
+            </summary>
+            <see cref="M:DINT_F_P.TwitClientMain.LabelLogout_MouseLeave(System.Object,System.EventArgs)"/>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.LabelLogout_MouseLeave(System.Object,System.EventArgs)">
+             <summary>
+             Hace hover en el texto de logout.
+             </summary>
+            <see cref="M:DINT_F_P.TwitClientMain.Label12_MouseEnter(System.Object,System.EventArgs)"/>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.VentanaTuit">
+            <summary>
+            Abre el form para hacer tuit y updatea la BBDD al salir.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.CargarEstadisticas">
+            <summary>
+            Rellena los campos del perfil de usuario con sus estadísiticas de tuiter.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.CargarEstadisticasContacto(System.String)">
+            <summary>
+            Rellena los campos del perfil del contacto clicado en la foto.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.FotoABytes(System.String)">
+            <summary>
+            Convierte una imagen a un array de bytes para tratarla como un blob.
+            </summary>
+            <param name="ruta">ruta es la ruta de la imagen a convertir.</param>
+            <returns>
+            La imagen que en forma de array de bytes.
+            </returns>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.SubirFoto(System.String)">
+            <summary>
+            Sube la foto a la base de datos como blob.
+            </summary>
+            <param name="ruta">ruta es la ruta de la imagen a convertir.</param>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBox15_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona otro tab: perfil de user.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBox18_Click(System.Object,System.EventArgs)">
+            <summary>
+            Selecciona otro tab: Timeline.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBox17_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lanza el form para tuitear.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.IrAPerfilDeContacto(System.Object,System.EventArgs)">
+            <summary>
+            Va a la página de un usuario y carga sus datos.
+            </summary>
+        </member>
+        <member name="F:DINT_F_P.TwitClientMain.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+        <member name="T:DINT_F_P.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:DINT_F_P.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:DINT_F_P.Properties.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:DINT_F_P.Properties.Resources.Amatic">
+            <summary>
+              Busca un recurso adaptado de tipo System.Byte[].
+            </summary>
+        </member>
+        <member name="P:DINT_F_P.Properties.Resources.AmaticSC_Regular">
+            <summary>
+              Busca un recurso adaptado de tipo System.Byte[].
+            </summary>
+        </member>
+    </members>
+</doc>

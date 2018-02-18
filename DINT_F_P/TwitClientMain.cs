@@ -5,7 +5,8 @@ using System.Drawing;
 using System.IO;
 using DINT_F_P.Properties;
 
-namespace DINT_F_P{
+namespace DINT_F_P
+{
 
 
     /// <summary>
@@ -158,7 +159,6 @@ namespace DINT_F_P{
 
         /// <summary>
         /// Rellena el flowlayout de los tuits de los seguidos por el usuario.
-        /// 
         /// </summary>
         private void RescateTimeline(string User)
         {
@@ -694,18 +694,27 @@ namespace DINT_F_P{
             comand.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Selecciona otro tab: perfil de user.
+        /// </summary>
         private void pictureBox15_Click(object sender, EventArgs e)
         {
 
             ControlPaginas.SelectedTab = tabPagePerfilUser;
         }
 
+        /// <summary>
+        /// Selecciona otro tab: Timeline.
+        /// </summary>
         private void pictureBox18_Click(object sender, EventArgs e)
         {
 
             ControlPaginas.SelectedTab = Timeline;
         }
 
+        /// <summary>
+        /// Lanza el form para tuitear.
+        /// </summary>
         private void pictureBox17_Click(object sender, EventArgs e)
         {
 
@@ -713,11 +722,12 @@ namespace DINT_F_P{
         }
 
         /// <summary>
-        /// Sube la foto a la base de datos como blob.
+        /// Va a la página de un usuario y carga sus datos.
         /// </summary>
         private void IrAPerfilDeContacto(object sender, EventArgs e)
         {
             byte[] avatarByte;
+
             MemoryStream ms;
 
             PictureBox a = sender as PictureBox;
@@ -727,8 +737,8 @@ namespace DINT_F_P{
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", a.Tag);
             MySqlDataReader Reader = comand.ExecuteReader();
-            if (Reader.Read()) {
-
+            if (Reader.Read())
+            {
                 labelNombreContacto.Text = Reader["usuario_twitter"].ToString();
                 try
                 {
@@ -742,5 +752,5 @@ namespace DINT_F_P{
                 }
             }
         }
-    }   
+    }
 }

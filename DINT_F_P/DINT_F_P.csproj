@@ -36,8 +36,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>
-    </DocumentationFile>
+    <DocumentationFile>..\DINT_F_P.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,7 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BotonCustom">
-      <HintPath>..\..\BotonCustom\BotonCustom\bin\Debug\BotonCustom.dll</HintPath>
+      <HintPath>bin\Debug\BotonCustom.dll</HintPath>
     </Reference>
     <Reference Include="CajaNot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -61,9 +61,6 @@
       <HintPath>..\CajaTwitt\cajatwitt\bin\Debug\CajaTwitt.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="roundedButton">
-      <HintPath>..\..\roundedButton\roundedButton\bin\Debug\roundedButton.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

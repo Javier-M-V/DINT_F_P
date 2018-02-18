@@ -1,6 +1,3 @@
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.exe.config
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.exe
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.pdb
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.Properties.Resources.resources
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csproj.GenerateResource.Cache
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.csproj.CoreCompileInputs.cache
@@ -24,9 +21,17 @@ C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\BotonCustom.dll
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.dll
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\BotonCustom.pdb
 C:\Users\javiv\source\repos\DINT_F_P\DINT_F_P\bin\Debug\roundedButton.pdb
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.pdb
-C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.FormEditar.resources
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\obj\Debug\DINT_F_P.Tuitear.resources
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P.exe.config
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P.exe
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P.pdb
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P.xml
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.exe.config
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.exe
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.pdb
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\DINT_F_P.xml
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaNot.dll
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.dll
 C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaNot.pdb
+C:\Users\Alumno\source\repos\DINT_F_P\DINT_F_P\bin\Debug\CajaTwitt.pdb
