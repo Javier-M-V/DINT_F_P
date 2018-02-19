@@ -8,7 +8,6 @@ using DINT_F_P.Properties;
 namespace DINT_F_P
 {
 
-
     /// <summary>
     /// Formulario principal.
     /// Contiene las funciones básicas de comportamiento.
@@ -89,6 +88,11 @@ namespace DINT_F_P
 
             Usuario = textBoxUsuario.Text;
             Contrasenya = textBoxContrasenya.Text;
+            if (Usuario[0] != '@')
+            {
+
+                Usuario = "@" + Usuario;
+            }
 
             string sql = "SELECT contrasena from usuarios WHERE usuario_twitter=@USER";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
@@ -285,8 +289,11 @@ namespace DINT_F_P
         /// </summary>
         private void TextBoxUsuario_Click(object sender, EventArgs e)
         {
-
-            textBoxUsuario.Text = "";
+            if (textBoxUsuario.Text == "@twitterUser")
+            {
+                textBoxUsuario.Text = "";
+            }
+            
         }
         //FIN DE CÓDIGO RELATIVO A LA PÁGINA DE LOGIN
 
@@ -325,7 +332,7 @@ namespace DINT_F_P
         private void RichTextBoxCajaTwit_Click(object sender, EventArgs e)
         {
 
-            // richTextBox1.Text = "";
+             richTextBoxCajaTwit.Text = "";
         }
 
         /// <summary>
@@ -333,6 +340,10 @@ namespace DINT_F_P
         /// </summary>
         private void ButtonTwittIt_Click(object sender, EventArgs e)
         {
+            byte[] avatarByte;
+            MemoryStream ms;
+            Image fotoavatar = null ;
+
             //inserción en BBDD
             string sql = "Insert INTO mensajes VALUES(@USER,@RECEPTOR,@DATE,@MENSAJE,@FAVS,@RETS)";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
@@ -344,7 +355,12 @@ namespace DINT_F_P
             comand.Parameters.AddWithValue("@RETS", 0);
             comand.ExecuteNonQuery();
 
-            //refresco del flowlayout e inserción del tuit en la vista
+            //refresco del flowlayout e inserción del tuit en la vista          
+            String sql2 = "SELECT foto FROM usuarios WHERE usuario_twitter = @USER";
+            comand = new MySqlCommand(sql2, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            MySqlDataReader reader = comand.ExecuteReader();
+            
             flowLayoutPanelTwits.Controls.Clear();
             CajaTwitt.BoxTwit cajita = new CajaTwitt.BoxTwit(ref conexion);
             cajita.ForeColor = Color.Black;
@@ -352,12 +368,38 @@ namespace DINT_F_P
             cajita.SetRets(0);
             cajita.SetFavs(0);
             cajita.SetUser(Usuario);
+            if (reader.Read()) {
+
+                try
+                {
+                    avatarByte = (byte[])reader["foto"];
+                    ms = new MemoryStream(avatarByte);
+                    fotoavatar = Image.FromStream(ms, false, false);
+                }
+                catch (InvalidCastException)
+                {
+
+                    fotoavatar = null;//TODO: METER IMAGEN POR DEFECTO
+                }
+            }
+            reader.Close();       
+            cajita.SetFoto(fotoavatar);
             flowLayoutPanelTwits.Controls.Add(cajita);
             RescateTimeline(Usuario);
             flowLayoutPanelLastTuits.Controls.Clear();
             RescateTwittsSelfUsuario(Usuario);
         }
 
+        /// <summary>
+        /// Evento que responde a la tecla enter en la caja de tuit.
+        /// </summary>
+        private void richTextBoxCajaTwit_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ButtonTwittIt_Click(sender, e);
+            }
+        }
 
         //BOTONES DE CAMBIO DE PANTALLA
         /// <summary>
@@ -440,7 +482,7 @@ namespace DINT_F_P
 
 
 
-        //CODIGO DE PERFIL
+        //CODIGO DE PERFIL DEL USER
         /// <summary>
         /// Va al timeline.
         /// </summary>
@@ -490,7 +532,6 @@ namespace DINT_F_P
                 comand.ExecuteNonQuery();
                 RescateInfoDinamica(Usuario);//refresco de la info del usuario
             }
-
         }
 
         /// <summary>
@@ -501,11 +542,7 @@ namespace DINT_F_P
         {
 
             ControlPaginas.SelectedTab = Main;
-            Usuario = "";
-            Contrasenya = "";
-            //ESTO NO SE SI ES DEL TODO NECESARIO. TODO
-            flowLayoutPanelLastTuits.Controls.Clear();
-            flowLayoutPanelTwits.Controls.Clear();
+            Clear();
         }
 
         /// <summary>
@@ -526,7 +563,57 @@ namespace DINT_F_P
 
             labelLogout.ForeColor = Color.Black;
         }
-        //FIN DE CODIGO DE PERFIL
+        //FIN DE CODIGO DE PERFIL DEL USER
+
+
+        //CÓDIGO RELATIVO AL PERFIL DEL CONTACTO
+        /// <summary>
+        /// Abre el form para hacer tuit y updatea la BBDD al salir.
+        /// </summary>
+        private void pictureBoxTimeline4_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = Timeline;
+            ClearContacto();
+        }
+
+        private void ClearContacto()
+        {
+            pictureBoxContacto.Image = null;
+            labelNombreContacto.Text = "Nombre";
+            labelContactoNumTuits.Text = "0";
+            labelContactoNumseguidres.Text = "0";
+            labelLabelContactoSiguiendo.Text = "0";
+            labelContactosMegusta.Text = "0";
+
+        }
+
+        /// <summary>
+        /// Abre el form para hacer tuit y updatea la BBDD al salir.
+        /// </summary>
+        private void pictureBoxTuit4_Click(object sender, EventArgs e)
+        {
+            VentanaTuit();
+            ClearContacto();
+        }
+
+        /// <summary>
+        /// Abre el form para hacer tuit y updatea la BBDD al salir.
+        /// </summary>
+        private void pictureBoxNot4_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = LastNotifications;
+            ClearContacto();
+        }
+
+        /// <summary>
+        /// Abre el form para hacer tuit y updatea la BBDD al salir.
+        /// </summary>
+        private void pictureBoxUser4_Click(object sender, EventArgs e)
+        {
+            ControlPaginas.SelectedTab = tabPagePerfilUser;
+        }
+
+        //FIN DE CODIGO DE PERFIL DEL CONTACTO
 
         //CÓDIGO DE FUNCIONES GENERALES DE LA APP
         /// <summary>
@@ -549,6 +636,7 @@ namespace DINT_F_P
                 comand.Parameters.AddWithValue("@FAVS", 0);
                 comand.Parameters.AddWithValue("@RETS", 0);
                 comand.ExecuteNonQuery();
+                flowLayoutPanelLastTuits.Controls.Clear();
                 RescateTwittsSelfUsuario(Usuario);
             }
         }
@@ -670,11 +758,9 @@ namespace DINT_F_P
         /// </returns>
         private byte[] FotoABytes(string ruta)
         {
-
             FileStream stream = new FileStream(ruta, FileMode.Open, FileAccess.Read);
             BinaryReader reader = new BinaryReader(stream);
             byte[] fotobytes = reader.ReadBytes((int)stream.Length);
-            reader.Close();
             stream.Close();
             return fotobytes;
         }
@@ -727,9 +813,7 @@ namespace DINT_F_P
         private void IrAPerfilDeContacto(object sender, EventArgs e)
         {
             byte[] avatarByte;
-
             MemoryStream ms;
-
             PictureBox a = sender as PictureBox;
             ControlPaginas.SelectedTab = tabPageContacto;
             CargarEstadisticasContacto(a.Tag.ToString());
@@ -751,6 +835,56 @@ namespace DINT_F_P
                     pictureBoxPerfilUserFoto.Image = null;//TODO: METER IMAGEN POR DEFECTO
                 }
             }
+            Reader.Close();
+
+            /*
+            string sql2 = "SELECT mensaje, num_rets,num_tuits user_emisor,foto FROM mensajes, usuarios WHERE user_emisor=@USER AND user_emisor=usuario_twitter
+            comand.Parameters.AddWithValue("@USER", a.Tag);
+            MySqlDataReader reader = comand.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                CajaTwitt.BoxTwit cajita = new CajaTwitt.BoxTwit(ref conexion);
+                cajita.ForeColor = Color.Black;
+                cajita.SetTuit(reader["mensaje"].ToString());
+                cajita.SetRets(Int32.Parse(reader["num_rets"].ToString()));
+                cajita.SetFavs(Int32.Parse(reader["num_favs"].ToString()));
+                cajita.SetUser(reader["user_emisor"].ToString());
+                try
+                {
+                    avatarByte = (byte[])reader["foto"];
+                    ms = new MemoryStream(avatarByte);
+                    fotoavatar = Image.FromStream(ms, false, false);
+                }
+                catch (InvalidCastException)
+                {
+
+                    pictureBoxPerfilUserFoto.Image = null;//TODO: METER IMAGEN POR DEFECTO
+                }
+                cajita.SetFoto(fotoavatar);
+                flowLayoutPanelContacto.Controls.Add(cajita);
+                */
+
+        }
+
+        /// <summary>
+        /// Elimina todos los datos de usuario logeado en la aplicación.
+        /// </summary>
+        private void Clear()
+        {
+            labelNombreUserperfil.Text = "";
+            pictureBoxPerfilUserFoto.Image = null;
+            pictureBoxFotoPerfilTImeline.Image = null;
+            labelEstadoUser.Text = "";
+            labelPerfilNumTuits.Text = "0";
+            labelPerfilSeguidores.Text = "0";
+            labellabelPerfilSiguiendo.Text = "0";
+            labelPerfilMegusta.Text = "0";
+            flowLayoutPanelTwits.Controls.Clear();
+            flowLayoutPanelNotifications.Controls.Clear();
+            richTextBoxCajaTwit.Text = "";
+            textBoxUsuario.Text = "@twitterUser";
         }
     }
 }

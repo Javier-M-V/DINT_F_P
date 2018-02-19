@@ -54,6 +54,7 @@
             this.PopTuitcaja.Size = new System.Drawing.Size(291, 63);
             this.PopTuitcaja.TabIndex = 7;
             this.PopTuitcaja.Text = "";
+            this.PopTuitcaja.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PopTuitcaja_KeyDown);
             // 
             // Tuitear
             // 

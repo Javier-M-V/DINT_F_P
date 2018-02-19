@@ -35,5 +35,16 @@ namespace DINT_F_P
             }
             
         }
+
+        /// <summary>
+        /// Responde al botón enter.
+        /// </summary>
+        private void PopTuitcaja_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ButtonTwittItForm_Click(sender, e);
+            }
+        }
     }
 }
