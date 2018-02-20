@@ -50,6 +50,7 @@
             // 
             this.PopTuitcaja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PopTuitcaja.Location = new System.Drawing.Point(12, 12);
+            this.PopTuitcaja.MaxLength = 250;
             this.PopTuitcaja.Name = "PopTuitcaja";
             this.PopTuitcaja.Size = new System.Drawing.Size(291, 63);
             this.PopTuitcaja.TabIndex = 7;

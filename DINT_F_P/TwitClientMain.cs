@@ -401,6 +401,14 @@ namespace DINT_F_P
             }
         }
 
+        /// <summary>
+        /// botón logout.
+        /// </summary>
+        private void labellogout0_Click(object sender, EventArgs e)
+        {
+            LogoutLabel_Click(sender, e);
+        }
+
         //BOTONES DE CAMBIO DE PANTALLA
         /// <summary>
         /// Evento que responde al botón de tuitear.
@@ -449,7 +457,6 @@ namespace DINT_F_P
                 CustomButton1Login_Click(sender, e);
             }
         }
-
         //FIN DE CÓDIGO RELATIVO AL TIMELINE
 
 
@@ -478,8 +485,15 @@ namespace DINT_F_P
         {
             ControlPaginas.SelectedTab = tabPagePerfilUser;
         }
-        //FIN DE CODIGO DE NOTIFICATIONS
 
+        /// <summary>
+        /// botón logout.
+        /// </summary>
+        private void labellogout1_Click(object sender, EventArgs e)
+        {
+            LogoutLabel_Click(sender, e);
+        }
+        //FIN DE CODIGO DE NOTIFICATIONS
 
 
         //CODIGO DE PERFIL DEL USER
@@ -814,7 +828,6 @@ namespace DINT_F_P
         private void IrAPerfilDeContacto(object sender, EventArgs e)
         {
             
-
             byte[] avatarByte;
             MemoryStream ms;
             PictureBox a = sender as PictureBox;
@@ -841,8 +854,8 @@ namespace DINT_F_P
             Reader.Close();
 
             
-            string sql2 = "SELECT mensaje, num_rets,num_favs, user_emisor,foto FROM mensajes, usuarios WHERE user_emisor=@USER AND user_emisor=usuario_twitter";
-            comand = new MySqlCommand(sql2, conexion);
+            sql = "SELECT mensaje, num_rets,num_favs, user_emisor,foto FROM mensajes, usuarios WHERE user_emisor=@USER AND user_emisor=usuario_twitter";
+            comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", a.Tag);
             MySqlDataReader reader = comand.ExecuteReader();
             Image fotoavatar;
@@ -870,7 +883,6 @@ namespace DINT_F_P
                 flowLayoutPanelContacto.Controls.Add(cajita);
             }
             reader.Close();
-
         }
 
         /// <summary>
@@ -890,22 +902,6 @@ namespace DINT_F_P
             flowLayoutPanelNotifications.Controls.Clear();
             richTextBoxCajaTwit.Text = "";
             textBoxUsuario.Text = "@twitterUser";
-        }
-
-        /// <summary>
-        /// botón logout.
-        /// </summary>
-        private void labellogout1_Click(object sender, EventArgs e)
-        {
-            LogoutLabel_Click(sender, e);
-        }
-
-        /// <summary>
-        /// botón logout.
-        /// </summary>
-        private void labellogout0_Click(object sender, EventArgs e)
-        {
-            LogoutLabel_Click(sender, e);
-        }
+        }    
     }
 }

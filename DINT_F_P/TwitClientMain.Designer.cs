@@ -697,6 +697,7 @@ namespace DINT_F_P
             // 
             this.richTextBoxCajaTwit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBoxCajaTwit.Location = new System.Drawing.Point(213, 73);
+            this.richTextBoxCajaTwit.MaxLength = 250;
             this.richTextBoxCajaTwit.Name = "richTextBoxCajaTwit";
             this.richTextBoxCajaTwit.Size = new System.Drawing.Size(291, 63);
             this.richTextBoxCajaTwit.TabIndex = 2;
@@ -754,6 +755,7 @@ namespace DINT_F_P
             // 
             this.textBoxContrasenya.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxContrasenya.Location = new System.Drawing.Point(86, 40);
+            this.textBoxContrasenya.MaxLength = 45;
             this.textBoxContrasenya.Name = "textBoxContrasenya";
             this.textBoxContrasenya.Size = new System.Drawing.Size(195, 20);
             this.textBoxContrasenya.TabIndex = 2;
@@ -767,6 +769,7 @@ namespace DINT_F_P
             // 
             this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUsuario.Location = new System.Drawing.Point(86, 14);
+            this.textBoxUsuario.MaxLength = 45;
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(195, 20);
             this.textBoxUsuario.TabIndex = 1;

@@ -63,6 +63,7 @@
             // 
             this.textBoxNuevoMensajePerfil.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxNuevoMensajePerfil.Location = new System.Drawing.Point(11, 153);
+            this.textBoxNuevoMensajePerfil.MaxLength = 100;
             this.textBoxNuevoMensajePerfil.Name = "textBoxNuevoMensajePerfil";
             this.textBoxNuevoMensajePerfil.Size = new System.Drawing.Size(210, 20);
             this.textBoxNuevoMensajePerfil.TabIndex = 4;

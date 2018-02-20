@@ -177,6 +177,11 @@
             Evento que responde a la tecla enter en la caja de tuit.
             </summary>
         </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout0_Click(System.Object,System.EventArgs)">
+            <summary>
+            botón logout.
+            </summary>
+        </member>
         <member name="M:DINT_F_P.TwitClientMain.pictureBox8_Click(System.Object,System.EventArgs)">
             <summary>
             Evento que responde al botón de tuitear.
@@ -217,6 +222,11 @@
         <member name="M:DINT_F_P.TwitClientMain.PictureBoxuser3_Click(System.Object,System.EventArgs)">
             <summary>
             Va al perfil.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout1_Click(System.Object,System.EventArgs)">
+            <summary>
+            botón logout.
             </summary>
         </member>
         <member name="M:DINT_F_P.TwitClientMain.PictureBoxHome4_Clic(System.Object,System.EventArgs)">
