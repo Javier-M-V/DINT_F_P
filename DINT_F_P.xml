@@ -328,7 +328,7 @@
             Va a la página de un usuario y carga sus datos.
             </summary>
         </member>
-        <member name="M:DINT_F_P.TwitClientMain.Clear">
+        <member name="M:DINT_F_P.TwitClientMain.ClearAll">
             <summary>
             Elimina todos los datos de usuario logeado en la aplicación.
             </summary>

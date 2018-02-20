@@ -542,7 +542,7 @@ namespace DINT_F_P
         {
 
             ControlPaginas.SelectedTab = Main;
-            Clear();
+            ClearAll();
         }
 
         /// <summary>
@@ -584,6 +584,7 @@ namespace DINT_F_P
             labelContactoNumseguidres.Text = "0";
             labelLabelContactoSiguiendo.Text = "0";
             labelContactosMegusta.Text = "0";
+            flowLayoutPanelContacto.Controls.Clear();
 
         }
 
@@ -812,6 +813,8 @@ namespace DINT_F_P
         /// </summary>
         private void IrAPerfilDeContacto(object sender, EventArgs e)
         {
+            
+
             byte[] avatarByte;
             MemoryStream ms;
             PictureBox a = sender as PictureBox;
@@ -837,11 +840,12 @@ namespace DINT_F_P
             }
             Reader.Close();
 
-            /*
-            string sql2 = "SELECT mensaje, num_rets,num_tuits user_emisor,foto FROM mensajes, usuarios WHERE user_emisor=@USER AND user_emisor=usuario_twitter
+            
+            string sql2 = "SELECT mensaje, num_rets,num_favs, user_emisor,foto FROM mensajes, usuarios WHERE user_emisor=@USER AND user_emisor=usuario_twitter";
+            comand = new MySqlCommand(sql2, conexion);
             comand.Parameters.AddWithValue("@USER", a.Tag);
             MySqlDataReader reader = comand.ExecuteReader();
-
+            Image fotoavatar;
             while (reader.Read())
             {
 
@@ -860,18 +864,19 @@ namespace DINT_F_P
                 catch (InvalidCastException)
                 {
 
-                    pictureBoxPerfilUserFoto.Image = null;//TODO: METER IMAGEN POR DEFECTO
+                    fotoavatar = null;//TODO: METER IMAGEN POR DEFECTO
                 }
                 cajita.SetFoto(fotoavatar);
                 flowLayoutPanelContacto.Controls.Add(cajita);
-                */
+            }
+            reader.Close();
 
         }
 
         /// <summary>
         /// Elimina todos los datos de usuario logeado en la aplicación.
         /// </summary>
-        private void Clear()
+        private void ClearAll()
         {
             labelNombreUserperfil.Text = "";
             pictureBoxPerfilUserFoto.Image = null;

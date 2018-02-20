@@ -65,6 +65,7 @@ namespace DINT_F_P
             this.labelEstadoUser = new System.Windows.Forms.Label();
             this.ButtonTwittIt = new BotonCustom.CustomButton1();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxConfig = new System.Windows.Forms.PictureBox();
             this.pictureBoxNotifications = new System.Windows.Forms.PictureBox();
             this.pictureBoxLastTwits = new System.Windows.Forms.PictureBox();
@@ -85,6 +86,7 @@ namespace DINT_F_P
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -93,6 +95,7 @@ namespace DINT_F_P
             this.flowLayoutPanelNotifications = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPageContacto = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanelContacto = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.labelNombreContacto = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -119,9 +122,6 @@ namespace DINT_F_P
             this.pictureBoxuser3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanelContacto = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPagePerfilUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel5.SuspendLayout();
@@ -606,6 +606,17 @@ namespace DINT_F_P
             this.panel8.Size = new System.Drawing.Size(372, 65);
             this.panel8.TabIndex = 5;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label2.Location = new System.Drawing.Point(199, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Logout";
+            // 
             // pictureBoxConfig
             // 
             this.pictureBoxConfig.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxConfig.Image")));
@@ -828,6 +839,17 @@ namespace DINT_F_P
             this.panel18.Size = new System.Drawing.Size(372, 65);
             this.panel18.TabIndex = 5;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(199, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Logout";
+            // 
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
@@ -916,6 +938,14 @@ namespace DINT_F_P
             this.tabPageContacto.Text = "Contacto";
             this.tabPageContacto.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanelContacto
+            // 
+            this.flowLayoutPanelContacto.AutoScroll = true;
+            this.flowLayoutPanelContacto.Location = new System.Drawing.Point(339, 74);
+            this.flowLayoutPanelContacto.Name = "flowLayoutPanelContacto";
+            this.flowLayoutPanelContacto.Size = new System.Drawing.Size(576, 419);
+            this.flowLayoutPanelContacto.TabIndex = 8;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
@@ -985,7 +1015,7 @@ namespace DINT_F_P
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(310, 100);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(340, 100);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // labelContactosMegusta
@@ -994,9 +1024,9 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelContactosMegusta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContactosMegusta.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelContactosMegusta.Location = new System.Drawing.Point(234, 14);
+            this.labelContactosMegusta.Location = new System.Drawing.Point(258, 14);
             this.labelContactosMegusta.Name = "labelContactosMegusta";
-            this.labelContactosMegusta.Size = new System.Drawing.Size(73, 16);
+            this.labelContactosMegusta.Size = new System.Drawing.Size(79, 16);
             this.labelContactosMegusta.TabIndex = 9;
             this.labelContactosMegusta.Text = "0";
             this.labelContactosMegusta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1007,9 +1037,9 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelLabelContactoSiguiendo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLabelContactoSiguiendo.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelLabelContactoSiguiendo.Location = new System.Drawing.Point(157, 14);
+            this.labelLabelContactoSiguiendo.Location = new System.Drawing.Point(173, 14);
             this.labelLabelContactoSiguiendo.Name = "labelLabelContactoSiguiendo";
-            this.labelLabelContactoSiguiendo.Size = new System.Drawing.Size(71, 16);
+            this.labelLabelContactoSiguiendo.Size = new System.Drawing.Size(79, 16);
             this.labelLabelContactoSiguiendo.TabIndex = 8;
             this.labelLabelContactoSiguiendo.Text = "0";
             this.labelLabelContactoSiguiendo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1023,7 +1053,7 @@ namespace DINT_F_P
             this.label6.ForeColor = System.Drawing.SystemColors.MenuText;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 14);
+            this.label6.Size = new System.Drawing.Size(79, 14);
             this.label6.TabIndex = 1;
             this.label6.Text = "Tweets";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1034,9 +1064,9 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelContactoNumseguidres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContactoNumseguidres.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.labelContactoNumseguidres.Location = new System.Drawing.Point(80, 14);
+            this.labelContactoNumseguidres.Location = new System.Drawing.Point(88, 14);
             this.labelContactoNumseguidres.Name = "labelContactoNumseguidres";
-            this.labelContactoNumseguidres.Size = new System.Drawing.Size(71, 16);
+            this.labelContactoNumseguidres.Size = new System.Drawing.Size(79, 16);
             this.labelContactoNumseguidres.TabIndex = 7;
             this.labelContactoNumseguidres.Text = "0";
             this.labelContactoNumseguidres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1048,9 +1078,9 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label8.Location = new System.Drawing.Point(80, 0);
+            this.label8.Location = new System.Drawing.Point(88, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 14);
+            this.label8.Size = new System.Drawing.Size(79, 14);
             this.label8.TabIndex = 3;
             this.label8.Text = "Seguidores";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1062,9 +1092,9 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label9.Location = new System.Drawing.Point(157, 0);
+            this.label9.Location = new System.Drawing.Point(173, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 14);
+            this.label9.Size = new System.Drawing.Size(79, 14);
             this.label9.TabIndex = 2;
             this.label9.Text = "Siguiendo";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1077,7 +1107,7 @@ namespace DINT_F_P
             this.labelContactoNumTuits.ForeColor = System.Drawing.SystemColors.MenuText;
             this.labelContactoNumTuits.Location = new System.Drawing.Point(3, 14);
             this.labelContactoNumTuits.Name = "labelContactoNumTuits";
-            this.labelContactoNumTuits.Size = new System.Drawing.Size(71, 16);
+            this.labelContactoNumTuits.Size = new System.Drawing.Size(79, 16);
             this.labelContactoNumTuits.TabIndex = 5;
             this.labelContactoNumTuits.Text = "0";
             this.labelContactoNumTuits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1089,9 +1119,9 @@ namespace DINT_F_P
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label11.Location = new System.Drawing.Point(234, 0);
+            this.label11.Location = new System.Drawing.Point(258, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 14);
+            this.label11.Size = new System.Drawing.Size(79, 14);
             this.label11.TabIndex = 4;
             this.label11.Text = "Me gusta";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1236,36 +1266,6 @@ namespace DINT_F_P
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 11;
             this.pictureBox12.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(199, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Logout";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(199, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Logout";
-            // 
-            // flowLayoutPanelContacto
-            // 
-            this.flowLayoutPanelContacto.AutoScroll = true;
-            this.flowLayoutPanelContacto.Location = new System.Drawing.Point(313, 74);
-            this.flowLayoutPanelContacto.Name = "flowLayoutPanelContacto";
-            this.flowLayoutPanelContacto.Size = new System.Drawing.Size(576, 419);
-            this.flowLayoutPanelContacto.TabIndex = 8;
             // 
             // TwitClientMain
             // 
