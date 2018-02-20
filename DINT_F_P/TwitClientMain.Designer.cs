@@ -51,7 +51,7 @@ namespace DINT_F_P
             this.labelPerfilNumTuits = new System.Windows.Forms.Label();
             this.labelMegustaUser = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.labelLogout = new System.Windows.Forms.Label();
+            this.labelLogout2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxNotifications4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxTuits4 = new System.Windows.Forms.PictureBox();
@@ -65,7 +65,7 @@ namespace DINT_F_P
             this.labelEstadoUser = new System.Windows.Forms.Label();
             this.ButtonTwittIt = new BotonCustom.CustomButton1();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labellogout0 = new System.Windows.Forms.Label();
             this.pictureBoxConfig = new System.Windows.Forms.PictureBox();
             this.pictureBoxNotifications = new System.Windows.Forms.PictureBox();
             this.pictureBoxLastTwits = new System.Windows.Forms.PictureBox();
@@ -86,7 +86,7 @@ namespace DINT_F_P
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labellogout1 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -430,7 +430,7 @@ namespace DINT_F_P
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.labelLogout);
+            this.panel12.Controls.Add(this.labelLogout2);
             this.panel12.Controls.Add(this.pictureBox1);
             this.panel12.Controls.Add(this.pictureBoxNotifications4);
             this.panel12.Controls.Add(this.pictureBoxTuits4);
@@ -440,19 +440,19 @@ namespace DINT_F_P
             this.panel12.Size = new System.Drawing.Size(372, 68);
             this.panel12.TabIndex = 7;
             // 
-            // labelLogout
+            // labelLogout2
             // 
-            this.labelLogout.AutoSize = true;
-            this.labelLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogout.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.labelLogout.Location = new System.Drawing.Point(199, 3);
-            this.labelLogout.Name = "labelLogout";
-            this.labelLogout.Size = new System.Drawing.Size(46, 13);
-            this.labelLogout.TabIndex = 10;
-            this.labelLogout.Text = "Logout";
-            this.labelLogout.Click += new System.EventHandler(this.LogoutLabel_Click);
-            this.labelLogout.MouseEnter += new System.EventHandler(this.Label12_MouseEnter);
-            this.labelLogout.MouseLeave += new System.EventHandler(this.LabelLogout_MouseLeave);
+            this.labelLogout2.AutoSize = true;
+            this.labelLogout2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogout2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labelLogout2.Location = new System.Drawing.Point(199, 3);
+            this.labelLogout2.Name = "labelLogout2";
+            this.labelLogout2.Size = new System.Drawing.Size(46, 13);
+            this.labelLogout2.TabIndex = 10;
+            this.labelLogout2.Text = "Logout";
+            this.labelLogout2.Click += new System.EventHandler(this.LogoutLabel_Click);
+            this.labelLogout2.MouseEnter += new System.EventHandler(this.Label12_MouseEnter);
+            this.labelLogout2.MouseLeave += new System.EventHandler(this.LabelLogout_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -596,7 +596,7 @@ namespace DINT_F_P
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label2);
+            this.panel8.Controls.Add(this.labellogout0);
             this.panel8.Controls.Add(this.pictureBoxConfig);
             this.panel8.Controls.Add(this.pictureBoxNotifications);
             this.panel8.Controls.Add(this.pictureBoxLastTwits);
@@ -606,16 +606,17 @@ namespace DINT_F_P
             this.panel8.Size = new System.Drawing.Size(372, 65);
             this.panel8.TabIndex = 5;
             // 
-            // label2
+            // labellogout0
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(199, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Logout";
+            this.labellogout0.AutoSize = true;
+            this.labellogout0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellogout0.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labellogout0.Location = new System.Drawing.Point(199, 3);
+            this.labellogout0.Name = "labellogout0";
+            this.labellogout0.Size = new System.Drawing.Size(46, 13);
+            this.labellogout0.TabIndex = 11;
+            this.labellogout0.Text = "Logout";
+            this.labellogout0.Click += new System.EventHandler(this.labellogout0_Click);
             // 
             // pictureBoxConfig
             // 
@@ -829,7 +830,7 @@ namespace DINT_F_P
             // 
             // panel18
             // 
-            this.panel18.Controls.Add(this.label1);
+            this.panel18.Controls.Add(this.labellogout1);
             this.panel18.Controls.Add(this.pictureBox15);
             this.panel18.Controls.Add(this.pictureBox16);
             this.panel18.Controls.Add(this.pictureBox17);
@@ -839,16 +840,17 @@ namespace DINT_F_P
             this.panel18.Size = new System.Drawing.Size(372, 65);
             this.panel18.TabIndex = 5;
             // 
-            // label1
+            // labellogout1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(199, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Logout";
+            this.labellogout1.AutoSize = true;
+            this.labellogout1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellogout1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labellogout1.Location = new System.Drawing.Point(199, 3);
+            this.labellogout1.Name = "labellogout1";
+            this.labellogout1.Size = new System.Drawing.Size(46, 13);
+            this.labellogout1.TabIndex = 11;
+            this.labellogout1.Text = "Logout";
+            this.labellogout1.Click += new System.EventHandler(this.labellogout1_Click);
             // 
             // pictureBox15
             // 
@@ -1407,7 +1409,7 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBoxTimeline4;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label labelEstadUserPerfil;
-        private System.Windows.Forms.Label labelLogout;
+        private System.Windows.Forms.Label labelLogout2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLastTuits;
         private System.Windows.Forms.PictureBox pictureBoxMunequito;
@@ -1433,8 +1435,8 @@ namespace DINT_F_P
         private System.Windows.Forms.PictureBox pictureBoxuser3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labellogout0;
+        private System.Windows.Forms.Label labellogout1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelContacto;
     }
 }

@@ -551,7 +551,7 @@ namespace DINT_F_P
         /// <see cref="LabelLogout_MouseLeave"/>
         private void Label12_MouseEnter(object sender, EventArgs e)
         {
-            labelLogout.ForeColor = Color.DarkGray;
+            labelLogout2.ForeColor = Color.DarkGray;
         }
 
         /// <summary>
@@ -561,7 +561,7 @@ namespace DINT_F_P
         private void LabelLogout_MouseLeave(object sender, EventArgs e)
         {
 
-            labelLogout.ForeColor = Color.Black;
+            labelLogout2.ForeColor = Color.Black;
         }
         //FIN DE CODIGO DE PERFIL DEL USER
 
@@ -890,6 +890,22 @@ namespace DINT_F_P
             flowLayoutPanelNotifications.Controls.Clear();
             richTextBoxCajaTwit.Text = "";
             textBoxUsuario.Text = "@twitterUser";
+        }
+
+        /// <summary>
+        /// botón logout.
+        /// </summary>
+        private void labellogout1_Click(object sender, EventArgs e)
+        {
+            LogoutLabel_Click(sender, e);
+        }
+
+        /// <summary>
+        /// botón logout.
+        /// </summary>
+        private void labellogout0_Click(object sender, EventArgs e)
+        {
+            LogoutLabel_Click(sender, e);
         }
     }
 }
