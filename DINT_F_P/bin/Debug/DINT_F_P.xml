@@ -4,6 +4,41 @@
         <name>DINT_F_P</name>
     </assembly>
     <members>
+        <member name="M:DINT_F_P.AyudaForm.pictureBoxHome_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Rellena el texto con las instrucciones del botón.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.pictureBoxLastTwits_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Rellena el texto con las instrucciones del botón.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.pictureBoxLastTwits_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Limpia la caja de texto.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.pictureBoxNotifications_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Rellena el texto con las instrucciones del botón.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.pictureBoxNotifications_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Limpia la caja de texto.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.pictureBoxConfig_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Rellena el texto con las instrucciones del botón.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.pictureBoxConfig_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Limpia la caja de texto.
+            </summary>
+        </member>
         <member name="F:DINT_F_P.AyudaForm.components">
             <summary>
             Required designer variable.
@@ -363,6 +398,61 @@
         <member name="M:DINT_F_P.TwitClientMain.ClearAll">
             <summary>
             Elimina todos los datos de usuario logeado en la aplicación.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout5_MouseEnter_1(System.Object,System.EventArgs)">
+            <summary>
+            Hover.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout5_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Hover.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout1_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Hover.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout1_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Hover.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout0_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Hover.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout0_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Hover.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout1_Click_1(System.Object,System.EventArgs)">
+            <summary>
+            Hover.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBoxayuda_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lanza el formulario de ayuda.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBoxayuda3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lanza el formulario de ayuda.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBoxayuda4_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lanza el formulario de ayuda.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.pictureBoxayuda5_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lanza el formulario de ayuda.
             </summary>
         </member>
         <member name="F:DINT_F_P.TwitClientMain.components">

@@ -914,58 +914,91 @@ namespace DINT_F_P
 
 
         //Hover del botón de logout en todas las pantallas
+        /// <summary>
+        /// Hover.
+        /// </summary>
         private void labellogout5_MouseEnter_1(object sender, EventArgs e)
         {
             labellogout5.ForeColor = Color.DarkGray;
         }
+        /// <summary>
+        /// Hover.
+        /// </summary>
         private void labellogout5_MouseLeave(object sender, EventArgs e)
         {
             labellogout5.ForeColor = Color.Black;
         }
 
+        /// <summary>
+        /// Hover.
+        /// </summary>
         private void labellogout1_MouseEnter(object sender, EventArgs e)
         {
             labellogout1.ForeColor = Color.DarkGray;
         }
 
+        /// <summary>
+        /// Hover.
+        /// </summary>
         private void labellogout1_MouseLeave(object sender, EventArgs e)
         {
             labellogout1.ForeColor = Color.Black;
 
         }
 
+        /// <summary>
+        /// Hover.
+        /// </summary>
         private void labellogout0_MouseEnter(object sender, EventArgs e)
         {
             labellogout0.ForeColor = Color.DarkGray;
         }
 
+        /// <summary>
+        /// Hover.
+        /// </summary>
         private void labellogout0_MouseLeave(object sender, EventArgs e)
         {
             labellogout0.ForeColor = Color.Black;
 
         }
 
+        /// <summary>
+        /// Hover.
+        /// </summary>
         private void labellogout1_Click_1(object sender, EventArgs e)
         {
             LogoutLabel_Click(sender, e);
         }
 
+        /// <summary>
+        /// Lanza el formulario de ayuda.
+        /// </summary>
         private void pictureBoxayuda_Click(object sender, EventArgs e)
         {
             AyudaForm ayuda = new AyudaForm();
             ayuda.Show();
         }
 
+        /// <summary>
+        /// Lanza el formulario de ayuda.
+        /// </summary>
         private void pictureBoxayuda3_Click(object sender, EventArgs e)
         {
             pictureBoxayuda_Click(sender,e);
         }
 
+        /// <summary>
+        /// Lanza el formulario de ayuda.
+        /// </summary>
         private void pictureBoxayuda4_Click(object sender, EventArgs e)
         {
             pictureBoxayuda_Click(sender, e);
         }
 
+        /// <summary>
+        /// Lanza el formulario de ayuda.
+        /// </summary>
         private void pictureBoxayuda5_Click(object sender, EventArgs e)
         {
             pictureBoxayuda_Click(sender, e);
