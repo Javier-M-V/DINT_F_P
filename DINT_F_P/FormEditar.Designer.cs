@@ -36,6 +36,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevaFoto)).BeginInit();
@@ -48,21 +49,24 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.textBoxNuevoMensajePerfil, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxNuevoMensajePerfil, 0, 4);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(29, 35);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(232, 189);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(232, 199);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // textBoxNuevoMensajePerfil
             // 
             this.textBoxNuevoMensajePerfil.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxNuevoMensajePerfil.Location = new System.Drawing.Point(11, 153);
+            this.textBoxNuevoMensajePerfil.Location = new System.Drawing.Point(11, 182);
             this.textBoxNuevoMensajePerfil.MaxLength = 100;
             this.textBoxNuevoMensajePerfil.Name = "textBoxNuevoMensajePerfil";
             this.textBoxNuevoMensajePerfil.Size = new System.Drawing.Size(210, 20);
@@ -108,7 +112,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(106, 230);
+            this.pictureBox1.Location = new System.Drawing.Point(107, 240);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,13 +123,26 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(149, 230);
+            this.pictureBox2.Location = new System.Drawing.Point(150, 240);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // label
+            // 
+            this.label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(3, 159);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(226, 20);
+            this.label.TabIndex = 5;
+            this.label.Text = "Introduce tu nuevo mensaje de perfil";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormEditar
             // 
@@ -158,5 +175,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label;
     }
 }

@@ -22,6 +22,7 @@ namespace DINT_F_P{
             Nuevaimagen = null;
             this.imagenvieja = imagenvieja;
             pictureBoxNuevaFoto.Image = imagenvieja;
+            textBoxNuevoMensajePerfil.Text = Mensajeperfil;
         }
 
         /// <summary>

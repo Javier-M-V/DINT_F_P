@@ -170,7 +170,7 @@ namespace DINT_F_P
             byte[] avatarByte = null;
             Image fotoavatar = null;
             MemoryStream ms;
-            string sql = "SELECT mensaje,num_rets,num_favs,user_emisor,foto FROM mensajes, usuarios WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) AND mensajes.user_emisor =usuarios.usuario_twitter ORDER BY fecha";
+            string sql = "SELECT mensaje,num_rets,num_favs,user_emisor,foto FROM mensajes, usuarios WHERE user_emisor IN (SELECT user_seguido FROM seguimiento WHERE user_sigue = @USER) AND mensajes.user_emisor =usuarios.usuario_twitter ORDER BY fecha DESC";
             MySqlCommand comand = new MySqlCommand(sql, conexion);
             comand.Parameters.AddWithValue("@USER", User);
             MySqlDataReader reader = comand.ExecuteReader();
@@ -354,6 +354,7 @@ namespace DINT_F_P
             comand.Parameters.AddWithValue("@FAVS", 0);
             comand.Parameters.AddWithValue("@RETS", 0);
             comand.ExecuteNonQuery();
+            richTextBoxCajaTwit.Text = "";
 
             //refresco del flowlayout e inserción del tuit en la vista          
             String sql2 = "SELECT foto FROM usuarios WHERE usuario_twitter = @USER";
@@ -388,6 +389,7 @@ namespace DINT_F_P
             RescateTimeline(Usuario);
             flowLayoutPanelLastTuits.Controls.Clear();
             RescateTwittsSelfUsuario(Usuario);
+
         }
 
         /// <summary>
@@ -527,9 +529,23 @@ namespace DINT_F_P
         /// </summary>
         private void Editar_Click(object sender, EventArgs e)
         {
-
             FormEditar editar = new FormEditar(pictureBoxPerfilUserFoto.Image);
-            editar.ShowDialog();
+            string sql = "SELECT estado FROM usuarios WHERE usuario_twitter = @USER";
+            MySqlCommand comand = new MySqlCommand(sql, conexion);
+            comand.Parameters.AddWithValue("@USER", Usuario);
+            MySqlDataReader reader = comand.ExecuteReader();
+            if (reader.Read())
+            {
+
+                editar.Mensajeperfil = reader["estado"].ToString();
+            }
+            else {
+                editar.Mensajeperfil = "";
+            }
+            reader.Close();
+
+
+            editar.ShowDialog(); 
             Image nuevaimagen = editar.Nuevaimagen;
             string nuevomensaje = editar.Mensajeperfil;
             MemoryStream ms = new MemoryStream();
@@ -538,13 +554,15 @@ namespace DINT_F_P
 
                 nuevaimagen.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
                 byte[] fotobytes = ms.ToArray();
-                string sql = "UPDATE usuarios SET estado=@ESTADO, foto=@FOTO WHERE usuario_twitter = @USER";
-                MySqlCommand comand = new MySqlCommand(sql, conexion);
+                sql = "UPDATE usuarios SET estado=@ESTADO, foto=@FOTO WHERE usuario_twitter = @USER";
+                comand = new MySqlCommand(sql, conexion);
                 comand.Parameters.AddWithValue("@FOTO", fotobytes);
                 comand.Parameters.AddWithValue("@ESTADO", nuevomensaje);
                 comand.Parameters.AddWithValue("@USER", Usuario);
                 comand.ExecuteNonQuery();
                 RescateInfoDinamica(Usuario);//refresco de la info del usuario
+                flowLayoutPanelLastTuits.Controls.Clear();
+                RescateTwittsSelfUsuario(Usuario);
             }
         }
 
