@@ -628,6 +628,14 @@ namespace DINT_F_P
             ControlPaginas.SelectedTab = tabPagePerfilUser;
         }
 
+        /// <summary>
+        /// Hace logout.
+        /// </summary>
+        private void labellogout5_Click(object sender, EventArgs e)
+        {
+            LogoutLabel_Click(sender, e);
+        }
+
         //FIN DE CODIGO DE PERFIL DEL CONTACTO
 
         //CÓDIGO DE FUNCIONES GENERALES DE LA APP
@@ -902,6 +910,65 @@ namespace DINT_F_P
             flowLayoutPanelNotifications.Controls.Clear();
             richTextBoxCajaTwit.Text = "";
             textBoxUsuario.Text = "@twitterUser";
-        }    
+        }
+
+
+        //Hover del botón de logout en todas las pantallas
+        private void labellogout5_MouseEnter_1(object sender, EventArgs e)
+        {
+            labellogout5.ForeColor = Color.DarkGray;
+        }
+        private void labellogout5_MouseLeave(object sender, EventArgs e)
+        {
+            labellogout5.ForeColor = Color.Black;
+        }
+
+        private void labellogout1_MouseEnter(object sender, EventArgs e)
+        {
+            labellogout1.ForeColor = Color.DarkGray;
+        }
+
+        private void labellogout1_MouseLeave(object sender, EventArgs e)
+        {
+            labellogout1.ForeColor = Color.Black;
+
+        }
+
+        private void labellogout0_MouseEnter(object sender, EventArgs e)
+        {
+            labellogout0.ForeColor = Color.DarkGray;
+        }
+
+        private void labellogout0_MouseLeave(object sender, EventArgs e)
+        {
+            labellogout0.ForeColor = Color.Black;
+
+        }
+
+        private void labellogout1_Click_1(object sender, EventArgs e)
+        {
+            LogoutLabel_Click(sender, e);
+        }
+
+        private void pictureBoxayuda_Click(object sender, EventArgs e)
+        {
+            AyudaForm ayuda = new AyudaForm();
+            ayuda.Show();
+        }
+
+        private void pictureBoxayuda3_Click(object sender, EventArgs e)
+        {
+            pictureBoxayuda_Click(sender,e);
+        }
+
+        private void pictureBoxayuda4_Click(object sender, EventArgs e)
+        {
+            pictureBoxayuda_Click(sender, e);
+        }
+
+        private void pictureBoxayuda5_Click(object sender, EventArgs e)
+        {
+            pictureBoxayuda_Click(sender, e);
+        }
     }
 }

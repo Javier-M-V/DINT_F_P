@@ -32,6 +32,7 @@ namespace DINT_F_P
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwitClientMain));
             this.tabPagePerfilUser = new System.Windows.Forms.TabPage();
+            this.pictureBoxayuda4 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanelLastTuits = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,6 +59,7 @@ namespace DINT_F_P
             this.pictureBoxHome4 = new System.Windows.Forms.PictureBox();
             this.Timeline = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBoxayuda = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -84,6 +86,7 @@ namespace DINT_F_P
             this.LastNotifications = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBoxayuda3 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.labellogout1 = new System.Windows.Forms.Label();
@@ -95,6 +98,8 @@ namespace DINT_F_P
             this.flowLayoutPanelNotifications = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPageContacto = new System.Windows.Forms.TabPage();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxayuda5 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanelContacto = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.labelNombreContacto = new System.Windows.Forms.Label();
@@ -110,6 +115,7 @@ namespace DINT_F_P
             this.labelContactoNumTuits = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.labellogout5 = new System.Windows.Forms.Label();
             this.pictureBoxUser4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxNot4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxTuit4 = new System.Windows.Forms.PictureBox();
@@ -123,6 +129,7 @@ namespace DINT_F_P
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabPagePerfilUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -137,6 +144,7 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome4)).BeginInit();
             this.Timeline.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -154,6 +162,7 @@ namespace DINT_F_P
             this.LastNotifications.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -162,6 +171,8 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panel19.SuspendLayout();
             this.tabPageContacto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda5)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContacto)).BeginInit();
@@ -181,6 +192,7 @@ namespace DINT_F_P
             // tabPagePerfilUser
             // 
             this.tabPagePerfilUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPagePerfilUser.Controls.Add(this.pictureBoxayuda4);
             this.tabPagePerfilUser.Controls.Add(this.pictureBox9);
             this.tabPagePerfilUser.Controls.Add(this.panel5);
             this.tabPagePerfilUser.Controls.Add(this.tableLayoutPanel2);
@@ -188,10 +200,21 @@ namespace DINT_F_P
             this.tabPagePerfilUser.Controls.Add(this.panel12);
             this.tabPagePerfilUser.Location = new System.Drawing.Point(4, 22);
             this.tabPagePerfilUser.Name = "tabPagePerfilUser";
-            this.tabPagePerfilUser.Size = new System.Drawing.Size(1014, 533);
+            this.tabPagePerfilUser.Size = new System.Drawing.Size(1014, 537);
             this.tabPagePerfilUser.TabIndex = 5;
             this.tabPagePerfilUser.Text = "Perfil";
             this.tabPagePerfilUser.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxayuda4
+            // 
+            this.pictureBoxayuda4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxayuda4.Image")));
+            this.pictureBoxayuda4.Location = new System.Drawing.Point(139, 476);
+            this.pictureBoxayuda4.Name = "pictureBoxayuda4";
+            this.pictureBoxayuda4.Size = new System.Drawing.Size(24, 28);
+            this.pictureBoxayuda4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxayuda4.TabIndex = 10;
+            this.pictureBoxayuda4.TabStop = false;
+            this.pictureBoxayuda4.Click += new System.EventHandler(this.pictureBoxayuda4_Click);
             // 
             // pictureBox9
             // 
@@ -435,7 +458,7 @@ namespace DINT_F_P
             this.panel12.Controls.Add(this.pictureBoxNotifications4);
             this.panel12.Controls.Add(this.pictureBoxTuits4);
             this.panel12.Controls.Add(this.pictureBoxHome4);
-            this.panel12.Location = new System.Drawing.Point(637, 2);
+            this.panel12.Location = new System.Drawing.Point(624, 3);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(372, 68);
             this.panel12.TabIndex = 7;
@@ -451,6 +474,7 @@ namespace DINT_F_P
             this.labelLogout2.TabIndex = 10;
             this.labelLogout2.Text = "Logout";
             this.labelLogout2.Click += new System.EventHandler(this.LogoutLabel_Click);
+            this.labelLogout2.Enter += new System.EventHandler(this.Label12_MouseEnter);
             this.labelLogout2.MouseEnter += new System.EventHandler(this.Label12_MouseEnter);
             this.labelLogout2.MouseLeave += new System.EventHandler(this.LabelLogout_MouseLeave);
             // 
@@ -507,7 +531,7 @@ namespace DINT_F_P
             this.Timeline.Location = new System.Drawing.Point(4, 22);
             this.Timeline.Name = "Timeline";
             this.Timeline.Padding = new System.Windows.Forms.Padding(3);
-            this.Timeline.Size = new System.Drawing.Size(1014, 533);
+            this.Timeline.Size = new System.Drawing.Size(1014, 537);
             this.Timeline.TabIndex = 1;
             this.Timeline.Text = "Timeline";
             this.Timeline.UseVisualStyleBackColor = true;
@@ -515,6 +539,7 @@ namespace DINT_F_P
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.pictureBoxayuda);
             this.panel3.Controls.Add(this.pictureBox11);
             this.panel3.Controls.Add(this.tableLayoutPanel3);
             this.panel3.Controls.Add(this.ButtonTwittIt);
@@ -526,6 +551,17 @@ namespace DINT_F_P
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1008, 514);
             this.panel3.TabIndex = 0;
+            // 
+            // pictureBoxayuda
+            // 
+            this.pictureBoxayuda.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxayuda.Image")));
+            this.pictureBoxayuda.Location = new System.Drawing.Point(102, 451);
+            this.pictureBoxayuda.Name = "pictureBoxayuda";
+            this.pictureBoxayuda.Size = new System.Drawing.Size(24, 28);
+            this.pictureBoxayuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxayuda.TabIndex = 0;
+            this.pictureBoxayuda.TabStop = false;
+            this.pictureBoxayuda.Click += new System.EventHandler(this.pictureBoxayuda_Click);
             // 
             // pictureBox11
             // 
@@ -601,7 +637,7 @@ namespace DINT_F_P
             this.panel8.Controls.Add(this.pictureBoxNotifications);
             this.panel8.Controls.Add(this.pictureBoxLastTwits);
             this.panel8.Controls.Add(this.pictureBoxHome);
-            this.panel8.Location = new System.Drawing.Point(614, 4);
+            this.panel8.Location = new System.Drawing.Point(633, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(372, 65);
             this.panel8.TabIndex = 5;
@@ -617,6 +653,8 @@ namespace DINT_F_P
             this.labellogout0.TabIndex = 11;
             this.labellogout0.Text = "Logout";
             this.labellogout0.Click += new System.EventHandler(this.labellogout0_Click);
+            this.labellogout0.MouseEnter += new System.EventHandler(this.labellogout0_MouseEnter);
+            this.labellogout0.MouseLeave += new System.EventHandler(this.labellogout0_MouseLeave);
             // 
             // pictureBoxConfig
             // 
@@ -712,7 +750,7 @@ namespace DINT_F_P
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(1014, 533);
+            this.Main.Size = new System.Drawing.Size(1014, 537);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
@@ -785,10 +823,10 @@ namespace DINT_F_P
             this.ControlPaginas.Controls.Add(this.LastNotifications);
             this.ControlPaginas.Controls.Add(this.tabPagePerfilUser);
             this.ControlPaginas.Controls.Add(this.tabPageContacto);
-            this.ControlPaginas.Location = new System.Drawing.Point(-3, 3);
+            this.ControlPaginas.Location = new System.Drawing.Point(-3, -25);
             this.ControlPaginas.Name = "ControlPaginas";
             this.ControlPaginas.SelectedIndex = 0;
-            this.ControlPaginas.Size = new System.Drawing.Size(1022, 559);
+            this.ControlPaginas.Size = new System.Drawing.Size(1022, 587);
             this.ControlPaginas.TabIndex = 1;
             // 
             // LastNotifications
@@ -796,7 +834,7 @@ namespace DINT_F_P
             this.LastNotifications.Controls.Add(this.panel6);
             this.LastNotifications.Location = new System.Drawing.Point(4, 22);
             this.LastNotifications.Name = "LastNotifications";
-            this.LastNotifications.Size = new System.Drawing.Size(1014, 533);
+            this.LastNotifications.Size = new System.Drawing.Size(1014, 537);
             this.LastNotifications.TabIndex = 4;
             this.LastNotifications.Text = "LastNotifications";
             this.LastNotifications.UseVisualStyleBackColor = true;
@@ -812,6 +850,7 @@ namespace DINT_F_P
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.Transparent;
+            this.panel16.Controls.Add(this.pictureBoxayuda3);
             this.panel16.Controls.Add(this.pictureBox13);
             this.panel16.Controls.Add(this.panel18);
             this.panel16.Controls.Add(this.panel19);
@@ -820,6 +859,17 @@ namespace DINT_F_P
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(1008, 514);
             this.panel16.TabIndex = 1;
+            // 
+            // pictureBoxayuda3
+            // 
+            this.pictureBoxayuda3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxayuda3.Image")));
+            this.pictureBoxayuda3.Location = new System.Drawing.Point(102, 451);
+            this.pictureBoxayuda3.Name = "pictureBoxayuda3";
+            this.pictureBoxayuda3.Size = new System.Drawing.Size(24, 28);
+            this.pictureBoxayuda3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxayuda3.TabIndex = 0;
+            this.pictureBoxayuda3.TabStop = false;
+            this.pictureBoxayuda3.Click += new System.EventHandler(this.pictureBoxayuda3_Click);
             // 
             // pictureBox13
             // 
@@ -853,7 +903,9 @@ namespace DINT_F_P
             this.labellogout1.Size = new System.Drawing.Size(46, 13);
             this.labellogout1.TabIndex = 11;
             this.labellogout1.Text = "Logout";
-            this.labellogout1.Click += new System.EventHandler(this.labellogout1_Click);
+            this.labellogout1.Click += new System.EventHandler(this.labellogout1_Click_1);
+            this.labellogout1.MouseEnter += new System.EventHandler(this.labellogout1_MouseEnter);
+            this.labellogout1.MouseLeave += new System.EventHandler(this.labellogout1_MouseLeave);
             // 
             // pictureBox15
             // 
@@ -932,16 +984,39 @@ namespace DINT_F_P
             // 
             // tabPageContacto
             // 
+            this.tabPageContacto.Controls.Add(this.pictureBox6);
+            this.tabPageContacto.Controls.Add(this.pictureBoxayuda5);
             this.tabPageContacto.Controls.Add(this.flowLayoutPanelContacto);
             this.tabPageContacto.Controls.Add(this.tableLayoutPanel4);
             this.tabPageContacto.Controls.Add(this.tableLayoutPanel5);
             this.tabPageContacto.Controls.Add(this.panel15);
             this.tabPageContacto.Location = new System.Drawing.Point(4, 22);
             this.tabPageContacto.Name = "tabPageContacto";
-            this.tabPageContacto.Size = new System.Drawing.Size(1014, 533);
+            this.tabPageContacto.Size = new System.Drawing.Size(1014, 561);
             this.tabPageContacto.TabIndex = 7;
             this.tabPageContacto.Text = "Contacto";
             this.tabPageContacto.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(260, 415);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBoxayuda5
+            // 
+            this.pictureBoxayuda5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxayuda5.Image")));
+            this.pictureBoxayuda5.Location = new System.Drawing.Point(230, 465);
+            this.pictureBoxayuda5.Name = "pictureBoxayuda5";
+            this.pictureBoxayuda5.Size = new System.Drawing.Size(24, 28);
+            this.pictureBoxayuda5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxayuda5.TabIndex = 9;
+            this.pictureBoxayuda5.TabStop = false;
+            this.pictureBoxayuda5.Click += new System.EventHandler(this.pictureBoxayuda5_Click);
             // 
             // flowLayoutPanelContacto
             // 
@@ -1133,14 +1208,29 @@ namespace DINT_F_P
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.labellogout5);
             this.panel15.Controls.Add(this.pictureBoxUser4);
             this.panel15.Controls.Add(this.pictureBoxNot4);
             this.panel15.Controls.Add(this.pictureBoxTuit4);
             this.panel15.Controls.Add(this.pictureBoxTimeline4);
-            this.panel15.Location = new System.Drawing.Point(639, 0);
+            this.panel15.Location = new System.Drawing.Point(625, 6);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(372, 68);
             this.panel15.TabIndex = 7;
+            // 
+            // labellogout5
+            // 
+            this.labellogout5.AutoSize = true;
+            this.labellogout5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellogout5.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labellogout5.Location = new System.Drawing.Point(199, 3);
+            this.labellogout5.Name = "labellogout5";
+            this.labellogout5.Size = new System.Drawing.Size(46, 13);
+            this.labellogout5.TabIndex = 11;
+            this.labellogout5.Text = "Logout";
+            this.labellogout5.Click += new System.EventHandler(this.labellogout5_Click);
+            this.labellogout5.MouseEnter += new System.EventHandler(this.labellogout5_MouseEnter_1);
+            this.labellogout5.MouseLeave += new System.EventHandler(this.labellogout5_MouseLeave);
             // 
             // pictureBoxUser4
             // 
@@ -1285,6 +1375,7 @@ namespace DINT_F_P
             this.Text = "TwitClient";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwitClientMain_FormClosed);
             this.tabPagePerfilUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1301,6 +1392,7 @@ namespace DINT_F_P
             this.Timeline.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -1321,6 +1413,7 @@ namespace DINT_F_P
             this.panel6.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
@@ -1330,11 +1423,14 @@ namespace DINT_F_P
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.panel19.ResumeLayout(false);
             this.tabPageContacto.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxayuda5)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContacto)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNot4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTuit4)).EndInit();
@@ -1441,6 +1537,12 @@ namespace DINT_F_P
         private System.Windows.Forms.Label labellogout0;
         private System.Windows.Forms.Label labellogout1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelContacto;
+        private System.Windows.Forms.Label labellogout5;
+        private System.Windows.Forms.PictureBox pictureBoxayuda4;
+        private System.Windows.Forms.PictureBox pictureBoxayuda;
+        private System.Windows.Forms.PictureBox pictureBoxayuda3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBoxayuda5;
     }
 }
 

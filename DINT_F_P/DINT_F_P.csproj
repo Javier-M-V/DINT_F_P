@@ -84,6 +84,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AyudaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyudaForm.Designer.cs">
+      <DependentUpon>AyudaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AyudaForm.resx">
+      <DependentUpon>AyudaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditar.resx">
       <DependentUpon>FormEditar.cs</DependentUpon>
     </EmbeddedResource>

@@ -4,6 +4,23 @@
         <name>DINT_F_P</name>
     </assembly>
     <members>
+        <member name="F:DINT_F_P.AyudaForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DINT_F_P.AyudaForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:DINT_F_P.FormEditar">
             <summary>
             Formulario de edición del perfil de usuario.
@@ -286,6 +303,11 @@
         <member name="M:DINT_F_P.TwitClientMain.pictureBoxUser4_Click(System.Object,System.EventArgs)">
             <summary>
             Abre el form para hacer tuit y updatea la BBDD al salir.
+            </summary>
+        </member>
+        <member name="M:DINT_F_P.TwitClientMain.labellogout5_Click(System.Object,System.EventArgs)">
+            <summary>
+            Hace logout.
             </summary>
         </member>
         <member name="M:DINT_F_P.TwitClientMain.VentanaTuit">
