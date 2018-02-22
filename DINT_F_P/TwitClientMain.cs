@@ -331,8 +331,10 @@ namespace DINT_F_P
         /// </summary>
         private void RichTextBoxCajaTwit_Click(object sender, EventArgs e)
         {
+           
+           richTextBoxCajaTwit.Text = "";
 
-             richTextBoxCajaTwit.Text = "";
+             
         }
 
         /// <summary>
@@ -354,7 +356,7 @@ namespace DINT_F_P
             comand.Parameters.AddWithValue("@FAVS", 0);
             comand.Parameters.AddWithValue("@RETS", 0);
             comand.ExecuteNonQuery();
-            richTextBoxCajaTwit.Text = "";
+            
 
             //refresco del flowlayout e inserción del tuit en la vista          
             String sql2 = "SELECT foto FROM usuarios WHERE usuario_twitter = @USER";
@@ -389,7 +391,8 @@ namespace DINT_F_P
             RescateTimeline(Usuario);
             flowLayoutPanelLastTuits.Controls.Clear();
             RescateTwittsSelfUsuario(Usuario);
-
+            richTextBoxCajaTwit.Text = "";
+            CargarEstadisticas();
         }
 
         /// <summary>
@@ -995,7 +998,7 @@ namespace DINT_F_P
         private void pictureBoxayuda_Click(object sender, EventArgs e)
         {
             AyudaForm ayuda = new AyudaForm();
-            ayuda.Show();
+            ayuda.ShowDialog();
         }
 
         /// <summary>
